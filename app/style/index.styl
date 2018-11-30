@@ -1,0 +1,225 @@
+ @import "utilities/reset.styl"
+ @import "mixins/flex-grid.styl"
+ 
+ @font-face
+     font-family 'Neo Sans Pro'
+     src url('../fonts/NeoSansPro-Bold.eot')
+     src local('Neo Sans Pro Bold'), local('NeoSansPro-Bold'),
+        url('../fonts/NeoSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeoSansPro-Bold.woff') format('woff'),
+        url('../fonts/NeoSansPro-Bold.ttf') format('truetype')
+     font-weight bold
+     font-style normal
+
+ @font-face
+     font-family 'Neo Sans Pro'
+     src url('../fonts/NeoSansPro-Medium.eot')
+     src local('Neo Sans Pro Medium'), local('NeoSansPro-Medium'),
+        url('../fonts/NeoSansPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeoSansPro-Medium.woff') format('woff'),
+        url('../fonts/NeoSansPro-Medium.ttf') format('truetype')
+     font-weight 500
+     font-style normal
+
+ @font-face
+     font-family 'Neo Sans Pro'
+     src url('../fonts/NeoSansPro-LightItalic.eot')
+     src local('Neo Sans Pro Light Italic'), local('NeoSansPro-LightItalic'),
+        url('../fonts/NeoSansPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeoSansPro-LightItalic.woff') format('woff'),
+        url('../fonts/NeoSansPro-LightItalic.ttf') format('truetype')
+     font-weight 300
+     font-style italic
+
+ @font-face
+     font-family 'Neo Sans Pro'
+     src url('../fonts/NeoSansPro-Regular.eot')
+     src local('Neo Sans Pro'), local('NeoSansPro-Regular'),
+        url('../fonts/NeoSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeoSansPro-Regular.woff') format('woff'),
+        url('../fonts/NeoSansPro-Regular.ttf') format('truetype')
+     font-weight normal
+     font-style normal
+
+ @font-face
+     font-family 'Neo Sans Pro Ultra'
+     src url('../fonts/NeoSansPro-Ultra.eot')
+     src local('Neo Sans Pro Ultra'), local('NeoSansPro-Ultra'),
+        url('../fonts/NeoSansPro-Ultra.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeoSansPro-Ultra.woff') format('woff'),
+        url('../fonts/NeoSansPro-Ultra.ttf') format('truetype')
+     font-weight 900
+     font-style normal
+
+ @font-face
+     font-family 'Neo Sans Pro'
+     src url('../fonts/NeoSansPro-BoldItalic.eot')
+     src local('Neo Sans Pro Bold Italic'), local('NeoSansPro-BoldItalic'),
+        url('../fonts/NeoSansPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeoSansPro-BoldItalic.woff') format('woff'),
+        url('../fonts/NeoSansPro-BoldItalic.ttf') format('truetype')
+     font-weight bold
+     font-style italic
+
+ @font-face
+     font-family 'Neo Sans Pro'
+     src url('../fonts/NeoSansPro-Light.eot')
+     src local('Neo Sans Pro Light'), local('NeoSansPro-Light'),
+        url('../fonts/NeoSansPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeoSansPro-Light.woff') format('woff'),
+        url('../fonts/NeoSansPro-Light.ttf') format('truetype')
+     font-weight 300
+     font-style normal
+
+ @font-face
+     font-family 'Neo Sans Pro'
+     src url('../fonts/NeoSansPro-Italic.eot')
+     src local('Neo Sans Pro Italic'), local('NeoSansPro-Italic'),
+        url('../fonts/NeoSansPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeoSansPro-Italic.woff') format('woff'),
+        url('../fonts/NeoSansPro-Italic.ttf') format('truetype')
+     font-weight normal
+     font-style italic
+
+.page
+    font-family 'Neo Sans Pro'
+    background #fff
+    font-weight normal
+    font-style normal
+    height 4000px
+    
+.row
+    make-row()
+.col
+    make-col-ready()
+    make-col('xs') //Extra small devices 
+    @media (min-width 768px)
+        make-col('sm') //Small devices Tablets 
+    @media (min-width 992px)
+        make-col('md') //Medium devices Desktops 
+    @media (min-width 1200px)
+        make-col('lg') //Large devices Desktops 
+
+.container
+    max-width 1200px
+    margin auto
+    width 100%
+    
+.top
+    background-color rgba(255, 255, 255, .741)
+    position absolute
+    width 100%
+    height 80px
+
+.logo
+    &__img
+        padding-top 5px
+        display inline-block
+        float left
+    &__text
+          font-size 14px
+          color #000003
+          text-transform uppercase
+          line-height 1.357
+          text-align left
+          display inline-block
+          padding 20px
+  
+.phone-grup
+    text-align right
+    line-height 1
+    margin-top 18px
+    &__phone
+        font-size 18px
+        color #302d36
+        font-weight 500
+    &__text
+        margin-top 13px
+        font-size 12px
+
+.callme
+    user-select none
+    box-shadow 0px 2px 0px 0px #2e4693
+    height 33px
+    font-size 14px
+    color #fff
+    background #5472d2 linear-gradient(0deg, #5472d2, #5b7ce5)
+    background-image url('../img/callme__icon.png')
+    background-repeat no-repeat
+    background-position 5px center
+    border-radius 100px
+    text-align center
+    line-height 33px
+    float right
+    margin-top 20px
+    position relative
+    top 0
+    cursor pointer
+    transition all .1s linear
+    padding 0 20px 0 40px
+    &:active
+        top 2px
+        box-shadow 0px 0px 0px 0px #2e4693
+
+.header
+    width 100%
+    padding 200px 0
+    text-align center
+    box-shadow inset 0px 2px 18px 0px rgba(46, 43, 43, 0.63)
+    
+    background-color #ddd
+    background-image  linear-gradient(0deg, rgba(0, 0, 0, 0.40), rgba(255, 255, 255, 0.40)), url('../img/header-img.png'), url('../img/header-bg.jpg')
+    // background-position top right 10px, bottom left
+    background-repeat no-repeat, repeat, no-repeat
+    background-size auto, auto, cover
+    background-attachment scroll , scroll , fixed
+
+.offer
+    font-size 40px
+    color #fff
+    text-transform uppercase
+    line-height 1.55
+    text-align center
+    text-shadow 0px 0px 10px rgba(7, 7, 7, 0.7)
+    width 100%
+    text-align center
+    
+.btn
+    user-select none
+    box-shadow 0px 3px 0px 0px #950b0b
+    height 40px
+    font-size 16px
+    color #fff
+    background #db4d4d linear-gradient(0deg, #db4d4d, #e05a5a)
+    border-radius 100px
+    text-align center
+    line-height 40px
+    display inline-block
+    position relative
+    top 0
+    cursor pointer
+    transition all .1s linear
+    padding 0 25px
+    &:active
+        top 3px
+        box-shadow 0px 0px 0px 0px #950b0b
+
+//ЗАМЕР
+.froze
+    width 100%
+    background #e2e2e2
+    padding 40px 0
+    &__container
+        display table
+        margin auto
+    &__action
+        font-size 22px
+        line-height 1.2em
+        color #000
+        text-transform uppercase
+    &__description
+        margin-top 10px
+        font-size 18px
+        line-height 1.2em
+        color #000
+    

@@ -1,0 +1,38 @@
+include ../../node_modules/bemto.jade/bemto
+
+<!DOCTYPE html>
+html(lang="ru")
+head
+  meta(charset="UTF-8")
+  title Document
+  //build:css css/all.css
+  link(rel="stylesheet", href="tmp/index.css")
+  //endbuild
+body.page
+  .top
+    .container
+      .row
+        +b.col_lg_4
+          +b.logo
+            +e.img
+              img(src='img/logo.png')
+            +e.text ПРОЕКТНО-СТРОИТЕЛЬНАЯ<br>КОМПАНИЯ
+        +b.col_lg_6
+          +b.phone-grup 
+            +e.phone 8 (863) 308-45-38
+            +e.text Пн.- пт. с 9:00 до 18:00
+        +b.col_lg_2
+          +b.callme Заказать звонок
+  .header
+    .offer Водопровод и канализация «под ключ» <br> в Ростове-на-Дону
+    .btn Получить бесплатную консультацию
+
+  .froze
+    .container
+      .froze__container
+        .froze__action Запишитесь на бесплатный консультацию  инженера с ытом работы 6 лет
+        .froze__description Заполните форму и представитель компании свяжется с вами в течении 40 минут
+  //build:js js/all.js
+  //- script(src=".tmp/index.js")
+  //endbuild
+    

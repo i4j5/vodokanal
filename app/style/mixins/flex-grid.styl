@@ -1,0 +1,23 @@
+grid-columns = 12 
+grid-gutter-width = 20px
+
+make-row()
+    display flex
+    flex-wrap wrap
+    margin-left (grid-gutter-width / -2)
+    margin-right (grid-gutter-width / -2)
+
+make-col-ready(gutter-width = grid-gutter-width)
+    position relative
+    width 100%
+    min-height 1px
+    padding-left  (gutter-width / 2)
+    padding-right (gutter-width / 2)
+
+make-col(devices = 'xs', columns = grid-columns, gutter-width = grid-gutter-width)
+    for index in 1..columns
+        &_{devices}_{index}
+            flex 0 0 (100% * (index / columns))
+            max-width 100% * (index / columns)
+        &_{devices}-offset_{index}
+            margin-left 100% * (index / columns)
