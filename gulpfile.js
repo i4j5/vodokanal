@@ -19,18 +19,18 @@ const webpack = require("webpack");
 gulp.task('browser-sync', () => {
     browserSync.init({
         server: {
-            baseDir: './app'
+            baseDir: './'
         }
     });
 });
 
 gulp.task('clean', () => {
-    return gulp.src(['./app/tmp/**/*.*', './app/*.html', './dist'], {read: false})
+    return gulp.src(['./tmp/**/*.*', './*.html', './dist'], {read: false})
         .pipe(clean());
 });
 
 gulp.task('js', () => {
-    return gulp.src(['./app/js/*.js', '!./app/js/*.module.js'])
+    return gulp.src(['./js/*.js', '!./js/*.module.js'])
         .pipe(plumber({
             errorHandler: notify.onError(function (err) { 
                 return {
@@ -40,7 +40,7 @@ gulp.task('js', () => {
             })
         }))
         .pipe(babel({presets: ['es2015']}))
-        .pipe(gulp.dest('./app/tmp'));
+        .pipe(gulp.dest('./tmp'));
 });
 
 gulp.task('webpack', () => {
@@ -50,7 +50,7 @@ gulp.task('webpack', () => {
 });
 
 gulp.task('jade', () => {
-    return gulp.src('app/jade/*.jade')
+    return gulp.src('./jade/*.jade')
         .pipe(plumber({
             errorHandler: notify.onError(function (err) { 
                 return {
@@ -64,11 +64,11 @@ gulp.task('jade', () => {
             path.dirname = '';
             path.extname = '.html'
         }))
-        .pipe(gulp.dest('./app'));
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('style', () => {
-    return gulp.src('./app/style/*.styl')
+    return gulp.src('./style/*.styl')
         .pipe(plumber({
             errorHandler: notify.onError(function (err) { 
                 return {
@@ -86,7 +86,7 @@ gulp.task('style', () => {
            debug: true
         }))
         .pipe(autoprefixer())
-        .pipe(gulp.dest('./app/tmp'));
+        .pipe(gulp.dest('./tmp'));
 });
 
 gulp.task('build', ['clean', 'style', 'js', 'webpack', 'jade'], () => {
@@ -102,12 +102,12 @@ gulp.task('build', ['clean', 'style', 'js', 'webpack', 'jade'], () => {
 });
 
 gulp.task('font', () => {
-    return gulp.src('./app/fonts/**/*.{otf,ttf,woff,woff2,eot,svg}')
+    return gulp.src('./fonts/**/*.{otf,ttf,woff,woff2,eot,svg}')
         .pipe(gulp.dest('./dist/fonts'));
 });
 
 gulp.task('img', () => {
-    return gulp.src('./app/img/**/*.{jpg,jpeg,png,gif,ico,tif,svg}')
+    return gulp.src('./img/**/*.{jpg,jpeg,png,gif,ico,tif,svg}')
         .pipe(plumber({
             errorHandler: notify.onError(function (err) { 
                 return {
@@ -121,14 +121,14 @@ gulp.task('img', () => {
 });
 
 gulp.task('watch', () => {
-    gulp.watch('./app/js/**/*.js', ['js']);
-    gulp.watch('./app/jade/**/*.jade', ['jade']);
-    gulp.watch('./app/style/**/*.styl', ['style']);
-    gulp.watch('./app/webpack/**/*.*', ['webpack']);
+    gulp.watch('./js/**/*.js', ['js']);
+    gulp.watch('./jade/**/*.jade', ['jade']);
+    gulp.watch('./style/**/*.styl', ['style']);
+    gulp.watch('./webpack/**/*.*', ['webpack']);
     gulp.watch([
-        './app/*.html',
-        './app/tmp/*.css',
-        './app/tmp/*.js',
+        './*.html',
+        './tmp/*.css',
+        './tmp/*.js',
     ]).on('change', browserSync.reload);
 });
 

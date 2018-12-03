@@ -42,6 +42,8 @@
     "webpack": "^1.14.0"
   },
   "dependencies": {
-    "bemto.jade": "^1.0.3"
+    "bemto.jade": "^1.0.3",
+    "bxslider": "^4.2.14",
+    "jquery": "^3.3.1"
   }
 }
