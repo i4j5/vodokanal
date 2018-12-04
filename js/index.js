@@ -1,5 +1,25 @@
 $(document).ready(()=>{
 
+	$('.triggers').waypoint(function() {
+		$('.triggers__items').addClass('animated flipInX finish-animate')
+	}, {offset: '90%'})
+
+	$('#doc').waypoint(function() {
+		$('#doc .l').addClass('animated fadeInLeft finish-animate')
+		$('#doc .r').addClass('animated fadeInRight finish-animate')
+	}, {offset: '90%'})
+
+	$('.scheme').waypoint(function() {
+		$('.scheme__item_step_1, .scheme__item_step_3, .scheme__item_step_5').addClass('animated zoomInLeft')
+		$('.scheme__item_step_2, .scheme__item_step_4, .scheme__item_step_6').addClass('animated zoomInRight')
+	}, {offset: '90%'})
+
+	$('.logos').waypoint(function() {
+		$('.logos img').addClass('animated zoomIn')
+		
+	}, {offset: '90%'})
+
+
 	let $items = $('.tabs__item')
 
 	$items.each((index, el) => {

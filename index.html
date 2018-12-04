@@ -4,6 +4,7 @@
   <meta charset="UTF-8"/>
   <title>Document</title>
   <!--build:css css/all.css-->
+  <link rel="stylesheet" href="node_modules/animate.css/animate.min.css"/>
   <link rel="stylesheet" href="tmp/index.css"/>
   <!--endbuild-->
 </head>
@@ -61,23 +62,35 @@
   <div class="triggers">
     <div class="container">
       <div class="row">
-        <div class="col col_lg_4"><img src="img/triggers__img1.png" class="triggers__img"/>
-          <div class="triggers__text">Опыт работы<br>более 6 лет</div>
+        <div class="col col_lg_4">
+          <div class="triggers__items start-animate"><img src="img/triggers__img1.png" class="triggers__img"/>
+            <div class="triggers__text">Опыт работы<br>более 6 лет</div>
+          </div>
         </div>
-        <div class="col col_lg_4"><img src="img/triggers__img2.png" class="triggers__img"/>
-          <div class="triggers__text">Гарантия 24 месяца<br>на монтажные работы</div>
+        <div class="col col_lg_4">
+          <div style="animation-delay: .2s" class="triggers__items start-animate"><img src="img/triggers__img2.png" class="triggers__img"/>
+            <div class="triggers__text">Гарантия 24 месяца<br>на монтажные работы</div>
+          </div>
         </div>
-        <div class="col col_lg_4"><img src="img/triggers__img3.png" class="triggers__img"/>
-          <div class="triggers__text">Пдключение<br>за 3 месяца</div>
+        <div class="col col_lg_4">
+          <div style="animation-delay: .3s" class="triggers__items start-animate"><img src="img/triggers__img3.png" class="triggers__img"/>
+            <div class="triggers__text">Пдключение<br>за 3 месяца</div>
+          </div>
         </div>
-        <div class="col col_lg_4"><img src="img/triggers__img4.png" class="triggers__img"/>
-          <div class="triggers__text">Гарантия получения<br>лицевого счета</div>
+        <div class="col col_lg_4">
+          <div style="animation-delay: .4s" class="triggers__items start-animate"><img src="img/triggers__img4.png" class="triggers__img"/>
+            <div class="triggers__text">Гарантия получения<br>лицевого счета</div>
+          </div>
         </div>
-        <div class="col col_lg_4"><img src="img/triggers__img5.png" class="triggers__img"/>
-          <div class="triggers__text">Применяем<br>сертифицированные<br>материалы</div>
+        <div class="col col_lg_4">
+          <div style="animation-delay: .5s" class="triggers__items start-animate"><img src="img/triggers__img5.png" class="triggers__img"/>
+            <div class="triggers__text">Применяем<br>сертифицированные<br>материалы</div>
+          </div>
         </div>
-        <div class="col col_lg_4"><img src="img/triggers__img6.png" class="triggers__img"/>
-          <div class="triggers__text">Цены ниже<br>среднерыночных<br> на 7-12%</div>
+        <div class="col col_lg_4">
+          <div style="animation-delay: .6s" class="triggers__items start-animate"><img src="img/triggers__img6.png" class="triggers__img"/>
+            <div class="triggers__text">Цены ниже<br>среднерыночных<br> на 7-12%</div>
+          </div>
         </div>
       </div>
     </div>
@@ -322,8 +335,22 @@
         <div class="col col_lg_10 col_lg-offset_1">
           <div class="slider">
             <div>
-              <div class="reviews__name">Алина Евсеева</div>
-              <div class="reviews__text">Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!</div>
+              <div class="row">
+                <div class="col col_lg_6">
+                  <div class="reviews__gallery">
+                    <div class="reviews__img"><img src="http://placehold.it/500x250"/></div>
+                    <div class="reviews__imgs">
+                      <div class="reviews__img reviews__img_size_small"><img src="http://placehold.it/500x250"/></div>
+                      <div class="reviews__img reviews__img_size_small"><img src="http://placehold.it/500x250"/></div>
+                      <div class="reviews__img reviews__img_size_small"><img src="http://placehold.it/500x250"/></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col_lg_6">
+                  <div class="reviews__name">Алина Евсеева</div>
+                  <div class="reviews__text">Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!</div>
+                </div>
+              </div>
             </div>
             <div>2</div>
             <div>3</div>
@@ -332,8 +359,170 @@
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="title">
+      <div class="title__wrap">
+        <div class="title__text">Этапы подключени 
+        </div>
+      </div>
+    </div>
+    <div id="doc" class="row">
+      <div class="col col_lg_3">
+        <div style="animation-delay: .2s" class="zoom l start-animate"><img src="img/doc1.jpg"/>
+          <div class="zoom__icon">
+          </div>
+        </div>
+      </div>
+      <div class="col col_lg_3">
+        <div class="zoom l start-animate"><img src="img/doc2.jpg"/>
+          <div class="zoom__icon">
+          </div>
+        </div>
+      </div>
+      <div class="col col_lg_3">
+        <div class="zoom r start-animate"><img src="img/doc3.jpg"/>
+          <div class="zoom__icon">
+          </div>
+        </div>
+      </div>
+      <div class="col col_lg_3">
+        <div style="animation-delay: .2s" class="zoom r start-animate"><img src="img/doc4.jpg"/>
+          <div class="zoom__icon">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="title">
+      <div class="title__wrap">
+        <div class="title__text">Наши партнеры
+        </div>
+      </div>
+    </div>
+    <div class="logos">
+      <div class="logos__grup"><img src="img/logo1.jpg"/><img src="img/logo2.jpg"/><img src="img/logo3.jpg"/><img src="img/logo4.jpg"/><img src="img/logo5.jpg"/>
+      </div>
+      <div class="logos__grup"><img src="img/logo6.jpg"/><img src="img/logo7.jpg"/><img src="img/logo8.jpg"/><img src="img/logo9.jpg"/>
+      </div>
+    </div>
+  </div>
+  <div class="froze">
+    <div class="container">
+      <div class="froze__container">
+        <div class="froze__action">Запишитесь на бесплатный консультацию  инженера с опытом работы 6 лет</div>
+        <div class="froze__description">Заполните форму и представитель компании свяжется с вами в течении 40 минут</div>
+        <div class="form">
+          <input placeholder="Введите ваше имя" class="input input_type_name"/>
+          <input placeholder="Введите ваш телефон" class="input input_type_phone"/>
+          <div class="form__btn">Оставить заявку на выезд инженера
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="title">
+      <div class="title__wrap">
+        <div class="title__text">Cхема работы
+        </div>
+      </div>
+    </div>
+    <div class="scheme">
+      <div class="row">
+        <div class="col col_lg_3">
+          <div class="scheme__item scheme__item_step_1">
+            <div class="scheme__title">Заявка</div>
+            <div class="scheme__text">Вы оставляете заявку или звоните нам по телефону</div>
+            <div class="btn btn_style_small">Оставить заявку</div>
+          </div>
+        </div>
+        <div class="col col_lg_5">
+          <div style="animation-delay: 1s" class="scheme__item scheme__item_step_3">
+            <div class="scheme__title">Заключение подрядного договора</div>
+            <div class="scheme__text">Мы формируем коммерческое предложение и составляем договор подряда</div>
+          </div>
+        </div>
+        <div class="col col_lg_3">
+          <div style="animation-delay: 2s" class="scheme__item scheme__item_step_5">
+            <div class="scheme__title">Осуществление работ</div>
+            <div class="scheme__text">Проводим необходимые работы по строительству и монтажу</div>
+          </div>
+        </div>
+      </div>
+      <div class="scheme__progress-bar"></div>
+      <div class="row">
+        <div class="col col_lg_5">
+          <div style="animation-delay: .5s" class="scheme__item scheme__item_step_2">
+            <div class="scheme__title">Бесплатное обследование объекта</div>
+            <div class="scheme__text">Мы отправляем главного инженера на объект для выяснения подробностей</div>
+          </div>
+        </div>
+        <div class="col col_lg_4">
+          <div style="animation-delay: 1.5s" class="scheme__item scheme__item_step_4">
+            <div class="scheme__title">Предоставление документов</div>
+            <div class="scheme__text">Вы предоставляете нам все необходимые документы</div>
+          </div>
+        </div>
+        <div class="col col_lg_3">
+          <div style="animation-delay: 2.5s" class="scheme__item scheme__item_step_6">
+            <div class="scheme__title">Получение лицевого счета</div>
+            <div class="scheme__text">Гарантируем, что вы получите все необходимые разрешения во всех инстанциях</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="questions">
+    <div class="questions__title">У вас остались вопросы?</div>Задайте их нашему специалисту!
+  </div>
+  <div class="btn">Получить бесплатную консультацию</div>
+  <div id="map" class="map">
+    <script type="text/javascript" charset="utf-8" async="async" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A725f3171e539a58c44b4487e12ce657f9c367cad0521f61a4883505dc8553b3d&amp;amp;width=100%25&amp;amp;height=420&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col col_lg_4">
+          <div class="footer__contact footer__contact_type_adress">Ростове-на-Дону, ул. Текучева, 23, эт. 3</div>
+        </div>
+        <div class="col col_lg_4">
+          <div class="footer__contact footer__contact_type_call">
+            <div class="phone-grup phone-grup_footer"> 
+              <div class="phone-grup__phone">8 (863) 308-45-38
+              </div>
+              <div class="phone-grup__text">Пн.- пт. с 9:00 до 18:00
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col_lg_4">
+          <div class="footer__contact footer__contact_type_mail">info@bk-invent.ru</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal__callme" class="modal">
+    <div class="modal__wrapper">
+      <div class="modal__dialog">
+        <div class="close modal__close"></div>
+        <div class="wall">
+          <div class="wall__title">Получить список необходимых <br>Вам документов
+          </div>
+          <div class="form">
+            <input placeholder="Введите Ваше имя" class="input input_type_name"/>
+            <input placeholder="Введите Ваш телефон" class="input input_type_phone"/>
+            <input placeholder="Введите Ваш E-mail" class="input input_type_email"/>
+            <div class="form__btn">Скачать документ
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--build:js js/all.js-->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
   <script src="node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
   <script src="tmp/index.js"></script>
   <!--endbuild

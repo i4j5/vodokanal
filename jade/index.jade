@@ -6,6 +6,7 @@ head
   meta(charset="UTF-8")
   title Document
   //build:css css/all.css
+  link(rel="stylesheet", href="node_modules/animate.css/animate.min.css")
   link(rel="stylesheet", href="tmp/index.css")
   //endbuild
 body.page
@@ -45,23 +46,29 @@ body.page
     .container
       .row
         +b.col_lg_4
-          img(src='img/triggers__img1.png').triggers__img
-          .triggers__text Опыт работы<br>более 6 лет
+          .triggers__items.start-animate
+            img(src='img/triggers__img1.png').triggers__img
+            .triggers__text Опыт работы<br>более 6 лет
         +b.col_lg_4
-          img(src='img/triggers__img2.png').triggers__img
-          .triggers__text Гарантия 24 месяца<br>на монтажные работы
+          .triggers__items(style="animation-delay: .2s").start-animate
+            img(src='img/triggers__img2.png').triggers__img
+            .triggers__text Гарантия 24 месяца<br>на монтажные работы
         +b.col_lg_4
-          img(src='img/triggers__img3.png').triggers__img
-          .triggers__text Пдключение<br>за 3 месяца
+          .triggers__items(style="animation-delay: .3s").start-animate
+            img(src='img/triggers__img3.png').triggers__img
+            .triggers__text Пдключение<br>за 3 месяца
         +b.col_lg_4
-          img(src='img/triggers__img4.png').triggers__img
-          .triggers__text Гарантия получения<br>лицевого счета
+          .triggers__items(style="animation-delay: .4s").start-animate
+            img(src='img/triggers__img4.png').triggers__img
+            .triggers__text Гарантия получения<br>лицевого счета
         +b.col_lg_4
-          img(src='img/triggers__img5.png').triggers__img
-          .triggers__text Применяем<br>сертифицированные<br>материалы
+          .triggers__items(style="animation-delay: .5s").start-animate
+            img(src='img/triggers__img5.png').triggers__img
+            .triggers__text Применяем<br>сертифицированные<br>материалы
         +b.col_lg_4
-          img(src='img/triggers__img6.png').triggers__img
-          .triggers__text Цены ниже<br>среднерыночных<br> на 7-12%
+          .triggers__items(style="animation-delay: .6s").start-animate
+            img(src='img/triggers__img6.png').triggers__img
+            .triggers__text Цены ниже<br>среднерыночных<br> на 7-12%
   .container
     +b.title
       +e.wrap
@@ -248,14 +255,144 @@ body.page
         +b.col_lg_10._lg-offset_1
           .slider
             div
-              .reviews__name Алина Евсеева
-              .reviews__text Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!
+              .row
+                +b.col_lg_6
+                 .reviews__gallery
+                    .reviews__img
+                        img(src="http://placehold.it/500x250")
+                    .reviews__imgs
+                      .reviews__img.reviews__img_size_small
+                        img(src="http://placehold.it/500x250")
+                      .reviews__img.reviews__img_size_small
+                        img(src="http://placehold.it/500x250")
+                      .reviews__img.reviews__img_size_small
+                        img(src="http://placehold.it/500x250")
+                +b.col_lg_6
+                  .reviews__name Алина Евсеева
+                  .reviews__text Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!
             div 2
             div 3
+  
+  .container
+    +b.title
+      +e.wrap
+        +e.text Этапы подключени 
+    .row#doc
+      +b.col_lg_3
+        +b.zoom(style="animation-delay: .2s").l.start-animate
+          img(src="img/doc1.jpg")
+          +e.icon
+      +b.col_lg_3
+        +b.zoom.l.start-animate
+          img(src="img/doc2.jpg")
+          +e.icon
+      +b.col_lg_3
+        +b.zoom.r.start-animate
+          img(src="img/doc3.jpg")
+          +e.icon
+      +b.col_lg_3
+        +b.zoom(style="animation-delay: .2s").r.start-animate
+            img(src="img/doc4.jpg")
+            +e.icon
+
+  .container
+    +b.title
+      +e.wrap
+        +e.text Наши партнеры
+    +b.logos
+      +e.grup
+        img(src="img/logo1.jpg")
+        img(src="img/logo2.jpg")
+        img(src="img/logo3.jpg")
+        img(src="img/logo4.jpg")
+        img(src="img/logo5.jpg")
+      +e.grup
+        img(src="img/logo6.jpg")
+        img(src="img/logo7.jpg")
+        img(src="img/logo8.jpg")
+        img(src="img/logo9.jpg")
+  .froze
+    .container
+      .froze__container
+        .froze__action Запишитесь на бесплатный консультацию  инженера с опытом работы 6 лет
+        .froze__description Заполните форму и представитель компании свяжется с вами в течении 40 минут
+        +b.form
+          input(placeholder='Введите ваше имя').input.input_type_name
+          input(placeholder='Введите ваш телефон').input.input_type_phone
+          +e.btn Оставить заявку на выезд инженера
+
+  .container
+    +b.title
+      +e.wrap
+        +e.text Cхема работы
+    .scheme
+      .row
+        +b.col_lg_3
+          .scheme__item.scheme__item_step_1
+            .scheme__title Заявка
+            .scheme__text Вы оставляете заявку или звоните нам по телефону
+            .btn.btn_style_small Оставить заявку
+        +b.col_lg_5
+          .scheme__item.scheme__item_step_3(style="animation-delay: 1s")
+            .scheme__title Заключение подрядного договора
+            .scheme__text Мы формируем коммерческое предложение и составляем договор подряда
+
+        +b.col_lg_3
+          .scheme__item.scheme__item_step_5(style="animation-delay: 2s")
+            .scheme__title Осуществление работ
+            .scheme__text Проводим необходимые работы по строительству и монтажу
+      .scheme__progress-bar
+      .row
+        +b.col_lg_5
+          .scheme__item.scheme__item_step_2(style="animation-delay: .5s")
+            .scheme__title Бесплатное обследование объекта
+            .scheme__text Мы отправляем главного инженера на объект для выяснения подробностей
+        +b.col_lg_4
+          .scheme__item.scheme__item_step_4(style="animation-delay: 1.5s")
+            .scheme__title Предоставление документов
+            .scheme__text Вы предоставляете нам все необходимые документы
+        +b.col_lg_3
+          .scheme__item.scheme__item_step_6(style="animation-delay: 2.5s")
+            .scheme__title Получение лицевого счета
+            .scheme__text Гарантируем, что вы получите все необходимые разрешения во всех инстанциях
+
+  .questions
+    .questions__title У вас остались вопросы?
+    | Задайте их нашему специалисту!
+  .btn Получить бесплатную консультацию
+  .map#map
+    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A725f3171e539a58c44b4487e12ce657f9c367cad0521f61a4883505dc8553b3d&amp;width=100%25&amp;height=420&amp;lang=ru_RU&amp;scroll=true")
+
+  .footer
+    .container
+      .row
+        +b.col_lg_4
+          .footer__contact.footer__contact_type_adress Ростове-на-Дону, ул. Текучева, 23, эт. 3
+        +b.col_lg_4
+          .footer__contact.footer__contact_type_call
+            +b.phone-grup._footer 
+              +e.phone 8 (863) 308-45-38
+              +e.text Пн.- пт. с 9:00 до 18:00
+        +b.col_lg_4
+          .footer__contact.footer__contact_type_mail info@bk-invent.ru
 
 
+  .modal#modal__callme
+    .modal__wrapper
+        .modal__dialog
+            .close.modal__close
+            +b.wall
+              +e.title Получить список необходимых <br>Вам документов
+              +b.form
+                input(placeholder='Введите Ваше имя').input.input_type_name
+                input(placeholder='Введите Ваш телефон').input.input_type_phone
+                input(placeholder='Введите Ваш E-mail').input.input_type_email
+                +e.btn Скачать документ
+
+  //-script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
   //build:js js/all.js
   script(src="node_modules/jquery/dist/jquery.min.js")
+  script(src="node_modules/waypoints/lib/jquery.waypoints.min.js")
   script(src="node_modules/bxslider/dist/jquery.bxslider.min.js")
   script(src="tmp/index.js")
   //endbuild

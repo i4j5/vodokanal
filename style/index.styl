@@ -176,6 +176,9 @@ load load_page
     text-align right
     line-height 1
     margin-top 18px
+    &_footer
+        text-align center
+        margin-top 0
     &__phone
         font-size 18px
         color #302d36
@@ -263,7 +266,14 @@ load load_page
     &_style_blue
         background #4273d6 linear-gradient(0deg, #4273d6, #477de9)
         box-shadow 0px 3px 0px 0px #174497
-         
+    &_style_small
+        font-size 12px !important
+        line-height 28px
+        height 28px
+        border-radius 4px
+        padding 0 15px
+        margin-bottom 10px
+        float left
 
 //ЗАМЕР
 .froze
@@ -513,14 +523,15 @@ load load_page
         margin-bottom 20px
     &_docs
         margin-top 100px
-        
+     
 .reviews
-    position reviews
+    position relative
     width 100%
     background #fff url('../img/reviews-bg.jpg') no-repeat
     background-size cover
     padding 40px 0 80px 0
     box-shadow inset 0px 2px 18px 0px rgba(0, 0, 0, 0.11)
+    margin 60px 0
     &__title
         font-size 28px 
         line-height 1.2em
@@ -532,12 +543,33 @@ load load_page
         line-height 1em
         color #000
         font-weight 500
+        margin-bottom 20px
     &__text
         font-size 14px
-        line-height 1.2em
-        color #444444
-        
-// .slider
+        line-height 1.6em
+        color #1b1b1b
+    &__gallery
+        padding-right 30px
+    &__imgs
+        display flex
+        justify-content center
+        flex-direction row
+        .reviews__img:nth-last-child(1)
+             margin-right 0px
+    &__img
+        // max-width 465px
+        width 100%
+        //float left
+        line-height 0
+        &_size_small
+            // width 33%
+            // max-width 154px
+            margin-right 10px
+            margin-top 10px 
+        img
+            width 100%
+            
+//slider
 .bx-pager
     text-align center
     position relative 
@@ -571,4 +603,245 @@ load load_page
     background url('../img/bx-next.png')
     right -80px
     
+.logos
+    display flex
+    justify-content center
+    flex-direction column
+    margin 20px 0 60px 0
+    &__grup
+        display flex
+        justify-content  space-between
+        flex-direction row
+        width 100%
+        
+.start-animate
+    opacity 0
+.finish-animate
+    opacity 1
+
+.scheme
+    margin 60px 
+    &__item
+        // transition all 5s linear
+        border-radius 10px 
+        border 3px solid #d3dfe0
+        padding 20px 30px
+        display table
+        position relative
+        min-height 160px
+        &::after
+            content " "
+            position absolute
+            display block
+            width 30px
+            height 30px
+            border-right 3px solid #d3dfe0
+            border-bottom 3px solid #d3dfe0
+            transform rotate(45deg)
+            bottom -17px
+            left calc(50% - 15px)
+            background #fff
+        &::before
+            font-size 16px
+            line-height 40px
+            width 40px
+            height 40px
+            background linear-gradient( 0deg, rgb(66,115,214) 0%, rgb(71,125,233) 100%)
+            border-radius 100%
+            border 6px solid #fff
+            content " "
+            position absolute
+            bottom -70px
+            left calc(50% - 20px)
+            text-align center
+            line-height 28px
+            color #fff
+            font-weight 500
+
+        &_step
+            &_1
+                max-width 225px
+                &::before
+                    content "1"
+            &_2
+                max-width 320px
+                margin auto
+                &::before
+                    content "2"
+            &_3
+                max-width 320px
+                margin auto
+                &::before
+                    content "3"
+            &_4
+                margin auto
+                max-width 290px
+                &::before
+                    content "4"
+            &_5
+                max-width 245px
+                &::before
+                    content "5"
+            &_6
+                max-width 260px
+                float right
+                &::before
+                    content "6"
+            &_2
+            &_4
+            &_6
+                padding-top 25px
+                min-height 140px
+                &::after
+                    bottom 0
+                    top -17px
+                    transform rotate(-135deg)
+                &::before
+                    bottom 0px
+                    top -70px
+    &__title
+        font-size 14px 
+        color #fff
+        line-height 1em
+        background rgb(66,115,214) linear-gradient( 0deg, rgb(66,115,214) 0%, rgb(71,125,233) 100%);
+        padding 4px 8px 
+        display inline-block
+        border-radius 40px
+        margin-bottom 10px
+    &__text
+        font-size 12px
+        line-height 1.4em
+        color #454545
+        margin-bottom 10px
+    // &__number
+    &__progress-bar
+        background linear-gradient( 90deg, rgba(210,223,224,0.25098) 0%, rgba(71,123,231,0.25) 0%, rgb(72,124,233) 100%);
+        height 16px
+        width 100%
+        border-radius 20px
+        margin 40px 0
+        
+.questions
+    font-size 16px 
+    color #000
+    line-height 1.2em
+    text-align center
+    margin-bottom 40px
+    margin-top 100px
+    &__title
+        font-size 25px
+        padding-bottom 15px
+        
+.map
+    margin-top 80px
+    border-top 3px solid #d8dee5
+
+.footer
+    background #d8dee5
+    width 100%
+    padding 10px 0
+    text-align center
+    font-size 16px
+    line-height 1.2em
+    color #5d5c5c
+    &__contact
+        min-height 80px
+        display flex
+        justify-content center    
+        flex-direction column
+        &_type
+            &_adress
+                background url('../img/contacts__adress.png') no-repeat center
+            &_mail
+                background url('../img/contacts__mail.png') no-repeat center
+            &_call
+                background url('../img/contacts__call.png') no-repeat center
+                
+.zoom
+    position relative
+    line-height 0
+    cursor pointer
+    &__icon
+        position absolute
+        display block
+        width 100%
+        height 100%
+        z-index 10
+        background rgba(237,237,237, .45) url('../img/zoom.png') no-repeat center
+        top 0
+        left 0
+        opacity 0
+        transition all .2s linear
+        &:hover
+            opacity 1
+            
+.modal
+    position fixed
+    left 0
+    top 0
+    height 100%
+    width 100%
+    // opacity 0
+    visibility hidden
+    z-index 190
+    transition visibility 0ms 300ms
+    &__wrapper
+        display flex
+        white-space nowrap
+        position absolute
+        left 0
+        top 0
+        height 100%
+        width 100%
+        z-index 1000
+        transition opacity 300ms 0ms, visibility 0ms 300ms
+        opacity 0
+        visibility hidden
+        background-color rgba(0, 0, 0, 0.78) 
+        
+    &::after
+        display inline-block
+        vertical-align middle
+        width 0
+        height 100%
+        content ''
+
+    &_visible
+        // opacity 1
+        visibility visible
+
+    &__dialog
+        display inline-block
+        vertical-align middle
+        z-index 100
+        //margin auto
+        transition transform 300ms 0ms
+        transform translateY(-10px)
+        //background #d4d4d4
+        //border-radius 4px
+        //padding 24px
+        //width 90%
+        //max-width 400px
+        //min-width 300px
+        position relative
+
+    &__close
+        cursor pointer
+        width 25px
+        height 25px
+        position absolute
+        right 0px
+        top -35px
+        display inline-block
+        z-index 1050 
+        
+    &.modal_visible
+        .modal__wrapper
+            transition opacity 300ms 0ms, visibility 0ms 0ms
+            opacity 1
+            visibility visible
+        .modal__dialog
+            transition transform 300ms 0ms
+            transform translateY(0)
+
         
