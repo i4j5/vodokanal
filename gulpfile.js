@@ -90,7 +90,7 @@ gulp.task('style', () => {
 });
 
 gulp.task('build', ['clean', 'style', 'js', 'webpack', 'jade'], () => {
-    return gulp.src('app/*.html')
+    return gulp.src('*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))

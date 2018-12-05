@@ -1,6 +1,38 @@
 'use strict';
 
+(function ($) {
+	$.fn.extend({
+		openModal: function openModal() {
+			$(this).addClass('modal_visible');
+			$('body').addClass('modal-open');
+
+			$(this).on('click', function (event) {
+				if ($(event.target).is('.modal__close') || $(event.target).is('.modal')) {
+					event.preventDefault();
+					$(this).closeModal();
+				}
+			});
+		}
+	});
+
+	$.fn.extend({
+		closeModal: function closeModal() {
+			$(this).removeClass('modal_visible');
+			$('body').removeClass('modal-open');
+		}
+	});
+})(jQuery);
+
 $(document).ready(function () {
+
+	$('.callme, .header .btn').click(function (event) {
+		$('#modal__callme').openModal();
+		console.log('123sa');
+	});
+	$('.zoom').click(function (event) {
+		$('#modal__zoom').openModal();
+		console.log('123sa');
+	});
 
 	$('.triggers').waypoint(function () {
 		$('.triggers__items').addClass('animated flipInX finish-animate');
@@ -11,9 +43,9 @@ $(document).ready(function () {
 		$('#doc .r').addClass('animated fadeInRight finish-animate');
 	}, { offset: '90%' });
 
-	$('.scheme').waypoint(function () {
-		$('.scheme__item_step_1, .scheme__item_step_3, .scheme__item_step_5').addClass('animated zoomInLeft');
-		$('.scheme__item_step_2, .scheme__item_step_4, .scheme__item_step_6').addClass('animated zoomInRight');
+	$('#scheme').waypoint(function () {
+		$('.scheme__item_step_1, .scheme__item_step_3, .scheme__item_step_5').addClass('animated zoomInLeft finish-animate');
+		$('.scheme__item_step_2, .scheme__item_step_4, .scheme__item_step_6').addClass('animated zoomInRight finish-animate');
 	}, { offset: '90%' });
 
 	$('.logos').waypoint(function () {
@@ -21,7 +53,6 @@ $(document).ready(function () {
 	}, { offset: '90%' });
 
 	var $items = $('.tabs__item');
-
 	$items.each(function (index, el) {
 		var $el = $(el);
 		$el.children('.tabs__title').click(function (event) {
@@ -55,6 +86,68 @@ $(document).ready(function () {
 			}
 		});
 	});
+
+	$('.ajax').each(function () {
+		$(this).validate({
+			unhighlight: function unhighlight(element, errorClass) {
+				$(element).addClass('input_ok').removeClass('input_error');
+			},
+			submitHandler: function submitHandler(form, e) {
+				e.preventDefault();
+
+				var form = $(form),
+				    str = form.serialize();
+
+				$.ajax({
+					url: './',
+					type: 'get',
+					data: str
+				}).done(function () {
+					$('.modal').closeModal();
+					$('#modal__ok').openModal();
+				}).always(function () {
+					// После завершения
+				});
+			},
+			rules: {
+				'phone': {
+					required: true
+				},
+				'name': {
+					required: true
+				}
+			},
+			errorPlacement: function errorPlacement(error, element) {
+				$(element).addClass('input_error').removeClass('input_ok');
+			}
+		}); //validate
+	}); //ajax
+
+
+	ymaps.ready(init);
+	var map;
+
+	function init() {
+		map = new ymaps.Map("map", {
+			center: [47.229409, 39.678002],
+			zoom: 17,
+			controls: ['zoomControl']
+		});
+
+		map.behaviors.disable(['scrollZoom']);
+
+		var placemark = new ymaps.Placemark([47.229409, 39.678002], {
+			hintContent: 'БК Инвент ул. Текучева, 23, эт. 3'
+			//balloonContent: 'html'
+		}, {
+			iconLayout: 'default#image',
+			iconImageHref: './img/maps.png',
+			iconImageSize: [90, 108],
+			iconImageOffset: [-38, -110]
+		});
+
+		map.geoObjects.add(placemark);
+	}
 });
 
 $(document).ready(function () {

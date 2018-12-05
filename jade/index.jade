@@ -4,6 +4,7 @@ include ../node_modules/bemto.jade/bemto
 html(lang="ru")
 head
   meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
   title Document
   //build:css css/all.css
   link(rel="stylesheet", href="node_modules/animate.css/animate.min.css")
@@ -16,16 +17,15 @@ body.page
   .top
     .container
       .row
-        +b.col_lg_4
+        +b.col._lg_4._md_4._sm_4._xs_6
           +b.logo
             +e.img
               img(src='img/logo.png')
             +e.text ПРОЕКТНО-СТРОИТЕЛЬНАЯ<br>КОМПАНИЯ
-        +b.col_lg_6
+        +b.col._lg_4._lg-offset_4._md_5._md-offset_3._sm_6._sm-offset_2._xs_6
           +b.phone-grup 
             +e.phone 8 (863) 308-45-38
             +e.text Пн.- пт. с 9:00 до 18:00
-        +b.col_lg_2
           +b.callme Заказать звонок
   .header
     div
@@ -45,27 +45,27 @@ body.page
   .triggers
     .container
       .row
-        +b.col_lg_4
+        +b.col._lg_4._md_4._sm_4._xs_6
           .triggers__items.start-animate
             img(src='img/triggers__img1.png').triggers__img
             .triggers__text Опыт работы<br>более 6 лет
-        +b.col_lg_4
+        +b.col._lg_4._md_4._sm_4._xs_6
           .triggers__items(style="animation-delay: .2s").start-animate
             img(src='img/triggers__img2.png').triggers__img
             .triggers__text Гарантия 24 месяца<br>на монтажные работы
-        +b.col_lg_4
+        +b.col._lg_4._md_4._sm_4._xs_6
           .triggers__items(style="animation-delay: .3s").start-animate
             img(src='img/triggers__img3.png').triggers__img
             .triggers__text Пдключение<br>за 3 месяца
-        +b.col_lg_4
+        +b.col._lg_4._md_4._sm_4._xs_6
           .triggers__items(style="animation-delay: .4s").start-animate
             img(src='img/triggers__img4.png').triggers__img
             .triggers__text Гарантия получения<br>лицевого счета
-        +b.col_lg_4
+        +b.col._lg_4._md_4._sm_4._xs_6
           .triggers__items(style="animation-delay: .5s").start-animate
             img(src='img/triggers__img5.png').triggers__img
             .triggers__text Применяем<br>сертифицированные<br>материалы
-        +b.col_lg_4
+        +b.col._lg_4._md_4._sm_4._xs_6
           .triggers__items(style="animation-delay: .6s").start-animate
             img(src='img/triggers__img6.png').triggers__img
             .triggers__text Цены ниже<br>среднерыночных<br> на 7-12%
@@ -246,17 +246,17 @@ body.page
               input(placeholder='Введите Ваш телефон').input.input_type_phone
               input(placeholder='Введите Ваш E-mail').input.input_type_email
               +e.btn Скачать документ
-    +b.btn_style_blue Оставить заявку на консультацию инженера
+    //-+b.btn_style_blue Оставить заявку на консультацию инженера
 
   .reviews
     .container
       .reviews__title Клиенты о нас
       .row
-        +b.col_lg_10._lg-offset_1
+        +b.col._xs_12._md_10._md-offset_1
           .slider
             div
               .row
-                +b.col_lg_6
+                +b.col._xs_12._md_6
                  .reviews__gallery
                     .reviews__img
                         img(src="http://placehold.it/500x250")
@@ -267,7 +267,7 @@ body.page
                         img(src="http://placehold.it/500x250")
                       .reviews__img.reviews__img_size_small
                         img(src="http://placehold.it/500x250")
-                +b.col_lg_6
+                +b.col._xs_12._md_6
                   .reviews__name Алина Евсеева
                   .reviews__text Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!
             div 2
@@ -278,19 +278,19 @@ body.page
       +e.wrap
         +e.text Этапы подключени 
     .row#doc
-      +b.col_lg_3
+      +b.col._xs_6._sm_3
         +b.zoom(style="animation-delay: .2s").l.start-animate
           img(src="img/doc1.jpg")
           +e.icon
-      +b.col_lg_3
+      +b.col._xs_6._sm_3
         +b.zoom.l.start-animate
           img(src="img/doc2.jpg")
           +e.icon
-      +b.col_lg_3
+      +b.col._xs_6._sm_3
         +b.zoom.r.start-animate
           img(src="img/doc3.jpg")
           +e.icon
-      +b.col_lg_3
+      +b.col._xs_6._sm_3
         +b.zoom(style="animation-delay: .2s").r.start-animate
             img(src="img/doc4.jpg")
             +e.icon
@@ -306,7 +306,6 @@ body.page
         img(src="img/logo3.jpg")
         img(src="img/logo4.jpg")
         img(src="img/logo5.jpg")
-      +e.grup
         img(src="img/logo6.jpg")
         img(src="img/logo7.jpg")
         img(src="img/logo8.jpg")
@@ -325,34 +324,63 @@ body.page
     +b.title
       +e.wrap
         +e.text Cхема работы
-    .scheme
+    .scheme#scheme
       .row
-        +b.col_lg_3
-          .scheme__item.scheme__item_step_1
+        +b.col.col_lg_3
+          .scheme__item.scheme__item_step_1.start-animate
             .scheme__title Заявка
             .scheme__text Вы оставляете заявку или звоните нам по телефону
             .btn.btn_style_small Оставить заявку
-        +b.col_lg_5
-          .scheme__item.scheme__item_step_3(style="animation-delay: 1s")
+        +b.col._lg_5
+          .scheme__item.scheme__item_step_3(style="animation-delay: 1s").start-animate
             .scheme__title Заключение подрядного договора
             .scheme__text Мы формируем коммерческое предложение и составляем договор подряда
 
-        +b.col_lg_3
-          .scheme__item.scheme__item_step_5(style="animation-delay: 2s")
+        +b.col._lg_3
+          .scheme__item.scheme__item_step_5(style="animation-delay: 2s").start-animate
             .scheme__title Осуществление работ
             .scheme__text Проводим необходимые работы по строительству и монтажу
       .scheme__progress-bar
       .row
-        +b.col_lg_5
-          .scheme__item.scheme__item_step_2(style="animation-delay: .5s")
+        +b.col._lg_5
+          .scheme__item.scheme__item_step_2(style="animation-delay: .5s").start-animate
             .scheme__title Бесплатное обследование объекта
             .scheme__text Мы отправляем главного инженера на объект для выяснения подробностей
-        +b.col_lg_4
-          .scheme__item.scheme__item_step_4(style="animation-delay: 1.5s")
+        +b.col._lg_4
+          .scheme__item.scheme__item_step_4(style="animation-delay: 1.5s").start-animate
             .scheme__title Предоставление документов
             .scheme__text Вы предоставляете нам все необходимые документы
-        +b.col_lg_3
-          .scheme__item.scheme__item_step_6(style="animation-delay: 2.5s")
+        +b.col._lg_3
+          .scheme__item.scheme__item_step_6(style="animation-delay: 2.5s").start-animate
+            .scheme__title Получение лицевого счета
+            .scheme__text Гарантируем, что вы получите все необходимые разрешения во всех инстанциях
+
+    .scheme.scheme_mod_1
+      .row
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_1
+            .scheme__title Заявка
+            .scheme__text Вы оставляете заявку или звоните нам по телефону
+            .btn.btn_style_small Оставить заявку
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_2
+            .scheme__title Бесплатное обследование объекта
+            .scheme__text Мы отправляем главного инженера на объект для выяснения подробностей
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_3
+            .scheme__title Заключение подрядного договора
+            .scheme__text Мы формируем коммерческое предложение и составляем договор подряда
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_4
+            .scheme__title Предоставление документов
+            .scheme__text Вы предоставляете нам все необходимые документы
+
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_5
+            .scheme__title Осуществление работ
+            .scheme__text Проводим необходимые работы по строительству и монтажу
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_6
             .scheme__title Получение лицевого счета
             .scheme__text Гарантируем, что вы получите все необходимые разрешения во всех инстанциях
 
@@ -361,8 +389,6 @@ body.page
     | Задайте их нашему специалисту!
   .btn Получить бесплатную консультацию
   .map#map
-    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A725f3171e539a58c44b4487e12ce657f9c367cad0521f61a4883505dc8553b3d&amp;width=100%25&amp;height=420&amp;lang=ru_RU&amp;scroll=true")
-
   .footer
     .container
       .row
@@ -381,19 +407,31 @@ body.page
     .modal__wrapper
         .modal__dialog
             .close.modal__close
-            +b.wall
-              +e.title Получить список необходимых <br>Вам документов
-              +b.form
-                input(placeholder='Введите Ваше имя').input.input_type_name
-                input(placeholder='Введите Ваш телефон').input.input_type_phone
-                input(placeholder='Введите Ваш E-mail').input.input_type_email
-                +e.btn Скачать документ
+            .modal__title Наши менеджеры свяжутся с Вами в ближайшее время
+            +b.form
+              form.ajax
+                input(placeholder='Введите Ваше имя' name='name').input.input_type_name
+                input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+                input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
+                input(type='submit' value='Заказать звонок').form__btn
 
-  //-script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+  .modal#modal__ok
+    .modal__wrapper
+        .modal__dialog
+            .close.modal__close
+            .modal__title OK
+
+  .modal.modal_type_zoom#modal__zoom
+    .modal__wrapper
+        .modal__dialog
+            .close.modal__close
+            img(src="http://placehold.it/2200x2000")
+
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
   //build:js js/all.js
   script(src="node_modules/jquery/dist/jquery.min.js")
   script(src="node_modules/waypoints/lib/jquery.waypoints.min.js")
   script(src="node_modules/bxslider/dist/jquery.bxslider.min.js")
+  script(src="node_modules/jquery-validation/dist/jquery.validate.min.js")
   script(src="tmp/index.js")
   //endbuild
-    

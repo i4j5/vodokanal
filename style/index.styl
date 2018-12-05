@@ -81,11 +81,13 @@
      font-weight normal
      font-style italic
 
+
 .page
     font-family 'Neo Sans Pro'
     background #fff
     font-weight normal
     font-style normal
+    overflow-x hidden
 .loader
     position fixed
     width 100%
@@ -130,10 +132,6 @@
     100%
         transform scale(1.0)
         opacity 0
-
-
-
-load load_page
     
 .row
     make-row()
@@ -148,6 +146,9 @@ load load_page
         make-col('lg') //Large devices Desktops 
 
 .container
+    padding 0 10px
+    @media (min-width 1200px)
+        padding 0
     max-width 1200px
     margin auto
     width 100%
@@ -164,18 +165,24 @@ load load_page
         display inline-block
         float left
     &__text
-          font-size 14px
-          color #000003
-          text-transform uppercase
-          line-height 1.357
-          text-align left
-          display inline-block
-          padding 20px
+        font-size 14px
+        color #000003
+        text-transform uppercase
+        line-height 1.357
+        text-align left
+        padding 20px
+        display NONE
+        @media (min-width 625px)
+            display inline-block
   
 .phone-grup
     text-align right
     line-height 1
     margin-top 18px
+    display inline-block
+    @media (min-width 790px)
+        float left
+    float right
     &_footer
         text-align center
         margin-top 0
@@ -188,6 +195,9 @@ load load_page
         font-size 12px
 
 .callme
+    @media (min-width 790px)
+        display block
+    display none
     user-select none
     box-shadow 0px 2px 0px 0px #2e4693
     height 33px
@@ -202,6 +212,7 @@ load load_page
     line-height 33px
     float right
     margin-top 20px
+    margin-left 50px
     position relative
     top 0
     cursor pointer
@@ -232,7 +243,9 @@ load load_page
     flex-direction column
 
 .offer
-    font-size 40px
+    @media (min-width 1000px)
+        font-size 45px
+    font-size 25px
     color #fff
     text-transform uppercase
     line-height 1.55
@@ -240,7 +253,7 @@ load load_page
     text-shadow 0px 0px 10px rgba(7, 7, 7, 0.7)
     width 100%
     text-align center
-    margin-bottom 50px
+    margin-bottom 100px
     
 .btn
     user-select none
@@ -284,21 +297,30 @@ load load_page
         display table
         margin auto
     &__action
-        font-size 22px
+        @media (min-width 790px)
+            font-size 22px
+        font-size 19px
         line-height 1.2em
         color #000
         text-transform uppercase
     &__description
         margin-top 10px
-        font-size 18px
+        @media (min-width 790px)
+            margin-bottom 40px
+            font-size 18px
+        margin-bottom 20px
+        font-size 14px
         line-height 1.2em
         color #000
-        margin-bottom 40px
     & .input
-        width 310px !important
+        @media (min-width 1015px)
+            width 310px
+        width 100%
         margin-right 20px
+        margin-bottom 10px
     & .form__btn
-        display inline-block !important
+        @media (min-width 1015px)
+            display inline-block !important
     
 .input
     font-size 16px
@@ -320,7 +342,15 @@ load load_page
         background-image url('../img/input_type_phone.png')
     &_type_email
         background-image url('../img/input_type_email.png')
-          
+    
+    &_error
+        border-color #fc4e4e
+        &::placeholder
+            color #ff5959
+    
+    &_ok
+        border-color #5a9c38
+        color #57ad21
 .form
     &__btn
         font-size 16px
@@ -367,12 +397,14 @@ load load_page
     margin 40px 0
     &__wrap
         &:before
+            @media (min-width 550px)
+                display block
+            display none
             content " "
             position absolute
             width 100%
             height 2px
             background #706f6f
-            display block
             top calc(50% - 1px)
             left 0
     &__text
@@ -387,13 +419,15 @@ load load_page
         position relative
     &:before
     &:after 
+        @media (min-width 550px)
+            display block
+        display none
         content " "
         position absolute
         width 14px
         height 14px
         background #706f6f
         border-radius 20px
-        display block
         top calc(50% - 7px)
     &:before
         left 0
@@ -499,8 +533,11 @@ load load_page
         color #565656
         margin auto
         background url('../img/docs-bg.jpg') no-repeat center right
-        & li
-            margin-bottom 10px
+        //background-size 100%
+        padding-left 25px
+        &
+            li
+                margin-bottom 10px
     
 .wall
     max-width 390px
@@ -591,6 +628,9 @@ load load_page
     margin 10px
 .bx-prev    
 .bx-next
+    display none
+    @media (min-width 1080px)
+        display block
     width 40px
     height 76px
     position absolute
@@ -604,23 +644,45 @@ load load_page
     right -80px
     
 .logos
+    //@media (min-width 770px)
     display flex
+    //display none
     justify-content center
     flex-direction column
-    margin 20px 0 60px 0
+    @media (min-width 810px)
+        margin 20px 0 60px 0
+    margin -20px 0 40px 0
+    text-align center
+    img
+        width calc(100vh / 8)
+        height calc(100vh / 8)
+        margin 10px
+        @media (min-width 810px)
+            width 150px
+            height 150px
+            margin 40px
     &__grup
-        display flex
-        justify-content  space-between
-        flex-direction row
+        //display flex
+        //justify-content  space-between
         width 100%
-        
+        //flex-direction row
+        // img
+        //     box-flex 1
+        //     flex 1 1 auto
+            
 .start-animate
     opacity 0
 .finish-animate
     opacity 1
 
 .scheme
-    margin 60px 
+    margin 60px 0
+    display none
+    @media (min-width 1200px)
+        display block
+     
+    
+
     &__item
         // transition all 5s linear
         border-radius 10px 
@@ -699,6 +761,53 @@ load load_page
                 &::before
                     bottom 0px
                     top -70px
+    &_mod_1
+        display block  
+        @media (min-width 1200px)
+            display none
+        & .scheme__item_step
+            &_1
+            &_2
+            &_3
+            &_4
+            &_5
+            &_6
+                float none !important
+                width 100%
+                max-width none
+                padding 10px
+                padding-top 20px
+                padding-bottom 20px
+                min-height 150px
+                margin-bottom 20px 
+                &::after
+                    display none !important
+                &::before
+                    // border 0px
+                    // width 28px
+                    // height 28px
+                    top -18px
+                    right 0
+                    left calc(100% - 28px) !important
+                    bottom calc(100%) !important
+            &_1
+                &::before
+                    content "1"
+            &_2
+                &::before
+                    content "2"
+            &_3
+                &::before
+                    content "3"
+            &_4
+                &::before
+                    content "4"
+            &_5
+                &::before
+                    content "5"
+            &_6
+                &::before
+                    content "6"
     &__title
         font-size 14px 
         color #fff
@@ -735,6 +844,8 @@ load load_page
 .map
     margin-top 80px
     border-top 3px solid #d8dee5
+    width 100%
+    height 400px
 
 .footer
     background #d8dee5
@@ -761,6 +872,8 @@ load load_page
     position relative
     line-height 0
     cursor pointer
+    img
+        width 100%
     &__icon
         position absolute
         display block
@@ -774,7 +887,12 @@ load load_page
         transition all .2s linear
         &:hover
             opacity 1
-            
+
+.close
+    background url('../img/close.png') no-repeat center
+    width 25px
+    height 25px
+                
 .modal
     position fixed
     left 0
@@ -787,7 +905,8 @@ load load_page
     transition visibility 0ms 300ms
     &__wrapper
         display flex
-        white-space nowrap
+        overflow auto
+        //white-space nowrap
         position absolute
         left 0
         top 0
@@ -811,27 +930,53 @@ load load_page
         visibility visible
 
     &__dialog
-        display inline-block
+        display inline-table
         vertical-align middle
         z-index 100
-        //margin auto
+        margin auto
         transition transform 300ms 0ms
         transform translateY(-10px)
-        //background #d4d4d4
-        //border-radius 4px
-        //padding 24px
-        //width 90%
-        //max-width 400px
-        //min-width 300px
+        width 90%
+        max-width 400px
+        min-width 300px
         position relative
+        background #d4d4d4
+        border-radius 4px
+        padding 40px 30px
+        height auto
+        & 
+            .input
+                margin-bottom 15px
+            img
+                max-width 100%
+            .form__btn
+                width 100%
+                margin-top 15px
+        
+            
+    &_type_zoom
+        .modal__dialog
+            background #fff
+            width auto
+            max-width 90%
+            min-width 300px
+            padding 40px 20px 20px 20px
+            line-height 0
+            margin 20px auto
+                        
+    &__title
+        font-size 18px
+        line-height 1.4em
+        text-align center
+        color #010101
+        margin-bottom 20px
+        margin-top 10px
 
     &__close
         cursor pointer
-        width 25px
-        height 25px
         position absolute
-        right 0px
-        top -35px
+        right 10px
+        top 10px
         display inline-block
         z-index 1050 
         
@@ -844,4 +989,5 @@ load load_page
             transition transform 300ms 0ms
             transform translateY(0)
 
-        
+.modal-open
+    overflow hidden
