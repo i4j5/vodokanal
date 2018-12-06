@@ -30,8 +30,9 @@ $(document).ready(function () {
 		console.log('123sa');
 	});
 	$('.zoom').click(function (event) {
+		var img = $(this).data('img');
+		$('#zoom__img').attr('src', 'img/' + img);
 		$('#modal__zoom').openModal();
-		console.log('123sa');
 	});
 
 	$('.triggers').waypoint(function () {
@@ -154,7 +155,12 @@ $(document).ready(function () {
 	$('.slider').bxSlider({
 		pager: true,
 		nextText: '',
-		prevText: ''
+		prevText: '',
+		touchEnabled: false,
+		auto: true,
+		pause: 3000,
+		stopAutoOnClick: true,
+		autoHover: true
 	});
 });
 

@@ -6,6 +6,14 @@ head
   meta(charset="UTF-8")
   meta(name="viewport" content="width=device-width, initial-scale=1")
   title Document
+
+  link(rel='shortcut icon', href='img/fav_64x64_2.png', type='image/x-icon')
+  link(rel='apple-touch-icon-precomposed', href='img/fav_57x57_2.png')
+  link(rel='apple-touch-icon-precomposed', sizes='114x114', href='img/fav_72x72_2.png')
+  link(rel='apple-touch-icon-precomposed', sizes='72x72', href='img/fav_72x72_2.png')
+  link(rel='apple-touch-icon-precomposed', sizes='144x144', href='img/fav_72x72_2.png')
+
+
   //build:css css/all.css
   link(rel="stylesheet", href="node_modules/animate.css/animate.min.css")
   link(rel="stylesheet", href="tmp/index.css")
@@ -17,20 +25,21 @@ body.page
   .top
     .container
       .row
-        +b.col._lg_4._md_4._sm_4._xs_6
+        +b.col._lg_4._md_4._sm_5._xs_6
           +b.logo
             +e.img
               img(src='img/logo.png')
             +e.text ПРОЕКТНО-СТРОИТЕЛЬНАЯ<br>КОМПАНИЯ
-        +b.col._lg_4._lg-offset_4._md_5._md-offset_3._sm_6._sm-offset_2._xs_6
+        +b.col._lg_4._lg-offset_4._md_5._md-offset_3._sm_7._xs_6
           +b.phone-grup 
             +e.phone 8 (863) 308-45-38
             +e.text Пн.- пт. с 9:00 до 18:00
           +b.callme Заказать звонок
   .header
-    div
-      .offer Водопровод и канализация «под ключ» <br> в Ростове-на-Дону
-      .btn Получить бесплатную консультацию
+    .container
+      .offer 
+        .offer__text <span>Водопровод и канализация «под ключ» </span><br> в Ростове-на-Дону и Ростовской области
+        .offer__actionПолучить бесплатную консультацию
 
   .froze
     .container
@@ -86,7 +95,7 @@ body.page
               | Топографическая съемка в масштабе 1:500 с указанием всем коммуникаций (наземных и подземных)
             li  Баланс водопотребления и водоотведения подключаемого объекта
             li  Ситуационный план
-          +b.progress-bar(data-interest="10")
+          //-+b.progress-bar(data-interest="10")
             +e.pace
               +e.interest 
 
@@ -113,7 +122,7 @@ body.page
             li Водоотведение — 59 166 руб за куб.м в сутки без НДС
           p Например (частный дом водоснабжение):
           p 0,84 * 39882 = 33500 (без НДС) + 18% = 39531 руб
-          +b.progress-bar(data-interest="24")
+          //-+b.progress-bar(data-interest="24")
             +e.pace
               +e.interest 
 
@@ -130,7 +139,7 @@ body.page
               | Создание полного пакета чертежей стадии РД (общие данные, план сетей, профиль, таблица колодцев, спецификация)
             li
               | И согласования со всеми эксплуатирующими инстанциями города, а также администрацией, департаментом автодорог, департаментом окружающей среды и департаментом архитектуры. Таким образом согласования с более 15 организациями.
-          +b.progress-bar(data-interest="24")
+          //-+b.progress-bar(data-interest="24")
             +e.pace
               +e.interest 
 
@@ -146,7 +155,7 @@ body.page
             li ГИБДД – согласовать схему дорожного движения
             li
              | Управление благоустройством администрации города – получение ордера на разрытие (по закрытии которого мы получаем справку о благоустройстве, как неотъемлемый документ при сдачи сети в Водоканал.
-          +b.progress-bar(data-interest="58")
+          //-+b.progress-bar(data-interest="58")
             +e.pace
               +e.interest 
 
@@ -166,7 +175,7 @@ body.page
             li
               | Прокладка трубопровода от точки врезки к дому (объекту капитального строительства)
             li Ввод трубопровода в дом (объект капитального строительства)
-          +b.progress-bar(data-interest="75")
+          //-+b.progress-bar(data-interest="75")
             +e.pace
               +e.interest 
 
@@ -191,7 +200,7 @@ body.page
             li Копия паспорта водомера (вода)
           p
             | После чего инспектор Водоканала выезжает на объект, проверяет качество, сопоставляет с проектом и пломбирует счетчик (только вода) и выдает акт.
-          +b.progress-bar(data-interest="86")
+          //-+b.progress-bar(data-interest="86")
             +e.pace
               +e.interest 
 
@@ -211,7 +220,7 @@ body.page
             li Разрешение совладельцев (при необходимости).
           p
             | Результатом всего цикла работ является  — ваше комфортное пользование коммуникациями и получение квитанций от водоканала на оплату!
-          +b.progress-bar(data-interest="100")
+          //-+b.progress-bar(data-interest="100")
             +e.pace
               +e.interest 
 
@@ -279,19 +288,19 @@ body.page
         +e.text Этапы подключени 
     .row#doc
       +b.col._xs_6._sm_3
-        +b.zoom(style="animation-delay: .2s").l.start-animate
+        +b.zoom(style="animation-delay: .2s" data-img="doc1_big.jpg").l.start-animate
           img(src="img/doc1.jpg")
           +e.icon
       +b.col._xs_6._sm_3
-        +b.zoom.l.start-animate
+        +b.zoom.l.start-animate(data-img="doc2_big.jpg")
           img(src="img/doc2.jpg")
           +e.icon
       +b.col._xs_6._sm_3
-        +b.zoom.r.start-animate
+        +b.zoom.r.start-animate(data-img="doc3_big.jpg")
           img(src="img/doc3.jpg")
           +e.icon
       +b.col._xs_6._sm_3
-        +b.zoom(style="animation-delay: .2s").r.start-animate
+        +b.zoom(style="animation-delay: .2s" data-img="doc4_big.jpg").r.start-animate
             img(src="img/doc4.jpg")
             +e.icon
 
@@ -392,14 +401,14 @@ body.page
   .footer
     .container
       .row
-        +b.col_lg_4
-          .footer__contact.footer__contact_type_adress Ростове-на-Дону, ул. Текучева, 23, эт. 3
-        +b.col_lg_4
+        +b.col_sm_4
+          .footer__contact.footer__contact_type_adress Ростове-на-Дону,<br>ул. Текучева, 23, эт. 3
+        +b.col_sm_4
           .footer__contact.footer__contact_type_call
             +b.phone-grup._footer 
               +e.phone 8 (863) 308-45-38
               +e.text Пн.- пт. с 9:00 до 18:00
-        +b.col_lg_4
+        +b.col_sm_4
           .footer__contact.footer__contact_type_mail info@bk-invent.ru
 
 
@@ -425,7 +434,7 @@ body.page
     .modal__wrapper
         .modal__dialog
             .close.modal__close
-            img(src="http://placehold.it/2200x2000")
+            img(src="")#zoom__img
 
   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
   //build:js js/all.js

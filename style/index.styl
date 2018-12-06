@@ -154,7 +154,7 @@
     width 100%
     
 .top
-    background-color rgba(255, 255, 255, .741)
+    background-color rgba(255, 255, 255, 1)
     position absolute
     width 100%
     height 80px
@@ -172,7 +172,7 @@
         text-align left
         padding 20px
         display NONE
-        @media (min-width 625px)
+        @media (min-width 650px)
             display inline-block
   
 .phone-grup
@@ -229,11 +229,11 @@
     box-shadow inset 0px 2px 18px 0px rgba(46, 43, 43, 0.63)
     
     background-color #ddd
-    background-image  linear-gradient(0deg, rgba(0, 0, 0, 0.40), rgba(111, 111, 111, 0.40)), url('../img/header-img.png'), url('../img/header-bg.jpg')
+    background-image  linear-gradient(135deg, rgba(84,114,210,.4) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(70, 70, 70, 0.6)), url('../img/header-img.png'), url('../img/header-bg.jpg')
     // background-position top right 10px, bottom left
-    background-repeat no-repeat, repeat, no-repeat
-    background-size auto, auto, cover
-    background-attachment scroll , scroll , fixed
+    background-repeat no-repeat, no-repeat, repeat, no-repeat
+    background-size auto, auto, auto, cover
+    background-attachment scroll, scroll , fixed , fixed
     height auto
     height 100vh
     min-height 500px
@@ -243,17 +243,50 @@
     flex-direction column
 
 .offer
-    @media (min-width 1000px)
-        font-size 45px
-    font-size 25px
-    color #fff
-    text-transform uppercase
-    line-height 1.55
-    text-align center
-    text-shadow 0px 0px 10px rgba(7, 7, 7, 0.7)
-    width 100%
-    text-align center
-    margin-bottom 100px
+    text-align left !important
+    &__text
+        @media (min-width 1000px)
+            margin-bottom 100px
+            font-size 40px
+        margin-bottom 50px
+        font-size 20px
+        color #fff
+        line-height 1.55
+        text-shadow 0px 0px 10px rgba(7, 7, 7, 0.7)
+        width 100%
+        span
+            text-transform uppercase
+            @media (min-width 1000px)
+                font-size 45px
+            font-size 25px
+    &__action
+        @media (min-width 1000px)
+            font-size 18px
+        font-size 16px
+        line-height 1.2em
+        padding 15px
+        border-radius 4px
+        //border 2px solid #fff
+        color #fff
+        display inline-block
+        text-align center
+        background-color #db4d4d 
+        background-image url('../img/offer__action.png'), linear-gradient(0deg, #db4d4d, #e05a5a)
+        background-repeat  no-repeat, no-repeat
+        background-position right 10px center, center
+        background-size 30px, auto
+        cursor pointer
+        transition all .1s linear
+        box-shadow  0px 2px 18px 0px rgba(171, 7, 46, 0.42)
+        position relative
+        padding-right 50px
+        user-select none
+        top 0 
+        &:hover
+            box-shadow  0px 2px 22px 0px rgba(46, 43, 43, 0.63)
+        &:active
+            // background #db4d4d linear-gradient(0deg, #e05a5a, #db4d4d)
+            top 2px       
     
 .btn
     user-select none
@@ -315,8 +348,8 @@
     & .input
         @media (min-width 1015px)
             width 310px
+            margin-right 20px
         width 100%
-        margin-right 20px
         margin-bottom 10px
     & .form__btn
         @media (min-width 1015px)
@@ -525,7 +558,9 @@
         color #000
         line-height 1.2em
         text-align center
-        margin 40px 0
+        @media (min-width 1200px)
+            margin 40px 0
+        margin 0px 0 20px 0
     &__list
         max-width 560px
         font-size 16px
@@ -559,7 +594,9 @@
         background  url('../img/pdf.png') no-repeat right 10px center, linear-gradient( 0deg, #fc4c4c, #ff5959)
         margin-bottom 20px
     &_docs
-        margin-top 100px
+        @media (min-width 1200px)
+            margin-top 100px
+        margin-top 20px
      
 .reviews
     position relative
@@ -991,3 +1028,7 @@
 
 .modal-open
     overflow hidden
+
+#doc
+    img
+        margin-bottom 20px
