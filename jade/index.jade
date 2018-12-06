@@ -39,7 +39,7 @@ body.page
     .container
       .offer 
         .offer__text <span>Водопровод и канализация «под ключ» </span><br> в Ростове-на-Дону и Ростовской области
-        .offer__actionПолучить бесплатную консультацию
+        .offer__action.order Получить бесплатную консультацию
 
   .froze
     .container
@@ -47,9 +47,10 @@ body.page
         .froze__action Запишитесь на бесплатный консультацию  инженера с опытом работы 6 лет
         .froze__description Заполните форму и представитель компании свяжется с вами в течении 40 минут
         +b.form
-          input(placeholder='Введите ваше имя').input.input_type_name
-          input(placeholder='Введите ваш телефон').input.input_type_phone
-          +e.btn Оставить заявку на выезд инженера
+          form.ajax
+            input(placeholder='Введите Ваше имя' name='name').input.input_type_name
+            input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+            input(type='submit' value='Оставить заявку на выезд инженера').form__btn
 
   .triggers
     .container
@@ -249,23 +250,30 @@ body.page
             li Паспорт водомера
         +b.col_lg_5
           +b.wall._docs
-            +e.title Получить список необходимых <br>Вам документов
+            //- +e.title Получить перечень необходимых документов для предоставления ООО «БК Инвент»
+            +e.title Получить перечень документов, которые Вам понадобятся
             +b.form
-              input(placeholder='Введите Ваше имя').input.input_type_name
-              input(placeholder='Введите Ваш телефон').input.input_type_phone
-              input(placeholder='Введите Ваш E-mail').input.input_type_email
-              +e.btn Скачать документ
+              //- input(placeholder='Введите Ваше имя').input.input_type_name
+              //- input(placeholder='Введите Ваш телефон').input.input_type_phone
+              //- input(placeholder='Введите Ваш E-mail').input.input_type_email
+              //- +e.btn Скачать документ
+              form.ajax
+                input(placeholder='Введите Ваше имя' name='name').input.input_type_name
+                input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+                input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
+                input(type="hidden" name="download" value="...")
+                input(type='submit' value='Получить документ').form__btn
     //-+b.btn_style_blue Оставить заявку на консультацию инженера
 
   .reviews
     .container
-      .reviews__title Клиенты о нас
+      .reviews__title Выполненные работы
       .row
         +b.col._xs_12._md_10._md-offset_1
           .slider
             div
               .row
-                +b.col._xs_12._md_6
+                +b.col._xs_12._md_12
                  .reviews__gallery
                     .reviews__img
                         img(src="http://placehold.it/500x250")
@@ -276,9 +284,11 @@ body.page
                         img(src="http://placehold.it/500x250")
                       .reviews__img.reviews__img_size_small
                         img(src="http://placehold.it/500x250")
-                +b.col._xs_12._md_6
-                  .reviews__name Алина Евсеева
-                  .reviews__text Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!
+                      .reviews__img.reviews__img_size_small
+                        img(src="http://placehold.it/500x250")
+                //- +b.col._xs_12._md_6
+                //-   .reviews__name Алина Евсеева
+                //-   .reviews__text Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!
             div 2
             div 3
   
@@ -325,9 +335,10 @@ body.page
         .froze__action Запишитесь на бесплатный консультацию  инженера с опытом работы 6 лет
         .froze__description Заполните форму и представитель компании свяжется с вами в течении 40 минут
         +b.form
-          input(placeholder='Введите ваше имя').input.input_type_name
-          input(placeholder='Введите ваш телефон').input.input_type_phone
-          +e.btn Оставить заявку на выезд инженера
+          form.ajax
+            input(placeholder='Введите Ваше имя' name='name').input.input_type_name
+            input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+            input(type='submit' value='Оставить заявку на выезд инженера').form__btn
 
   .container
     +b.title
@@ -339,7 +350,7 @@ body.page
           .scheme__item.scheme__item_step_1.start-animate
             .scheme__title Заявка
             .scheme__text Вы оставляете заявку или звоните нам по телефону
-            .btn.btn_style_small Оставить заявку
+            .btn.btn_style_small.order Оставить заявку
         +b.col._lg_5
           .scheme__item.scheme__item_step_3(style="animation-delay: 1s").start-animate
             .scheme__title Заключение подрядного договора
@@ -370,7 +381,7 @@ body.page
           .scheme__item.scheme__item_step_1
             .scheme__title Заявка
             .scheme__text Вы оставляете заявку или звоните нам по телефону
-            .btn.btn_style_small Оставить заявку
+            .btn.btn_style_small.order Оставить заявку
         +b.col._sm_6
           .scheme__item.scheme__item_step_2
             .scheme__title Бесплатное обследование объекта
@@ -396,7 +407,7 @@ body.page
   .questions
     .questions__title У вас остались вопросы?
     | Задайте их нашему специалисту!
-  .btn Получить бесплатную консультацию
+  .btn.order Получить бесплатную консультацию
   .map#map
   .footer
     .container
@@ -421,14 +432,32 @@ body.page
               form.ajax
                 input(placeholder='Введите Ваше имя' name='name').input.input_type_name
                 input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
-                input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
                 input(type='submit' value='Заказать звонок').form__btn
+
+  .modal#modal__order
+    .modal__wrapper
+        .modal__dialog
+            .close.modal__close
+            .modal__title Получить бесплатную консультацию
+            +b.form
+              form.ajax
+                input(placeholder='Введите Ваше имя' name='name').input.input_type_name
+                input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+                input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
+                input(type='submit' value='Отправить').form__btn
 
   .modal#modal__ok
     .modal__wrapper
         .modal__dialog
             .close.modal__close
-            .modal__title OK
+            .modal__title <b>ЗАЯВКА ПРИНЯТА!</b> <br>С Вами было приятно работать!
+
+  .modal#modal__download
+    .modal__wrapper
+        .modal__dialog
+            .close.modal__close
+            .modal__title С Вами было приятно работать!
+            a.btn Скачать
 
   .modal.modal_type_zoom#modal__zoom
     .modal__wrapper

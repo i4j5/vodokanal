@@ -244,7 +244,20 @@
 
 .offer
     text-align left !important
+    position relative
     &__text
+        &:after
+            content " "
+            position absolute
+            width 40%
+            height 5px
+            background #fff
+            margin-top 27px
+            @media (min-width 1000px)
+                display block
+            display none
+            margin-top 25px
+            box-shadow 0px 0px 5px rgba(7, 7, 7, 0.7)
         @media (min-width 1000px)
             margin-bottom 100px
             font-size 40px
@@ -354,6 +367,8 @@
     & .form__btn
         @media (min-width 1015px)
             display inline-block !important
+            width auto
+        width 100%
     
 .input
     font-size 16px
@@ -579,17 +594,22 @@
     background #d4d4d4
     border-radius 4px
     margin auto
-    padding 40px
+    @media (min-width 1200px)
+        padding 40px
+    padding 30px 20px 20px 20px
     display table
     &__title
         font-size 18px
         line-height 1.4em
         text-align center
         color #010101
-        margin-bottom 40px
+        @media (min-width 1200px)
+            margin-bottom 40px
+        margin-bottom 20px
     & .input
         margin-bottom 10px
     & .form__btn
+        width 100%
         margin-top 20px
         background  url('../img/pdf.png') no-repeat right 10px center, linear-gradient( 0deg, #fc4c4c, #ff5959)
         margin-bottom 20px
@@ -603,7 +623,7 @@
     width 100%
     background #fff url('../img/reviews-bg.jpg') no-repeat
     background-size cover
-    padding 40px 0 80px 0
+    padding 30px 0 40px 0
     box-shadow inset 0px 2px 18px 0px rgba(0, 0, 0, 0.11)
     margin 60px 0
     &__title
@@ -623,7 +643,7 @@
         line-height 1.6em
         color #1b1b1b
     &__gallery
-        padding-right 30px
+        //padding-right 30px
     &__imgs
         display flex
         justify-content center
@@ -647,7 +667,7 @@
 .bx-pager
     text-align center
     position relative 
-    bottom -50px
+    bottom -30px
 .bx-pager-item
     display inline-block
 .bx-pager-link
@@ -717,9 +737,6 @@
     display none
     @media (min-width 1200px)
         display block
-     
-    
-
     &__item
         // transition all 5s linear
         border-radius 10px 
@@ -799,6 +816,9 @@
                     bottom 0px
                     top -70px
     &_mod_1
+        
+        .scheme__title
+            padding 6px 12px
         display block  
         @media (min-width 1200px)
             display none
@@ -882,8 +902,9 @@
     margin-top 80px
     border-top 3px solid #d8dee5
     width 100%
-    height 400px
-
+    @media (min-width 790px)
+        height 400px
+    height 300px
 .footer
     background #d8dee5
     width 100%
@@ -1003,7 +1024,7 @@
                         
     &__title
         font-size 18px
-        line-height 1.4em
+        line-height 1.7em
         text-align center
         color #010101
         margin-bottom 20px

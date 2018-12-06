@@ -5,7 +5,7 @@
       $('body').addClass('modal-open');
 
       $(this).on('click', function(event){
-        if( $(event.target).is('.modal__close') || $(event.target).is('.modal') ) {
+        if( $(event.target).is('.modal__close') || $(event.target).is('.modal__wrapper') ) {
           event.preventDefault();
           $(this).closeModal();
         }
@@ -26,10 +26,14 @@
 
 $(document).ready(()=>{
 
-	$('.callme, .header .btn').click(function(event) {
+	$('.callme').click(function(event) {
 		$('#modal__callme').openModal()
-		console.log('123sa')
 	})
+
+	$('.order').click(function(event) {
+		$('#modal__order').openModal()
+	})
+
 	$('.zoom').click(function(event) {
 		let img = $(this).data('img');
 		$('#zoom__img').attr('src', 'img/' + img);
@@ -104,6 +108,9 @@ $(document).ready(()=>{
 	        var form = $(form),
 	        str = form.serialize()
 
+
+	        let download = form.children("[name='download']").val()
+
 	        $.ajax({
 	          url: './',
 	          type: 'get',
@@ -111,7 +118,12 @@ $(document).ready(()=>{
 	        })
 	        .done(function() {
 	           $('.modal').closeModal()
-	           $('#modal__ok').openModal()
+	           
+	           if (download) {
+           			$('#modal__download').openModal()
+	           } else {
+           			$('#modal__ok').openModal()
+	           }
 	        })
 	        .always(function() {
 	           // После завершения
@@ -171,9 +183,9 @@ $(document).ready(function(){
   	pager: true,
   	nextText: '',
   	prevText: '',
-  	touchEnabled: false,
+  	// touchEnabled: false,
   	auto: true,
-  	pause: 3000,
+  	pause: 2000,
   	stopAutoOnClick: true,
   	autoHover: true
   });

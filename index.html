@@ -47,7 +47,7 @@
     <div class="container">
       <div class="offer"> 
         <div class="offer__text"><span>Водопровод и канализация «под ключ» </span><br> в Ростове-на-Дону и Ростовской области</div>
-        <div class="offer__action">Получить бесплатную консультацию</div>
+        <div class="offer__action order">Получить бесплатную консультацию</div>
       </div>
     </div>
   </div>
@@ -57,10 +57,11 @@
         <div class="froze__action">Запишитесь на бесплатный консультацию  инженера с опытом работы 6 лет</div>
         <div class="froze__description">Заполните форму и представитель компании свяжется с вами в течении 40 минут</div>
         <div class="form">
-          <input placeholder="Введите ваше имя" class="input input_type_name"/>
-          <input placeholder="Введите ваш телефон" class="input input_type_phone"/>
-          <div class="form__btn">Оставить заявку на выезд инженера
-          </div>
+          <form class="ajax">
+            <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
+            <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+            <input type="submit" value="Оставить заявку на выезд инженера" class="form__btn"/>
+          </form>
         </div>
       </div>
     </div>
@@ -276,14 +277,16 @@
         </div>
         <div class="col col_lg_5">
           <div class="wall wall_docs">
-            <div class="wall__title">Получить список необходимых <br>Вам документов
+            <div class="wall__title">Получить перечень документов, которые Вам понадобятся
             </div>
             <div class="form">
-              <input placeholder="Введите Ваше имя" class="input input_type_name"/>
-              <input placeholder="Введите Ваш телефон" class="input input_type_phone"/>
-              <input placeholder="Введите Ваш E-mail" class="input input_type_email"/>
-              <div class="form__btn">Скачать документ
-              </div>
+              <form class="ajax">
+                <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
+                <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+                <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
+                <input type="hidden" name="download" value="..."/>
+                <input type="submit" value="Получить документ" class="form__btn"/>
+              </form>
             </div>
           </div>
         </div>
@@ -292,25 +295,22 @@
   </div>
   <div class="reviews">
     <div class="container">
-      <div class="reviews__title">Клиенты о нас</div>
+      <div class="reviews__title">Выполненные работы</div>
       <div class="row">
         <div class="col col_xs_12 col_md_10 col_md-offset_1">
           <div class="slider">
             <div>
               <div class="row">
-                <div class="col col_xs_12 col_md_6">
+                <div class="col col_xs_12 col_md_12">
                   <div class="reviews__gallery">
                     <div class="reviews__img"><img src="http://placehold.it/500x250"/></div>
                     <div class="reviews__imgs">
                       <div class="reviews__img reviews__img_size_small"><img src="http://placehold.it/500x250"/></div>
                       <div class="reviews__img reviews__img_size_small"><img src="http://placehold.it/500x250"/></div>
                       <div class="reviews__img reviews__img_size_small"><img src="http://placehold.it/500x250"/></div>
+                      <div class="reviews__img reviews__img_size_small"><img src="http://placehold.it/500x250"/></div>
                     </div>
                   </div>
-                </div>
-                <div class="col col_xs_12 col_md_6">
-                  <div class="reviews__name">Алина Евсеева</div>
-                  <div class="reviews__text">Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!</div>
                 </div>
               </div>
             </div>
@@ -373,10 +373,11 @@
         <div class="froze__action">Запишитесь на бесплатный консультацию  инженера с опытом работы 6 лет</div>
         <div class="froze__description">Заполните форму и представитель компании свяжется с вами в течении 40 минут</div>
         <div class="form">
-          <input placeholder="Введите ваше имя" class="input input_type_name"/>
-          <input placeholder="Введите ваш телефон" class="input input_type_phone"/>
-          <div class="form__btn">Оставить заявку на выезд инженера
-          </div>
+          <form class="ajax">
+            <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
+            <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+            <input type="submit" value="Оставить заявку на выезд инженера" class="form__btn"/>
+          </form>
         </div>
       </div>
     </div>
@@ -394,7 +395,7 @@
           <div class="scheme__item scheme__item_step_1 start-animate">
             <div class="scheme__title">Заявка</div>
             <div class="scheme__text">Вы оставляете заявку или звоните нам по телефону</div>
-            <div class="btn btn_style_small">Оставить заявку</div>
+            <div class="btn btn_style_small order">Оставить заявку</div>
           </div>
         </div>
         <div class="col col_lg_5">
@@ -438,7 +439,7 @@
           <div class="scheme__item scheme__item_step_1">
             <div class="scheme__title">Заявка</div>
             <div class="scheme__text">Вы оставляете заявку или звоните нам по телефону</div>
-            <div class="btn btn_style_small">Оставить заявку</div>
+            <div class="btn btn_style_small order">Оставить заявку</div>
           </div>
         </div>
         <div class="col col_sm_6">
@@ -477,7 +478,7 @@
   <div class="questions">
     <div class="questions__title">У вас остались вопросы?</div>Задайте их нашему специалисту!
   </div>
-  <div class="btn">Получить бесплатную консультацию</div>
+  <div class="btn order">Получить бесплатную консультацию</div>
   <div id="map" class="map"></div>
   <div class="footer">
     <div class="container">
@@ -510,8 +511,23 @@
           <form class="ajax">
             <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
-            <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
             <input type="submit" value="Заказать звонок" class="form__btn"/>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal__order" class="modal">
+    <div class="modal__wrapper">
+      <div class="modal__dialog">
+        <div class="close modal__close"></div>
+        <div class="modal__title">Получить бесплатную консультацию</div>
+        <div class="form">
+          <form class="ajax">
+            <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
+            <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+            <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
+            <input type="submit" value="Отправить" class="form__btn"/>
           </form>
         </div>
       </div>
@@ -521,7 +537,15 @@
     <div class="modal__wrapper">
       <div class="modal__dialog">
         <div class="close modal__close"></div>
-        <div class="modal__title">OK</div>
+        <div class="modal__title"><b>ЗАЯВКА ПРИНЯТА!</b> <br>С Вами было приятно работать!</div>
+      </div>
+    </div>
+  </div>
+  <div id="modal__download" class="modal">
+    <div class="modal__wrapper">
+      <div class="modal__dialog">
+        <div class="close modal__close"></div>
+        <div class="modal__title">С Вами было приятно работать!</div><a class="btn">Скачать</a>
       </div>
     </div>
   </div>
