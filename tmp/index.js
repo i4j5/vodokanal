@@ -167,9 +167,9 @@ $(document).ready(function () {
 		pager: true,
 		nextText: '',
 		prevText: '',
-		// touchEnabled: false,
+		touchEnabled: false,
 		auto: true,
-		pause: 2000,
+		pause: 2800,
 		stopAutoOnClick: true,
 		autoHover: true
 	});
@@ -178,5 +178,7 @@ $(document).ready(function () {
 $(window).on('load', function (e) {
 	window.setTimeout(function () {
 		$('.loader').removeClass('loader_active');
+		$('.offer__text').addClass('animated bounceInLeft finish-animate');
+		$('.offer__action').addClass('animated bounceInRight finish-animate');
 	}, 100);
 });

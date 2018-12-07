@@ -5,9 +5,9 @@ html(lang="ru")
 head
   meta(charset="UTF-8")
   meta(name="viewport" content="width=device-width, initial-scale=1")
-  title Document
+  title ВОДОПРОВОД И КАНАЛИЗАЦИЯ «ПОД КЛЮЧ»
 
-  link(rel='shortcut icon', href='img/fav_64x64_2.png', type='image/x-icon')
+  link(rel='shortcut icon', href='img/fav_64x64_2.png', type='image/png')
   link(rel='apple-touch-icon-precomposed', href='img/fav_57x57_2.png')
   link(rel='apple-touch-icon-precomposed', sizes='114x114', href='img/fav_72x72_2.png')
   link(rel='apple-touch-icon-precomposed', sizes='72x72', href='img/fav_72x72_2.png')
@@ -38,8 +38,8 @@ body.page
   .header
     .container
       .offer 
-        .offer__text <span>Водопровод и канализация «под ключ» </span><br> в Ростове-на-Дону и Ростовской области
-        .offer__action.order Получить бесплатную консультацию
+        .offer__text.start-animate <span>Водопровод и канализация «под ключ» </span><br> в Ростове-на-Дону и Ростовской области
+        .offer__action.order.start-animate(style="animation-delay: .2s") Получить бесплатную консультацию
 
   .froze
     .container
@@ -271,31 +271,59 @@ body.page
       .row
         +b.col._xs_12._md_10._md-offset_1
           .slider
-            div
+            .reviews__gallery
               .row
-                +b.col._xs_12._md_12
-                 .reviews__gallery
-                    .reviews__img
-                        img(src="http://placehold.it/500x250")
-                    .reviews__imgs
-                      .reviews__img.reviews__img_size_small
-                        img(src="http://placehold.it/500x250")
-                      .reviews__img.reviews__img_size_small
-                        img(src="http://placehold.it/500x250")
-                      .reviews__img.reviews__img_size_small
-                        img(src="http://placehold.it/500x250")
-                      .reviews__img.reviews__img_size_small
-                        img(src="http://placehold.it/500x250")
+                +b.col._xs_12._sm_6
+                  .reviews__img
+                      img(src="http://placehold.it/500x250")
+                  .reviews__imgs
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                +b.col._xs_12._sm_6
+                  .reviews__imgs
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                  .reviews__img
+                      img(src="http://placehold.it/500x250")
+            .reviews__gallery
+              .row
+                +b.col._xs_12._sm_6
+                  .reviews__imgs
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                  .reviews__img
+                      img(src="http://placehold.it/500x205")
+                  .reviews__imgs
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                +b.col._xs_12._sm_6
+                  .reviews__imgs
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                    .reviews__img.reviews__img_size_small
+                      img(src="http://placehold.it/500x250")
+                  .reviews__img
+                      img(src="http://placehold.it/500x250")
                 //- +b.col._xs_12._md_6
                 //-   .reviews__name Алина Евсеева
                 //-   .reviews__text Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!
-            div 2
-            div 3
   
   .container
     +b.title
       +e.wrap
-        +e.text Этапы подключени 
+        +e.text Допуски СРО
     .row#doc
       +b.col._xs_6._sm_3
         +b.zoom(style="animation-delay: .2s" data-img="doc1_big.jpg").l.start-animate
