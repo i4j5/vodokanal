@@ -15,7 +15,6 @@ const imagemin = require('gulp-imagemin');
 const clean = require('gulp-clean');
 const babel = require('gulp-babel');
 const webpack = require("webpack");
-
 gulp.task('browser-sync', () => {
     browserSync.init({
         server: {

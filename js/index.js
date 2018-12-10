@@ -26,11 +26,15 @@
 
 $(document).ready(()=>{
 
+	let yatarget = 'order'
+
 	$('.callme').click(function(event) {
+		yatarget = 'callme'
 		$('#modal__callme').openModal()
 	})
 
 	$('.order').click(function(event) {
+		yatarget = 'order'
 		$('#modal__order').openModal()
 	})
 
@@ -108,25 +112,33 @@ $(document).ready(()=>{
 	        var form = $(form),
 	        str = form.serialize()
 
+	        let btn = form.children("[type='submit']")
+	        //let btnText = btn.val()
+	        //btn.val('Обработка...')
+	        btn.prop('disabled',true)
 
 	        let download = form.children("[name='download']").val()
 
 	        $.ajax({
-	          url: './',
-	          type: 'get',
+	          url: 'http://lp.bk-invent.ru/send.php',
+	          type: 'post',
 	          data: str
 	        })
 	        .done(function() {
 	           $('.modal').closeModal()
 	           
 	           if (download) {
+	           		yatarget = 'doc'
            			$('#modal__download').openModal()
 	           } else {
            			$('#modal__ok').openModal()
 	           }
+	           yaCounter51499229.reachGoal(yatarget)
+	           yatarget = 'order'
 	        })
 	        .always(function() {
-	           // После завершения
+			   //btn.val(btnText)
+	           btn.prop('disabled',false)
 	        })
 
 	      },
