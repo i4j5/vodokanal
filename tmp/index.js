@@ -175,18 +175,18 @@ $(document).ready(function () {
 	}
 });
 
-$(document).ready(function () {
-	$('.slider').bxSlider({
-		pager: true,
-		nextText: '',
-		prevText: '',
-		touchEnabled: false,
-		auto: true,
-		pause: 2800,
-		stopAutoOnClick: true,
-		autoHover: true
-	});
-});
+// $(document).ready(function(){
+//   $('.slider').bxSlider({
+//   	pager: true,
+//   	nextText: '',
+//   	prevText: '',
+//   	touchEnabled: false,
+//   	auto: true,
+//   	pause: 2800,
+//   	stopAutoOnClick: true,
+//   	autoHover: true
+//   });
+// });
 
 $(window).on('load', function (e) {
 	window.setTimeout(function () {

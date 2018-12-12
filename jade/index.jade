@@ -44,14 +44,15 @@ body.page
   .froze
     .container
       .froze__container
-        .froze__action Запишитесь на бесплатный консультацию  инженера с опытом работы 6 лет
-        .froze__description Заполните форму и представитель компании свяжется с вами в течении 40 минут
+        .froze__action ЗАПИШИТЕСЬ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ СПЕЦИАЛИСТА ПО ОФОРМЛЕНИЮ ДОКУМЕНТОВ
+        .froze__description Заполните форму, и специалист свяжется с Вами в течение 20 минут
         +b.form
           form.ajax
             input(placeholder='Введите Ваше имя' name='name').input.input_type_name
             input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
-            input(type="hidden" name="order" value="ВК под ключ. Выезд инженера")
-            input(type='submit' value='Оставить заявку на выезд инженера').form__btn
+            input(type="hidden" name="order" value="ВК под ключ. Консультация по документам")
+            input(type='submit' value='Получить консультацию по документам').form__btn
+
 
   .triggers
     .container
@@ -67,7 +68,7 @@ body.page
         +b.col._lg_4._md_4._sm_4._xs_6
           .triggers__items(style="animation-delay: .3s").start-animate
             img(src='img/triggers__img3.png').triggers__img
-            .triggers__text Пдключение<br>за 3 месяца
+            .triggers__text Подключение<br>за 3 месяца
         +b.col._lg_4._md_4._sm_4._xs_6
           .triggers__items(style="animation-delay: .4s").start-animate
             img(src='img/triggers__img4.png').triggers__img
@@ -88,7 +89,7 @@ body.page
       +e.item
         +e.title
           +e.number 1
-          |Сбор документов
+          |Сбор пакета документов
           +e.arrow
         +e.text
           ol
@@ -107,7 +108,7 @@ body.page
           |Получение технических условий
           +e.arrow
         +e.text
-          p Регламентированный срок получения основания для проектирования:
+          p Регламентированный срок получения технических условий и/или договора на подключение:
           ol
             li  Технические условия – 14 рабочих дней
             li  Договор на подключение – 20 рабочих дней
@@ -131,7 +132,7 @@ body.page
       +e.item
         +e.title
           +e.number 3
-          |Получение технических условий
+          |Проектирование и согласование
           +e.arrow
         +e.text
           p Процесс проектирования включает в себя:
@@ -140,7 +141,7 @@ body.page
             li
               | Создание полного пакета чертежей стадии РД (общие данные, план сетей, профиль, таблица колодцев, спецификация)
             li
-              | И согласования со всеми эксплуатирующими инстанциями города, а также администрацией, департаментом автодорог, департаментом окружающей среды и департаментом архитектуры. Таким образом согласования с более 15 организациями.
+              | Согласования со всеми эксплуатирующими инстанциями города, а также администрацией, департаментом автодорог, департаментом окружающей среды и департаментом архитектуры. Таким образом согласования с более 15 организациями.
           //-+b.progress-bar(data-interest="24")
             +e.pace
               +e.interest 
@@ -148,7 +149,7 @@ body.page
       +e.item
         +e.title
           +e.number 4
-          |Получение технических условий
+          |Разрешение на разрытия
           +e.arrow
          +e.text
           p
@@ -156,7 +157,7 @@ body.page
           ul
             li ГИБДД – согласовать схему дорожного движения
             li
-             | Управление благоустройством администрации города – получение ордера на разрытие (по закрытии которого мы получаем справку о благоустройстве, как неотъемлемый документ при сдачи сети в Водоканал.
+             | Управление благоустройством администрации города – получение ордера на разрытие (по закрытии которого мы получаем справку о благоустройстве, как неотъемлемый документ при сдачи сети в Водоканал)
           //-+b.progress-bar(data-interest="58")
             +e.pace
               +e.interest 
@@ -164,7 +165,7 @@ body.page
       +e.item
         +e.title
           +e.number 5
-          |Получение технических условий
+          |Строительно-монтажные работы
           +e.arrow
         +e.text
           p
@@ -184,11 +185,11 @@ body.page
       +e.item
         +e.title
           +e.number 6
-          |Получение технических условий
+          |Сдача сетей в Водоканал
           +e.arrow
         +e.text
           p
-            | Результатом данного процесса является подписание актов со стороны Водоканала и опломбирование счетчика (только для воды).
+            | Результатом данного процесса является подписание актов со стороны Водоканала и опломбирование счетчика
           p Для этого необходимо сдать пакет документов, включающий в себя:
           ul
             li
@@ -198,10 +199,10 @@ body.page
             li Освидетельствования скрытых работ
             li Проект сетей
             li Акт дезинфекции и промывки сетей и внутридомовой системы
-            li Протокол лабораторных исследований (только вода)
+            li Протокол лабораторных исследований
             li Копия паспорта водомера (вода)
           p
-            | После чего инспектор Водоканала выезжает на объект, проверяет качество, сопоставляет с проектом и пломбирует счетчик (только вода) и выдает акт.
+            | После чего инспектор Водоканала выезжает на объект, проверяет качество, сопоставляет с проектом и пломбирует счетчик и выдает акт.
           //-+b.progress-bar(data-interest="86")
             +e.pace
               +e.interest 
@@ -209,19 +210,20 @@ body.page
       +e.item
         +e.title
           +e.number 7
-          |Получение технических условий
+          |Получение лицевого счета 
           +e.arrow
         +e.text
           p
-            | После приемки инспектором сетей, необходимо подать пакет документов, который состоит из правоустанавливающих документов:
+            | После приемки инспектором сетей, необходимо подать следующий пакет документов:
           ul
-            li Технического паспорта на дом,
-            li Подлинника паспорта водомера,
-            li Справка о количестве граждан,
-            li Зарегистрированных по адресу,
             li Разрешение совладельцев (при необходимости).
-          p
-            | Результатом всего цикла работ является  — ваше комфортное пользование коммуникациями и получение квитанций от водоканала на оплату!
+            li Правоустанавливающие документы на землю и дом
+            li Документ-основания права (договор купли продажи, договор дарения и т.д.)
+            li Технический паспорт на дом
+            li Паспорт водомера
+            li Разрешение совладельцев (при наличии таковых)
+          p(style="padding-top: 14px; line-height: 1.5em;")
+            b Результатом всего цикла работ является  — ваше комфортное пользование коммуникациями и получение квитанций от водоканала на оплату!
           //-+b.progress-bar(data-interest="100")
             +e.pace
               +e.interest 
@@ -252,7 +254,7 @@ body.page
         +b.col_lg_5
           +b.wall._docs
             //- +e.title Получить перечень необходимых документов для предоставления ООО «БК Инвент»
-            +e.title Получить перечень документов, которые Вам понадобятся
+            +e.title Перечень документов, которые нужны от Вас
             +b.form
               //- input(placeholder='Введите Ваше имя').input.input_type_name
               //- input(placeholder='Введите Ваш телефон').input.input_type_phone
@@ -264,60 +266,101 @@ body.page
                 input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
                 input(type="hidden" name="download" value="...")
                 input(type="hidden" name="order" value="ВК под ключ")
-                input(type='submit' value='Получить документ').form__btn
+                input(type='submit' value='Получить список документов').form__btn
     //-+b.btn_style_blue Оставить заявку на консультацию инженера
 
   .reviews
     .container
       .reviews__title Выполненные работы
-      .row
-        +b.col._xs_12._md_10._md-offset_1
-          .slider
-            .reviews__gallery
-              .row
-                +b.col._xs_12._sm_6
-                  .reviews__img
-                      img(src="http://placehold.it/500x250")
-                  .reviews__imgs
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                +b.col._xs_12._sm_6
-                  .reviews__imgs
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                  .reviews__img
-                      img(src="http://placehold.it/500x250")
-            .reviews__gallery
-              .row
-                +b.col._xs_12._sm_6
-                  .reviews__imgs
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                  .reviews__img
-                      img(src="http://placehold.it/500x205")
-                  .reviews__imgs
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                +b.col._xs_12._sm_6
-                  .reviews__imgs
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                    .reviews__img.reviews__img_size_small
-                      img(src="http://placehold.it/500x250")
-                  .reviews__img
-                      img(src="http://placehold.it/500x250")
+      div(style="text-align: center")
+        +b.zoom(data-img="case1.jpg")
+          img(src="img/case1_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case2.jpg")
+          img(src="img/case2_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case3.jpg")
+          img(src="img/case3_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case4.jpg")
+          img(src="img/case4_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case5.jpg")
+          img(src="img/case5_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case6.jpg")
+          img(src="img/case6_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case7.jpg")
+          img(src="img/case7_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case8.jpg")
+          img(src="img/case8_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case9.jpg")
+          img(src="img/case9_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case10.jpg")
+          img(src="img/case10_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case11.jpg")
+          img(src="img/case11_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case12.jpg")
+          img(src="img/case12_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case13.jpg")
+          img(src="img/case13_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case14.jpg")
+          img(src="img/case14_mini.jpg")
+          +e.icon
+        +b.zoom(data-img="case15.jpg")
+          img(src="img/case15_mini.jpg")
+          +e.icon 
+      //-   +b.col._xs_12._md_10._md-offset_1
+      //-     .slider
+      //-       .reviews__gallery
+      //-         .row
+      //-           +b.col._xs_12._sm_6
+      //-             .reviews__img
+      //-                 img(src="img/case1_mini.jpg")
+      //-             .reviews__imgs
+      //-           +b.col._xs_12._sm_6
+      //-             .reviews__imgs
+      //-               .reviews__img.reviews__img_size_small
+      //-                 img(src="img/case2_mini.jpg")
+      //-               .reviews__img.reviews__img_size_small
+      //-                 img(src="img/case3_mini.jpg")
+      //-             .reviews__img
+      //-                 img(src="http://placehold.it/500x250")
+      //-       .reviews__gallery
+      //-         .row
+      //-           +b.col._xs_12._sm_6
+      //-             .reviews__imgs
+      //-               .reviews__img.reviews__img_size_small
+      //-                 img(src="http://placehold.it/500x250")
+      //-               .reviews__img.reviews__img_size_small
+      //-                 img(src="http://placehold.it/500x250")
+      //-               .reviews__img.reviews__img_size_small
+      //-                 img(src="http://placehold.it/500x250")
+      //-             .reviews__img
+      //-                 img(src="http://placehold.it/500x205")
+      //-             .reviews__imgs
+      //-               .reviews__img.reviews__img_size_small
+      //-                 img(src="http://placehold.it/500x250")
+      //-               .reviews__img.reviews__img_size_small
+      //-                 img(src="http://placehold.it/500x250")
+      //-               .reviews__img.reviews__img_size_small
+      //-                 img(src="http://placehold.it/500x250")
+      //-           +b.col._xs_12._sm_6
+      //-             .reviews__imgs
+      //-               .reviews__img.reviews__img_size_small
+      //-                 img(src="http://placehold.it/500x250")
+      //-               .reviews__img.reviews__img_size_small
+      //-                 img(src="http://placehold.it/500x250")
+      //-             .reviews__img
+      //-                 img(src="http://placehold.it/500x250")
                 //- +b.col._xs_12._md_6
                 //-   .reviews__name Алина Евсеева
                 //-   .reviews__text Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!
@@ -362,14 +405,14 @@ body.page
   .froze
     .container
       .froze__container
-        .froze__action Запишитесь на бесплатный консультацию  инженера с опытом работы 6 лет
-        .froze__description Заполните форму и представитель компании свяжется с вами в течении 40 минут
+        .froze__action ЗАПИШИТЕСЬ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ СПЕЦИАЛИСТА ПО ОФОРМЛЕНИЮ ДОКУМЕНТОВ
+        .froze__description Заполните форму, и специалист свяжется с Вами в течение 20 минут
         +b.form
           form.ajax
             input(placeholder='Введите Ваше имя' name='name').input.input_type_name
             input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
-            input(type="hidden" name="order" value="ВК под ключ. Выезд инженера")
-            input(type='submit' value='Оставить заявку на выезд инженера').form__btn
+            input(type="hidden" name="order" value="ВК под ключ. Консультация по документам")
+            input(type='submit' value='Получить консультацию по документам').form__btn
 
   .container
     +b.title
@@ -390,7 +433,7 @@ body.page
         +b.col._lg_3
           .scheme__item.scheme__item_step_5(style="animation-delay: 2s").start-animate
             .scheme__title Осуществление работ
-            .scheme__text Проводим необходимые работы по строительству и монтажу
+            .scheme__text Проводим необходимые работы по проектированию и монтажу
       .scheme__progress-bar
       .row
         +b.col._lg_5
@@ -404,7 +447,7 @@ body.page
         +b.col._lg_3
           .scheme__item.scheme__item_step_6(style="animation-delay: 2.5s").start-animate
             .scheme__title Получение лицевого счета
-            .scheme__text Гарантируем, что вы получите все необходимые разрешения во всех инстанциях
+            .scheme__text Гарантируем, что вы получите лицевой счет на водоснабжение и канализацию
 
     .scheme.scheme_mod_1
       .row
@@ -429,11 +472,11 @@ body.page
         +b.col._sm_6
           .scheme__item.scheme__item_step_5
             .scheme__title Осуществление работ
-            .scheme__text Проводим необходимые работы по строительству и монтажу
+            .scheme__text Проводим необходимые работы по проектированию и монтажу
         +b.col._sm_6
           .scheme__item.scheme__item_step_6
             .scheme__title Получение лицевого счета
-            .scheme__text Гарантируем, что вы получите все необходимые разрешения во всех инстанциях
+            .scheme__text Гарантируем, что вы получите лицевой счет на водоснабжение и канализацию
 
   .questions
     .questions__title У вас остались вопросы?
@@ -448,10 +491,10 @@ body.page
         +b.col_sm_4
           .footer__contact.footer__contact_type_call
             +b.phone-grup._footer 
-              +e.phone 8 (863) 308-45-38
-              +e.text Пн.- пт. с 9:00 до 18:00
+              +e.phone 8 (863) 303-38-33
+              +e.text Пн.- пт. с 9:00 до 18:00<br>Сб. с 10:00 до 16:00
         +b.col_sm_4
-          .footer__contact.footer__contact_type_mail info@bk-invent.ru
+          .footer__contact.footer__contact_type_mail order@bk-invent.ru
 
 
   .modal#modal__callme
@@ -463,7 +506,7 @@ body.page
               form.ajax
                 input(placeholder='Введите Ваше имя' name='name').input.input_type_name
                 input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
-                input(type="hidden" name="order" value="ВК под ключ")
+                input(type="hidden" name="order" value="ВК под ключ. Заказ звонка")
                 input(type='submit' value='Заказать звонок').form__btn
 
   .modal#modal__order
@@ -483,14 +526,14 @@ body.page
     .modal__wrapper
         .modal__dialog
             .close.modal__close
-            .modal__title <b>ЗАЯВКА ПРИНЯТА!</b> <br>С Вами было приятно работать!
+            .modal__title <b>Ваша заявка принята</b> <br>Наш специалист свяжется с вами в течении 20 минут
 
   .modal#modal__download
     .modal__wrapper
         .modal__dialog
             .close.modal__close
-            .modal__title С Вами было приятно работать!
-            a.btn Скачать
+            .modal__title Документы можно скачать по ссылке
+            a(href="http://lp.bk-invent.ru/docs.pdf" target="_blank").btn Скачать
 
   .modal.modal_type_zoom#modal__zoom
     .modal__wrapper
@@ -502,7 +545,7 @@ body.page
   //build:js js/all.js
   script(src="node_modules/jquery/dist/jquery.min.js")
   script(src="node_modules/waypoints/lib/jquery.waypoints.min.js")
-  script(src="node_modules/bxslider/dist/jquery.bxslider.min.js")
+  //- script(src="node_modules/bxslider/dist/jquery.bxslider.min.js")
   script(src="node_modules/jquery-validation/dist/jquery.validate.min.js")
   script(src="tmp/index.js")
   //endbuild

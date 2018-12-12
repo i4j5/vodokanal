@@ -627,6 +627,14 @@
     padding 30px 0 40px 0
     box-shadow inset 0px 2px 18px 0px rgba(0, 0, 0, 0.11)
     margin 60px 0
+    & .zoom
+        height auto
+        display inline-block
+        margin 5px
+        img 
+            margin 0
+            width 200px
+            height 200px
     & .col
         padding-left 3px
         padding-right 3px
@@ -635,7 +643,7 @@
         line-height 1.2em
         color #000
         text-align center
-        margin-bottom 40px
+        margin-bottom 30px
     &__name
         font-size 17px 
         line-height 1em
@@ -669,41 +677,41 @@
             width 100%
             
 //slider
-.bx-pager
-    text-align center
-    position relative 
-    bottom -30px
-.bx-pager-item
-    display inline-block
-.bx-pager-link
-    border 2px solid #929292
-    width 18px 
-    height 18px
-    border-radius 20px
-    font-size 0
-    line-height 0
-    display block
-    background #fff
-    &.active
-        background #929292
-    float left
-    margin 10px
-.bx-prev    
-.bx-next
-    display none
-    @media (min-width 1080px)
-        display block
-    width 40px
-    height 76px
-    position absolute
-    top calc(50% - 38px)
+// .bx-pager
+//     text-align center
+//     position relative 
+//     bottom -30px
+// .bx-pager-item
+//     display inline-block
+// .bx-pager-link
+//     border 2px solid #929292
+//     width 18px 
+//     height 18px
+//     border-radius 20px
+//     font-size 0
+//     line-height 0
+//     display block
+//     background #fff
+//     &.active
+//         background #929292
+//     float left
+//     margin 10px
+// .bx-prev    
+// .bx-next
+//     display none
+//     @media (min-width 1080px)
+//         display block
+//     width 40px
+//     height 76px
+//     position absolute
+//     top calc(50% - 38px)
 
-.bx-prev
-    background url('../img/bx-prev.png')   
-    left -80px 
-.bx-next
-    background url('../img/bx-next.png')
-    right -80px
+// .bx-prev
+//     background url('../img/bx-prev.png')   
+//     left -80px 
+// .bx-next
+//     background url('../img/bx-next.png')
+//     right -80px
     
 .logos
     //@media (min-width 770px)
