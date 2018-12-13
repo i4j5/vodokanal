@@ -104,6 +104,8 @@ $(document).ready(function () {
 			submitHandler: function submitHandler(form, e) {
 				e.preventDefault();
 
+				$('.loader_submit').addClass('loader_active');
+
 				var form = $(form),
 				    str = form.serialize();
 
@@ -131,6 +133,7 @@ $(document).ready(function () {
 					yatarget = 'order';
 				}).always(function () {
 					//btn.val(btnText)
+					$('.loader_submit').removeClass('loader_active');
 					btn.prop('disabled', false);
 				});
 			},
