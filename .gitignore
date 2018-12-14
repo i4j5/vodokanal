@@ -1,5 +1,7 @@
 node_modules
 .DS_Store
 build
-app/tmp
-app/*.html
+dist
+app
+tmp
+*.html
