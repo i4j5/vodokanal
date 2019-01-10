@@ -1,3 +1,33 @@
+<?php
+
+$utm_medium = '-';
+$utm_source = '-';
+$utm_campaign = '-';
+$utm_term = '-';
+$utm_content = '-';
+
+if (isset($_GET['utm_medium'])) {
+  $utm_medium = $_GET['utm_medium'];
+}
+
+if (isset($_GET['utm_source'])) {
+  $utm_source = $_GET['utm_source'];
+}
+
+if (isset($_GET['utm_campaign'])) {
+  $utm_campaign = $_GET['utm_campaign'];
+}
+
+if (isset($_GET['utm_term'])) {
+  $utm_term = $_GET['utm_term'];
+}
+
+if (isset($_GET['utm_content'])) {
+  $utm_content = $_GET['utm_content'];
+}
+$url = $_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+$utm =  $_SERVER["QUERY_STRING"];
+?>
 <!DOCTYPE html>
 <html lang="ru"></html>
 <head>
@@ -64,6 +94,13 @@
           <form class="ajax">
             <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+            <input type="hidden" name="url" value="<?echo $url?>"/>
+<input type="hidden" name="utm" value="<?echo $utm?>"/>
+<input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+<input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+<input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+<input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+<input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
             <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
             <input type="submit" value="Получить консультацию по документам" class="form__btn"/>
           </form>
@@ -291,6 +328,13 @@
                 <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
                 <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
                 <input type="hidden" name="download" value="..."/>
+                <input type="hidden" name="url" value="<?echo $url?>"/>
+<input type="hidden" name="utm" value="<?echo $utm?>"/>
+<input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+<input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+<input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+<input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+<input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
                 <input type="hidden" name="order" value="ВК под ключ"/>
                 <input type="submit" value="Получить список документов" class="form__btn"/>
               </form>
@@ -303,66 +347,46 @@
   <div class="reviews">
     <div class="container">
       <div class="reviews__title">Выполненные работы</div>
-      <div style="text-align: center">
+      <div style="text-align: center;max-width: 1040px;margin: auto;">
         <div data-img="case1.jpg" class="zoom"><img src="img/case1_mini.jpg"/>
           <div class="zoom__icon">
           </div>
+          <div class="reviews__text">Прокладка водоотведения,<br> г.Ростов-на-Дону,<br>ул. Профсоюзная, 29</div>
         </div>
         <div data-img="case2.jpg" class="zoom"><img src="img/case2_mini.jpg"/>
           <div class="zoom__icon">
           </div>
+          <div class="reviews__text">Прокладка водоснабжения, <br>г.Ростов-на-Дону,<br> ул. Республиканская, 181</div>
         </div>
         <div data-img="case3.jpg" class="zoom"><img src="img/case3_mini.jpg"/>
           <div class="zoom__icon">
           </div>
-        </div>
-        <div data-img="case4.jpg" class="zoom"><img src="img/case4_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
+          <div class="reviews__text">Прокладка водоотведения,<br> г.Ростов-на-Дону, <br>ул. Мильчакова, 83</div>
         </div>
         <div data-img="case5.jpg" class="zoom"><img src="img/case5_mini.jpg"/>
           <div class="zoom__icon">
           </div>
-        </div>
-        <div data-img="case6.jpg" class="zoom"><img src="img/case6_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
+          <div class="reviews__text">Прокладка водовода, <br>ул. Скачкова, ЖК Акварель</div>
         </div>
         <div data-img="case7.jpg" class="zoom"><img src="img/case7_mini.jpg"/>
           <div class="zoom__icon">
           </div>
+          <div class="reviews__text">Устройство канализации,<br>ул.Неклиновская, 18</div>
         </div>
         <div data-img="case8.jpg" class="zoom"><img src="img/case8_mini.jpg"/>
           <div class="zoom__icon">
           </div>
-        </div>
-        <div data-img="case9.jpg" class="zoom"><img src="img/case9_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
+          <div class="reviews__text">Устройство водопровода, <br>ЖК Военвед Сити</div>
         </div>
         <div data-img="case10.jpg" class="zoom"><img src="img/case10_mini.jpg"/>
           <div class="zoom__icon">
           </div>
+          <div class="reviews__text"> Врезка в трубу диаметром<br> 300 под давлением, <br>ул. Витебская, 12</div>
         </div>
         <div data-img="case11.jpg" class="zoom"><img src="img/case11_mini.jpg"/>
           <div class="zoom__icon">
           </div>
-        </div>
-        <div data-img="case12.jpg" class="zoom"><img src="img/case12_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case13.jpg" class="zoom"><img src="img/case13_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case14.jpg" class="zoom"><img src="img/case14_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case15.jpg" class="zoom"><img src="img/case15_mini.jpg"/>
-          <div class="zoom__icon"> 
-          </div>
+          <div class="reviews__text">Устройство водопровода, <br>ул. Пескова, 87 убрать</div>
         </div>
       </div>
     </div>
@@ -422,6 +446,13 @@
           <form class="ajax">
             <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+            <input type="hidden" name="url" value="<?echo $url?>"/>
+<input type="hidden" name="utm" value="<?echo $utm?>"/>
+<input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+<input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+<input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+<input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+<input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
             <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
             <input type="submit" value="Получить консультацию по документам" class="form__btn"/>
           </form>
@@ -558,6 +589,13 @@
           <form class="ajax">
             <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+            <input type="hidden" name="url" value="<?echo $url?>"/>
+<input type="hidden" name="utm" value="<?echo $utm?>"/>
+<input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+<input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+<input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+<input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+<input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
             <input type="hidden" name="order" value="ВК под ключ. Заказ звонка"/>
             <input type="submit" value="Заказать звонок" class="form__btn"/>
           </form>
@@ -575,6 +613,13 @@
             <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
             <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
+            <input type="hidden" name="url" value="<?echo $url?>"/>
+<input type="hidden" name="utm" value="<?echo $utm?>"/>
+<input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+<input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+<input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+<input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+<input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
             <input type="hidden" name="order" value="ВК под ключ. Консультация"/>
             <input type="submit" value="Отправить" class="form__btn"/>
           </form>
