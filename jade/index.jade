@@ -1,5 +1,37 @@
 include ../node_modules/bemto.jade/bemto
 
+//
+  <?php
+
+  $utm_medium = '-';
+  $utm_source = '-';
+  $utm_campaign = '-';
+  $utm_term = '-';
+  $utm_content = '-';
+
+  if (isset($_GET['utm_medium'])) {
+    $utm_medium = $_GET['utm_medium'];
+  }
+
+  if (isset($_GET['utm_source'])) {
+    $utm_source = $_GET['utm_source'];
+  }
+
+  if (isset($_GET['utm_campaign'])) {
+    $utm_campaign = $_GET['utm_campaign'];
+  }
+
+  if (isset($_GET['utm_term'])) {
+    $utm_term = $_GET['utm_term'];
+  }
+
+  if (isset($_GET['utm_content'])) {
+    $utm_content = $_GET['utm_content'];
+  }
+  $url = $_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+  $utm =  $_SERVER["QUERY_STRING"];
+  ?>
+
 <!DOCTYPE html>
 html(lang="ru")
 head
@@ -40,7 +72,7 @@ body.page
             +e.text ПРОЕКТНО-СТРОИТЕЛЬНАЯ<br>КОМПАНИЯ
         +b.col._lg_4._lg-offset_4._md_5._md-offset_3._sm_7._xs_6
           +b.phone-grup 
-            +e.phone 8 (863) 303-38-33
+            +e.phone.primegate-phone 8 (863) 303-38-33
             +e.text Пн.- пт. с 9:00 до 18:00<br>Сб. с 10:00 до 16:00
           +b.callme Заказать звонок
   .header
@@ -59,6 +91,13 @@ body.page
             input(placeholder='Введите Ваше имя' name='name').input.input_type_name
             input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
             input(type="hidden" name="order" value="ВК под ключ. Консультация по документам")
+            input(type='hidden', name='url', value!="<?echo $url?>")
+            input(type='hidden', name='utm', value!="<?echo $utm?>")
+            input(type='hidden', name='utm_term', value!="<?echo $utm_term?>")
+            input(type='hidden', name='utm_campaign', value!="<?echo $utm_campaign?>")
+            input(type='hidden', name='utm_source', value!="<?echo $utm_source?>")
+            input(type='hidden', name='utm_medium', value!="<?echo $utm_medium?>")
+            input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
             input(type='submit' value='Получить консультацию по документам').form__btn
 
 
@@ -89,6 +128,64 @@ body.page
           .triggers__items(style="animation-delay: .6s").start-animate
             img(src='img/triggers__img6.png').triggers__img
             .triggers__text Цены ниже<br>среднерыночных<br> на 7-12%
+  
+
+  .stock
+    .container
+      .row
+        +b.col._lg_6._md_6._sm_12._xs_12._lg-offset_1
+            
+          .stock__title
+            span Внимание 
+            | акция!
+          .stock__text
+            |При заказе услуги - 
+            |<span> Водопровод и/или канализация “Под Ключ”</span> 
+            br
+            |до
+            span(id="data-s")
+            br
+            |для Вас  абсолютно <span>БЕСПЛАТНО:</span>
+            ul
+              li Выезд инженера на исследование объекта, снятие исходных данных, замеры с дальнейшим составлением сметы 
+              li Юстификация перечня документов, используемых в ходе всех этапов работ
+              li Расчет баланса водопотребления и водоотведения 
+              li Подготовка ситуационного плана - схемы земельного участка, оформленная по условным обозначениям, предусмотренным для масштабов 1:1000-1:5000 
+              li Предоставление архивной топографической съемки с указанием всех подземных и надземных коммуникаций 
+              li По завершении работы формирование рабочей папки и БОНУС - полное описание рабочего процесса в ходе реализации проекта. 
+
+          +b.timer
+            #timer
+              +e.action До конца акции осталось:
+              .digits
+            //- +e.el
+            //-   +e.numeral 33
+            //-   +e.text дней
+            //- +e.el
+            //-   +e.numeral 33
+            //-   +e.text часов
+            //- +e.el
+            //-   +e.numeral 33
+            //-   +e.text минут
+        +b.col._lg_5._md_6._sm_12._xs_12
+          .wall
+            .wall__title Заполните форму, чтобы<br>поучаствовать в акции
+            .form
+              form.ajax
+                input(placeholder='Введите Ваше имя' name='name').input.input_type_name
+                input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+                input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
+                input(type='hidden', name='order', value='ВК под ключ. Акция')
+                input(type='hidden', name='url', value!="<?echo $url?>")
+                input(type='hidden', name='utm', value!="<?echo $utm?>")
+                input(type='hidden', name='utm_term', value!="<?echo $utm_term?>")
+                input(type='hidden', name='utm_campaign', value!="<?echo $utm_campaign?>")
+                input(type='hidden', name='utm_source', value!="<?echo $utm_source?>")
+                input(type='hidden', name='utm_medium', value!="<?echo $utm_medium?>")
+                input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
+                input(type='submit' value='Отправить' style="background: linear-gradient(0deg,#fc4c4c,#ff5959);").form__btn
+
+
   .container
     +b.title
       +e.wrap
@@ -274,6 +371,13 @@ body.page
                 input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
                 input(type="hidden" name="download" value="...")
                 input(type="hidden" name="order" value="ВК под ключ")
+                input(type='hidden', name='url', value!="<?echo $url?>")
+                input(type='hidden', name='utm', value!="<?echo $utm?>")
+                input(type='hidden', name='utm_term', value!="<?echo $utm_term?>")
+                input(type='hidden', name='utm_campaign', value!="<?echo $utm_campaign?>")
+                input(type='hidden', name='utm_source', value!="<?echo $utm_source?>")
+                input(type='hidden', name='utm_medium', value!="<?echo $utm_medium?>")
+                input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
                 input(type='submit' value='Получить список документов').form__btn
     //-+b.btn_style_blue Оставить заявку на консультацию инженера
 
@@ -430,6 +534,13 @@ body.page
             input(placeholder='Введите Ваше имя' name='name').input.input_type_name
             input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
             input(type="hidden" name="order" value="ВК под ключ. Консультация по документам")
+            input(type='hidden', name='url', value!="<?echo $url?>")
+            input(type='hidden', name='utm', value!="<?echo $utm?>")
+            input(type='hidden', name='utm_term', value!="<?echo $utm_term?>")
+            input(type='hidden', name='utm_campaign', value!="<?echo $utm_campaign?>")
+            input(type='hidden', name='utm_source', value!="<?echo $utm_source?>")
+            input(type='hidden', name='utm_medium', value!="<?echo $utm_medium?>")
+            input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
             input(type='submit' value='Получить консультацию по документам').form__btn
 
   .container
@@ -509,7 +620,7 @@ body.page
         +b.col_sm_4
           .footer__contact.footer__contact_type_call
             +b.phone-grup._footer 
-              +e.phone 8 (863) 303-38-33
+              +e.phone.primegate-phone 8 (863) 303-38-33
               +e.text Пн.- пт. с 9:00 до 18:00<br>Сб. с 10:00 до 16:00
         +b.col_sm_4
           .footer__contact.footer__contact_type_mail order@bk-invent.ru
@@ -525,6 +636,13 @@ body.page
                 input(placeholder='Введите Ваше имя' name='name').input.input_type_name
                 input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
                 input(type="hidden" name="order" value="ВК под ключ. Заказ звонка")
+                input(type='hidden', name='url', value!="<?echo $url?>")
+                input(type='hidden', name='utm', value!="<?echo $utm?>")
+                input(type='hidden', name='utm_term', value!="<?echo $utm_term?>")
+                input(type='hidden', name='utm_campaign', value!="<?echo $utm_campaign?>")
+                input(type='hidden', name='utm_source', value!="<?echo $utm_source?>")
+                input(type='hidden', name='utm_medium', value!="<?echo $utm_medium?>")
+                input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
                 input(type='submit' value='Заказать звонок').form__btn
 
   .modal#modal__order
@@ -538,6 +656,13 @@ body.page
                 input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
                 input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
                 input(type="hidden" name="order" value="ВК под ключ. Консультация")
+                input(type='hidden', name='url', value!="<?echo $url?>")
+                input(type='hidden', name='utm', value!="<?echo $utm?>")
+                input(type='hidden', name='utm_term', value!="<?echo $utm_term?>")
+                input(type='hidden', name='utm_campaign', value!="<?echo $utm_campaign?>")
+                input(type='hidden', name='utm_source', value!="<?echo $utm_source?>")
+                input(type='hidden', name='utm_medium', value!="<?echo $utm_medium?>")
+                input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
                 input(type='submit' value='Отправить').form__btn
 
   .modal#modal__ok
@@ -567,6 +692,22 @@ body.page
   script(src="node_modules/jquery-validation/dist/jquery.validate.min.js")
   script(src="tmp/index.js")
   //endbuild
+  script(type='text/javascript').
+    (function () {
+    var pg = document.createElement('script');
+    var protocol = 'https:' == document.location.protocol ? 'https://' : 'http://';
+    pg.src = protocol + 'js.primegate.ru/primegate.min.js'; pg.setAttribute('async', 'true');
+    document.documentElement.getElementsByTagName('head')[0].appendChild(pg);
+    PrimeGate = {}; window.pg = []; components = ['init', 'track', 'identify'];
+    for (var i in components) {
+        PrimeGate[components[i]] = (function(component) {
+            return function () {
+                window.pg.push(component, [].slice.call(arguments, 0));
+      }
+    }(components[i]));
+    }
+    })();
+    PrimeGate.init(1548413692);
   script(type='text/javascript').
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})

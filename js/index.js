@@ -26,6 +26,42 @@
 
 $(document).ready(()=>{
 
+
+	let now = new Date();
+
+	let endTS = now.getTime() + 300176000;
+
+
+	$('#data-s').html( ' ' + (new Date(endTS).toISOString()).replace(/^([^T]+)T(.+)$/,'$1') .replace(/^(\d+)-(\d+)-(\d+)$/,'$3.$2.$1') )
+	setInterval(function(){
+	now = new Date();
+	let totalRemains = (endTS-now.getTime());
+	if (totalRemains>1){ 
+	    let RemainsSec=(parseInt(totalRemains/1000)); 
+	    let RemainsFullDays=(parseInt(RemainsSec/(24*60*60))); 
+	    let secInLastDay=RemainsSec-RemainsFullDays*24*3600; 
+	    let RemainsFullHours=(parseInt(secInLastDay/3600)); 
+	    if (RemainsFullHours<10){RemainsFullHours="0"+RemainsFullHours}; 
+	    let secInLastHour=secInLastDay-RemainsFullHours*3600; 
+	    let RemainsMinutes=(parseInt(secInLastHour/60)); 
+	    if (RemainsMinutes<10){RemainsMinutes="0"+RemainsMinutes}; 
+	    let lastSec=secInLastHour-RemainsMinutes*60; 
+	    if (lastSec<10){lastSec="0"+lastSec}; 
+	    if (RemainsFullDays<10){RemainsFullDays="0"+RemainsFullDays};
+	    let str = `<div class='timer__el'><div class='timer__numeral'>${RemainsFullDays}</div><div class='timer__text'>Дней</div></div>`
+	    str =  str + `<div class='timer__el'><div class='timer__numeral'>${RemainsFullHours}</div><div class='timer__text'>Часов</div></div>`
+	    str = str + `<div class='timer__el'><div class='timer__numeral'>${RemainsMinutes}</div><div class='timer__text'>Минуты</div></div>`
+	    str = str + `<div class='timer__el'><div class='timer__numeral'>${lastSec}</div><div class='timer__text'>Секунды</div></div>`
+	    $('.digits').html(str)
+
+	    //$('.digits').html("<span>"+RemainsFullDays+"<div>Дней</div></span> <span>"+RemainsFullHours+"<div>Часов</div></span> <span>"+RemainsMinutes+"<div>Минуты</div></span> <span class='red'>"+lastSec+"<div>Секунды</div></span>");
+	} 
+	else {$("#timer").remove();} 
+	},1000);
+
+
+
+
 	let yatarget = 'order'
 
 	$('.callme').click(function(event) {

@@ -25,6 +25,46 @@
 
 $(document).ready(function () {
 
+	var now = new Date();
+
+	var endTS = now.getTime() + 300176000;
+
+	$('#data-s').html(' ' + new Date(endTS).toISOString().replace(/^([^T]+)T(.+)$/, '$1').replace(/^(\d+)-(\d+)-(\d+)$/, '$3.$2.$1'));
+	setInterval(function () {
+		now = new Date();
+		var totalRemains = endTS - now.getTime();
+		if (totalRemains > 1) {
+			var RemainsSec = parseInt(totalRemains / 1000);
+			var RemainsFullDays = parseInt(RemainsSec / (24 * 60 * 60));
+			var secInLastDay = RemainsSec - RemainsFullDays * 24 * 3600;
+			var RemainsFullHours = parseInt(secInLastDay / 3600);
+			if (RemainsFullHours < 10) {
+				RemainsFullHours = "0" + RemainsFullHours;
+			};
+			var secInLastHour = secInLastDay - RemainsFullHours * 3600;
+			var RemainsMinutes = parseInt(secInLastHour / 60);
+			if (RemainsMinutes < 10) {
+				RemainsMinutes = "0" + RemainsMinutes;
+			};
+			var lastSec = secInLastHour - RemainsMinutes * 60;
+			if (lastSec < 10) {
+				lastSec = "0" + lastSec;
+			};
+			if (RemainsFullDays < 10) {
+				RemainsFullDays = "0" + RemainsFullDays;
+			};
+			var str = '<div class=\'timer__el\'><div class=\'timer__numeral\'>' + RemainsFullDays + '</div><div class=\'timer__text\'>\u0414\u043D\u0435\u0439</div></div>';
+			str = str + ('<div class=\'timer__el\'><div class=\'timer__numeral\'>' + RemainsFullHours + '</div><div class=\'timer__text\'>\u0427\u0430\u0441\u043E\u0432</div></div>');
+			str = str + ('<div class=\'timer__el\'><div class=\'timer__numeral\'>' + RemainsMinutes + '</div><div class=\'timer__text\'>\u041C\u0438\u043D\u0443\u0442\u044B</div></div>');
+			str = str + ('<div class=\'timer__el\'><div class=\'timer__numeral\'>' + lastSec + '</div><div class=\'timer__text\'>\u0421\u0435\u043A\u0443\u043D\u0434\u044B</div></div>');
+			$('.digits').html(str);
+
+			//$('.digits').html("<span>"+RemainsFullDays+"<div>Дней</div></span> <span>"+RemainsFullHours+"<div>Часов</div></span> <span>"+RemainsMinutes+"<div>Минуты</div></span> <span class='red'>"+lastSec+"<div>Секунды</div></span>");
+		} else {
+			$("#timer").remove();
+		}
+	}, 1000);
+
 	var yatarget = 'order';
 
 	$('.callme').click(function (event) {

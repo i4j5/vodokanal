@@ -1,4 +1,37 @@
-<!DOCTYPE html>
+
+<!--
+<?php
+
+$utm_medium = '-';
+$utm_source = '-';
+$utm_campaign = '-';
+$utm_term = '-';
+$utm_content = '-';
+
+if (isset($_GET['utm_medium'])) {
+  $utm_medium = $_GET['utm_medium'];
+}
+
+if (isset($_GET['utm_source'])) {
+  $utm_source = $_GET['utm_source'];
+}
+
+if (isset($_GET['utm_campaign'])) {
+  $utm_campaign = $_GET['utm_campaign'];
+}
+
+if (isset($_GET['utm_term'])) {
+  $utm_term = $_GET['utm_term'];
+}
+
+if (isset($_GET['utm_content'])) {
+  $utm_content = $_GET['utm_content'];
+}
+$url = $_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+$utm =  $_SERVER["QUERY_STRING"];
+?>
+
+--><!DOCTYPE html>
 <html lang="ru"></html>
 <head>
   <meta charset="UTF-8"/>
@@ -39,7 +72,7 @@
         </div>
         <div class="col col_lg_4 col_lg-offset_4 col_md_5 col_md-offset_3 col_sm_7 col_xs_6">
           <div class="phone-grup"> 
-            <div class="phone-grup__phone">8 (863) 303-38-33
+            <div class="phone-grup__phone primegate-phone">8 (863) 303-38-33
             </div>
             <div class="phone-grup__text">Пн.- пт. с 9:00 до 18:00<br>Сб. с 10:00 до 16:00
             </div>
@@ -68,6 +101,13 @@
             <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
             <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
+            <input type="hidden" name="url" value="<?echo $url?>"/>
+            <input type="hidden" name="utm" value="<?echo $utm?>"/>
+            <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+            <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+            <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+            <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+            <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
             <input type="submit" value="Получить консультацию по документам" class="form__btn"/>
           </form>
         </div>
@@ -105,6 +145,55 @@
         <div class="col col_lg_4 col_md_4 col_sm_4 col_xs_6">
           <div style="animation-delay: .6s" class="triggers__items start-animate"><img src="img/triggers__img6.png" class="triggers__img"/>
             <div class="triggers__text">Цены ниже<br>среднерыночных<br> на 7-12%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stock">
+    <div class="container">
+      <div class="row">
+        <div class="col col_lg_6 col_md_6 col_sm_12 col_xs_12 col_lg-offset_1">
+          <div class="stock__title"><span>Внимание </span>акция!</div>
+          <div class="stock__text">
+            При заказе услуги - 
+            <span> Водопровод и/или канализация “Под Ключ”</span> <br/>до<span id="data-s"></span><br/>для Вас  абсолютно <span>БЕСПЛАТНО:</span>
+            <ul>
+              <li>Выезд инженера на исследование объекта, снятие исходных данных, замеры с дальнейшим составлением сметы </li>
+              <li>Юстификация перечня документов, используемых в ходе всех этапов работ</li>
+              <li>Расчет баланса водопотребления и водоотведения </li>
+              <li>Подготовка ситуационного плана - схемы земельного участка, оформленная по условным обозначениям, предусмотренным для масштабов 1:1000-1:5000 </li>
+              <li>Предоставление архивной топографической съемки с указанием всех подземных и надземных коммуникаций </li>
+              <li>По завершении работы формирование рабочей папки и БОНУС - полное описание рабочего процесса в ходе реализации проекта. </li>
+            </ul>
+          </div>
+          <div class="timer">
+            <div id="timer">
+              <div class="timer__action">До конца акции осталось:
+              </div>
+              <div class="digits"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col col_lg_5 col_md_6 col_sm_12 col_xs_12">
+          <div class="wall">
+            <div class="wall__title">Заполните форму, чтобы<br>поучаствовать в акции</div>
+            <div class="form">
+              <form class="ajax">
+                <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
+                <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+                <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
+                <input type="hidden" name="order" value="ВК под ключ. Акция"/>
+                <input type="hidden" name="url" value="<?echo $url?>"/>
+                <input type="hidden" name="utm" value="<?echo $utm?>"/>
+                <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+                <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+                <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+                <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+                <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
+                <input type="submit" value="Отправить" style="background: linear-gradient(0deg,#fc4c4c,#ff5959);" class="form__btn"/>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -295,6 +384,13 @@
                 <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
                 <input type="hidden" name="download" value="..."/>
                 <input type="hidden" name="order" value="ВК под ключ"/>
+                <input type="hidden" name="url" value="<?echo $url?>"/>
+                <input type="hidden" name="utm" value="<?echo $utm?>"/>
+                <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+                <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+                <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+                <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+                <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
                 <input type="submit" value="Получить список документов" class="form__btn"/>
               </form>
             </div>
@@ -406,6 +502,13 @@
             <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
             <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
+            <input type="hidden" name="url" value="<?echo $url?>"/>
+            <input type="hidden" name="utm" value="<?echo $utm?>"/>
+            <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+            <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+            <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+            <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+            <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
             <input type="submit" value="Получить консультацию по документам" class="form__btn"/>
           </form>
         </div>
@@ -519,7 +622,7 @@
         <div class="col col_sm_4">
           <div class="footer__contact footer__contact_type_call">
             <div class="phone-grup phone-grup_footer"> 
-              <div class="phone-grup__phone">8 (863) 303-38-33
+              <div class="phone-grup__phone primegate-phone">8 (863) 303-38-33
               </div>
               <div class="phone-grup__text">Пн.- пт. с 9:00 до 18:00<br>Сб. с 10:00 до 16:00
               </div>
@@ -542,6 +645,13 @@
             <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
             <input type="hidden" name="order" value="ВК под ключ. Заказ звонка"/>
+            <input type="hidden" name="url" value="<?echo $url?>"/>
+            <input type="hidden" name="utm" value="<?echo $utm?>"/>
+            <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+            <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+            <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+            <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+            <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
             <input type="submit" value="Заказать звонок" class="form__btn"/>
           </form>
         </div>
@@ -559,6 +669,13 @@
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
             <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
             <input type="hidden" name="order" value="ВК под ключ. Консультация"/>
+            <input type="hidden" name="url" value="<?echo $url?>"/>
+            <input type="hidden" name="utm" value="<?echo $utm?>"/>
+            <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+            <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+            <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+            <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+            <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
             <input type="submit" value="Отправить" class="form__btn"/>
           </form>
         </div>
@@ -595,6 +712,23 @@
   <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
   <script src="tmp/index.js"></script>
   <!--endbuild-->
+  <script type="text/javascript">
+    (function () {
+    var pg = document.createElement('script');
+    var protocol = 'https:' == document.location.protocol ? 'https://' : 'http://';
+    pg.src = protocol + 'js.primegate.ru/primegate.min.js'; pg.setAttribute('async', 'true');
+    document.documentElement.getElementsByTagName('head')[0].appendChild(pg);
+    PrimeGate = {}; window.pg = []; components = ['init', 'track', 'identify'];
+    for (var i in components) {
+        PrimeGate[components[i]] = (function(component) {
+            return function () {
+                window.pg.push(component, [].slice.call(arguments, 0));
+      }
+    }(components[i]));
+    }
+    })();
+    PrimeGate.init(1548413692);
+  </script>
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
