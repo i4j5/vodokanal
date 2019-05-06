@@ -28,8 +28,36 @@ $(document).ready(function () {
 	var now = new Date();
 
 	var endTS = now.getTime() + 300176000;
+	var _months = {
+		1: 'Января',
+		2: 'Февраля',
+		3: 'Марта',
+		4: 'Апреля',
+		5: 'Мая',
+		6: 'Июня',
+		7: 'Июля',
+		8: 'Августа',
+		9: 'Сентября',
+		10: 'Октября',
+		11: 'Ноября',
+		12: 'Декабря'
 
-	$('#data-s').html(' ' + new Date(endTS).toISOString().replace(/^([^T]+)T(.+)$/, '$1').replace(/^(\d+)-(\d+)-(\d+)$/, '$3.$2.$1'));
+		//$('.data-s').html( ' ' + (new Date(endTS).toISOString()).replace(/^([^T]+)T(.+)$/,'$1') .replace(/^(\d+)-(\d+)-(\d+)$/,'$3.$2.$1') )
+	};var _date = new Date(endTS).toISOString().replace(/^([^T]+)T(.+)$/, '$1');
+
+	var _day = parseInt(_date.replace(/^(\d+)-(\d+)-(\d+)$/, '$3'));
+	var _month = parseInt(_date.replace(/^(\d+)-(\d+)-(\d+)$/, '$2'));
+	$('.data-s').html(' ' + _day + ' ' + _months[_month]);
+
+	if (_day >= 28) {
+		if (_month == 12) {
+			_month = 1;
+		} else {
+			_month = _month + 1;
+		}
+	}
+	$('.data-m').html(_months[_month]);
+
 	setInterval(function () {
 		now = new Date();
 		var totalRemains = endTS - now.getTime();
