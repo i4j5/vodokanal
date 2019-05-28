@@ -189,7 +189,7 @@ $(document).ready(()=>{
 	        let download = form.children("[name='download']").val()
 
 	        $.ajax({
-	          url: 'http://lp.bk-invent.ru/send.php',
+	          url: '//lp.bk-invent.ru/send.php',
 	          type: 'post',
 	          data: str
 	        })
