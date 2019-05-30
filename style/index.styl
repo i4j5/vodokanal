@@ -241,7 +241,7 @@
     background-size auto, auto, auto, cover
     background-attachment scroll, scroll , fixed , fixed
     height auto
-    height 100vh
+    //height 100vh
     min-height 500px
     // display fixed
     display flex
@@ -267,6 +267,7 @@
         @media (min-width 1000px)
             margin-bottom 100px
             font-size 40px
+            padding-top 40px
         margin-bottom 50px
         font-size 20px
         color #fff
@@ -375,7 +376,18 @@
             display inline-block !important
             width auto
         width 100%
-    
+
+.selectt
+    font-size 18px
+    color #545454 !important 
+    border-radius 4px 
+    border 1px solid #bcb8b8 !important
+    height 45px
+    outline 0
+    padding 0 40px 0 10px
+    background-color #fff
+    background-repeat no-repeat
+    background-position right 10px center  
 .input
     font-size 16px
     color #545454
@@ -631,7 +643,7 @@
     background-size cover
     padding 30px 0 40px 0
     box-shadow inset 0px 2px 18px 0px rgba(0, 0, 0, 0.11)
-    margin 60px 0
+    margin 0
     & .zoom
         height auto
         display inline-block
@@ -687,42 +699,60 @@
     height 200px
     width 200px
 
-//slider
-// .bx-pager
-//     text-align center
-//     position relative 
-//     bottom -30px
-// .bx-pager-item
-//     display inline-block
-// .bx-pager-link
-//     border 2px solid #929292
-//     width 18px 
-//     height 18px
-//     border-radius 20px
-//     font-size 0
-//     line-height 0
-//     display block
-//     background #fff
-//     &.active
-//         background #929292
-//     float left
-//     margin 10px
-// .bx-prev    
-// .bx-next
-//     display none
-//     @media (min-width 1080px)
-//         display block
-//     width 40px
-//     height 76px
-//     position absolute
-//     top calc(50% - 38px)
 
-// .bx-prev
-//     background url('../img/bx-prev.png')   
-//     left -80px 
-// .bx-next
-//     background url('../img/bx-next.png')
-//     right -80px
+.slider
+    padding 20px 0
+    background #fff url('../img/slider.jpg') no-repeat
+    background-size cover
+    background-attachment fixed
+    &__item
+        padding 10px 0
+        font-size 18px
+    &__title
+        font-size 25px 
+        line-height 1.2em
+        color #000
+        text-align center
+        margin-bottom 30px
+
+.bx-pager
+    text-align center
+    position relative 
+    //bottom -30px
+.bx-pager-item
+    display inline-block
+.bx-pager-link
+    border 2px solid #929292
+    width 18px 
+    height 18px
+    border-radius 20px
+    font-size 0
+    line-height 0
+    display block
+    background #fff
+    &.active
+        background #929292
+    float left
+    margin 10px
+.bx-prev    
+.bx-next
+    display inline-block
+    width 40px
+    height 40px
+    // position absolute
+    // top calc(50% - 38px)
+    margin 0 10px
+    border-radius 100%
+
+.bx-controls-direction
+    text-align center
+
+.bx-prev
+    background #ddd url('../img/bx-prev.png') center no-repeat
+    //left -80px 
+.bx-next
+    background #ddd url('../img/bx-next.png') center no-repeat
+    //right -80px
     
 .logos
     //@media (min-width 770px)
@@ -1082,17 +1112,19 @@
     
 
 .stock
+    color #fff
     width 100%
-    background #f5f4f4 url('../img/stock-bg.jpg')
+    background #f5f4f4 url('../img/stock-bg.jpg') no-repeat
+    background-size cover
     padding 50px 0px
     //margin-top 100px
     box-shadow inset 0px 0px 32px 0px rgba(103, 103, 103, 0.22)
     // font-weight 300
     line-height 1.5em
     
-    // & .wall
-    //     @media (min-width 990px)
-    //         margin-top 100px
+    & .wall
+        @media (min-width 990px)
+            margin-top 50px
     span
         font-weight 500
     ul
@@ -1138,7 +1170,7 @@
             margin-right 15px
             width 74px
     &__numeral
-        border 2px solid rgb(66, 115, 214)
+        border 2px solid #fff
         border-radius 50%
         positio absolute
         @media (min-width 380px)
