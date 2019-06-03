@@ -99,17 +99,17 @@ $utm =  $_SERVER["QUERY_STRING"];
             <div class="froze__action">
                
               ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ОТ
-              <select name="order" class="selectt">
-                <option selected="selected" value="ВК под ключ. Cпециалиста по оформлению документов">Cпециалиста по оформлению документов </option>
-                <option value="ВК под ключ. Ведущего инженера">Ведущего инженера</option>
-                <option value="ВК под ключ. Инженера-консультанта общего профиля">Инженера-консультанта общего профиля</option>
-                <option value="ВК под ключ. Юриста">Юриста</option>
+              <select name="comment" class="selectt">
+                <option selected="selected" value="Клиент хочет поговорить со cпециалистом по оформлению документов">Cпециалиста по оформлению документов </option>
+                <option value="Клиент хочет поговорить с ведущим инженером">Ведущего инженера</option>
+                <option value="Клиент хочет поговорить с инженером-консультантом общего профиля">Инженера-консультанта общего профиля</option>
+                <option value="Клиент хочет поговорить с юристом">Юриста</option>
               </select>
             </div>
             <div class="froze__description">Заполните форму, и в течение 20 минут с Вами свяжется выбранный Вами специалист</div>
             <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
-            <!--input(type="hidden" name="order" value="ВК под ключ. Консультация по документам")-->
+            <input type="hidden" name="order" value="ВК под ключ. Консультация"/>
             <input type="hidden" name="url" value="<?echo $url?>"/>
             <input type="hidden" name="utm" value="<?echo $utm?>"/>
             <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
@@ -123,63 +123,16 @@ $utm =  $_SERVER["QUERY_STRING"];
       </div>
     </div>
   </div>
-  <div class="triggers">
-    <div class="container">
-      <div class="row">
-        <div class="col col_lg_4 col_md_4 col_sm_4 col_xs_6">
-          <div class="triggers__items start-animate"><img src="img/triggers__img1.png" class="triggers__img"/>
-            <div class="triggers__text">Опыт работы<br>более 6 лет</div>
-          </div>
-        </div>
-        <div class="col col_lg_4 col_md_4 col_sm_4 col_xs_6">
-          <div style="animation-delay: .2s" class="triggers__items start-animate"><img src="img/triggers__img2.png" class="triggers__img"/>
-            <div class="triggers__text">Гарантия 24 месяца<br>на монтажные работы</div>
-          </div>
-        </div>
-        <div class="col col_lg_4 col_md_4 col_sm_4 col_xs_6">
-          <div style="animation-delay: .3s" class="triggers__items start-animate"><img src="img/triggers__img3.png" class="triggers__img"/>
-            <div class="triggers__text">Подключение<br>за 3 месяца</div>
-          </div>
-        </div>
-        <div class="col col_lg_4 col_md_4 col_sm_4 col_xs_6">
-          <div style="animation-delay: .4s" class="triggers__items start-animate"><img src="img/triggers__img4.png" class="triggers__img"/>
-            <div class="triggers__text">Гарантия получения<br>лицевого счета</div>
-          </div>
-        </div>
-        <div class="col col_lg_4 col_md_4 col_sm_4 col_xs_6">
-          <div style="animation-delay: .5s" class="triggers__items start-animate"><img src="img/triggers__img5.png" class="triggers__img"/>
-            <div class="triggers__text">Применяем<br>сертифицированные<br>материалы</div>
-          </div>
-        </div>
-        <div class="col col_lg_4 col_md_4 col_sm_4 col_xs_6">
-          <div style="animation-delay: .6s" class="triggers__items start-animate"><img src="img/triggers__img6.png" class="triggers__img"/>
-            <div class="triggers__text">Цены ниже<br>среднерыночных<br> на 7-12%</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="slider">
     <div class="col col_xs_12 col_md_10 col_md-offset_1">
       <div class="container">
-        <div class="slider__title">ВАШИ ПРЕИМУЩЕСТВА СОТРУДНИЧЕСТВА С ООО”БК ИНВЕНТ” </div>
+        <div class="slider__title">ВАШИ ПРЕИМУЩЕСТВА СОТРУДНИЧЕСТВА С ООО ”БК ИНВЕНТ” </div>
         <div class="slider__wrapped">
-          <div class="slider__item">Вы делегируете свою задачу “подключить инженерные сети” полностью нашим специалистам, которые имеют опыт более 8 лет </div>
-          <div class="slider__item">Вы, без отрыва от своих ежедневных дел, получаете результат - пользование водой/канализацией </div>
-          <div class="slider__item">Вы получаете высокий сервис оказания услуги, с применением высокотехнологичного и современного подхода </div>
-          <div class="slider__item">Вас предупреждают заблаговременно о том, когда будет необходимо присутствие на объекте</div>
-          <div class="slider__item">Ваше мнение и пожелания всегда учитываются в процессе реализации объекта, а специалисты учитывают экономическую выгоду и технические стандарты для принятия конечного решения</div>
-          <div class="slider__item">Вы оплачиваете работу поэтапно, получая результат </div>
-          <div class="slider__item">Вы получаете проект водоснабжения/водоотведения в формате 3D</div>
-          <div class="slider__item">Вы имеете правовую защиту -  подрядный договор, в котором детально прописаны наши обязанности и сроки по выполнению работ</div>
-          <div class="slider__item">У вас сохраняется гарантия на работы и материалы по строительству водопровода на 24 месяца, что закреплено в договоре</div>
-          <div class="slider__item">Вы пользуетесь коммуникацией в короткие сроки (3 месяца) санкционировано (имея все необходимые документы) </div>
-          <div class="slider__item">По окончании работ объект проходит внутреннюю экспертизу: на качественную техническую эксплуатацию, соответствующее благоустройство, и юридическую завершенность процесса подключения</div>
-          <div class="slider__item">По завершении работ Вы получаете на руки “Папку клиента”, в которой хранится емкий пакет документов на Ваш водопровод/водоотведение</div>
-          <div class="slider__item">Вы получаете полный своевременный отчет по результатам каждого этапа работ в удобной для Вас форме (e-mail, мессенджеры, телефонный звонок)</div>
-          <div class="slider__item">Ваш проект обеспечен квалифицированными кадрами и ресурсами - БК Инвент состоит в СРО проектном, СРО строительном, сертифицирована ИСО ____</div>
-          <div class="slider__item">Вы можете получить скидку от 7% до 12 % при заключении договора на комплексные работы </div>
-          <div class="slider__item">Вы можете участвовать в сезонных акциях и получать бонусы</div>
+          <div class="slider__item"> <img src="img/i1.png"/>Вы доверяете свою задачу “подключить инженерные сети” полностью нашим специалистам, которые имеют опыт более 8 лет </div>
+          <div class="slider__item"> <img src="img/i2.png"/>Ваши пояжелания всегда учитываются в реализации проекта, а специалисты в своем решении учитывают экономическую выгоду и технические стандарты </div>
+          <div class="slider__item"> <img src="img/i3.png"/>Вы получаете проект водоснабжения/водоотведения в формате 3D, который прошел нормоконтроль и имеет знак качества </div>
+          <div class="slider__item"> <img src="img/i4.png"/>Вы имеете правовую защиту -  подрядный договор, в котором детально прописаны наши обязанности и сроки по выполнению работ, а также гарантия 24 месяца</div>
+          <div class="slider__item"> <img src="img/i5.png"/>Ваш проект обеспечен квалифицированными кадрами и ресурсами - БК Инвент состоит в СРО проектном, СРО строительном, сертифицирована ISO, по завершении проходит внутреннюю экспертизу</div>
         </div>
       </div>
     </div>
@@ -188,8 +141,8 @@ $utm =  $_SERVER["QUERY_STRING"];
     <div class="container">
       <div class="row">
         <div class="col col_lg_6 col_md_6 col_sm_12 col_xs_12 col_lg-offset_1">
-          <div class="stock__title"><span>КАКИЕ БОНУСЫ ВЫ ПОЛУЧАЕТЕ?</span></div>
-          <div class="stock__text">Баланс водопотребления и водоотведения<br/><span style="padding: 26px;">БЕСПЛАТНО </span><br/>Справка о благоустройстве<br/><br/><span>УСЛОВИЯ ПОЛУЧЕНИЯ БОНУСОВ: </span>При заказе услуги “КОМПЛЕКСНОЕ ВОДОСНАБЖЕНИЕ И/ИЛИ ВОДООТВЕДЕНИЕ”<br/><span> СРОК ДЕЙСТВИЯ АКЦИИ: </span>до <span class="data-s"></span><br/><br/><span>Успей отправить заявку до <span class="data-s"></span>, чтобы сохранить за собой условия акции!! </span></div>
+          <div class="stock__title"><span>Действующие акции</span></div>
+          <div class="stock__text"><span style="color: #fd5454;">КАКИЕ БОНУСЫ ВЫ ПОЛУЧАЕТЕ?</span><br/>Баланс водопотребления и водоотведения<br/>Справка о благоустройстве<span style="padding: 26px; float: right; margin-top: -35px; color: #fd5454;">- БЕСПЛАТНО</span><br/><br/><span style="color: #fd5454;">УСЛОВИЯ ПОЛУЧЕНИЯ БОНУСОВ: </span>При заказе услуги “КОМПЛЕКСНОЕ ВОДОСНАБЖЕНИЕ И/ИЛИ ВОДООТВЕДЕНИЕ”<br/><span style="color: #fd5454;"> СРОК ДЕЙСТВИЯ АКЦИИ: </span>до <span class="data-s"></span><br/><br/><span style="color: #fd5454;">Успей отправить заявку до <span class="data-s"></span>, чтобы сохранить за собой условия акции!! </span></div>
           <div class="timer">
             <div id="timer">
               <div class="timer__action">До конца акции осталось:
@@ -229,194 +182,140 @@ $utm =  $_SERVER["QUERY_STRING"];
         </div>
       </div>
     </div>
-    <div class="tabs">
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">1
-          </div>Сбор пакета документов
-          <div class="tabs__arrow">
+    <div class="tabs row">
+      <div class="col col_lg_3 col_sm_12">
+        <div class="tabs__item">
+          <div class="tabs__title">
+            <div class="tabs__number">1
+            </div>Предпроектные работы + Рабочая проектная документация
+            <!--+e.arrow-->
           </div>
-        </div>
-        <div class="tabs__text">
-          <ol>
-            <li> Правоустанавливающие документы</li>
-            <li>Топографическая съемка в масштабе 1:500 с указанием всем коммуникаций (наземных и подземных)</li>
-            <li> Баланс водопотребления и водоотведения подключаемого объекта</li>
-            <li> Ситуационный план</li>
-          </ol>
+          <div class="tabs__text">
+            <p> <b>Вы получаете:</b></p>
+            <ol>
+              <li>Договор на технологическое присоединение от АО “Ростовводоканал”и/или Технические Условия </li>
+              <li>Топографическая съемка,согласованная с Департаментом Архитектуры</li>
+              <li>Баланс водопотребления и водоотведения </li>
+              <li>Согласованную со всеми необходимыми инстанциями проектную документацию на прокладку водопровода/водоотведения, согласно СНиП, СП </li>
+            </ol>
+          </div>
         </div>
       </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">2
-          </div>Получение технических условий
-          <div class="tabs__arrow">
+      <div class="col col_lg_3 col_sm_12">
+        <div class="tabs__item">
+          <div class="tabs__title">
+            <div class="tabs__number">2
+            </div>Строительно-монтажные работы
+            <!--+e.arrow-->
           </div>
-        </div>
-        <div class="tabs__text">
-          <p>Регламентированный срок получения технических условий и/или договора на подключение:</p>
-          <ol>
-            <li> Технические условия – 14 рабочих дней</li>
-            <li> Договор на подключение – 20 рабочих дней</li>
-          </ol>
-          <p>Технические условия являются бесплатными и выдаются при следующих условиях:</p>
-          <ul>
-            <li>Абонент уже имеет лицевой счет (подабонента, колонки и т.п.);</li>
-            <li>В исключительных случаях, когда водоканал не имеет возможности предоставить ближайшую точку подключения, но есть возможность подключиться с условием строительства магистральной сети за счет заказчика.</li>
-          </ul>
-          <p>Договор на подключение оплачивается в кассу Водоканала и рассчитывается, исходя из максимальной нагрузки водопотребления (водоотведения)</p>
-          <p>Цена:</p>
-          <ul>
-            <li>Водоснабжение — 39 882 руб./куб.м. в сутки без НДС</li>
-            <li>Водоотведение — 59 166 руб за куб.м в сутки без НДС</li>
-          </ul>
-          <p>Например (частный дом водоснабжение):</p>
-          <p>0,84 * 39882 = 33500 (без НДС) + 18% = 39531 руб</p>
+          <div class="tabs__text"><b>Вы получаете:</b>
+            <ol>
+              <li>Разрешение на разрытие (ордер)</li>
+              <li>Построенную сеть водоснабжения/водоотведения</li>
+              <li>колодец, обвязку колодца, </li>
+              <li>врезку на центральной магистрали, </li>
+            </ol>
+            <P>Cогласно проектной документации, СП, СНиП</P>
+          </div>
         </div>
       </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">3
-          </div>Проектирование и согласование
-          <div class="tabs__arrow">
+      <div class="col col_lg_3 col_sm_12">
+        <div class="tabs__item">
+          <div class="tabs__title">
+            <div class="tabs__number">3
+            </div>Сдача сетей в АО “Ростовводоканал”
+            <!--+e.arrow-->
           </div>
-        </div>
-        <div class="tabs__text">
-          <p>Процесс проектирования включает в себя:</p>
-          <ul>
-            <li>Обследование объекта инженером-проектировщиком</li>
-            <li>Создание полного пакета чертежей стадии РД (общие данные, план сетей, профиль, таблица колодцев, спецификация)</li>
-            <li>Согласования со всеми эксплуатирующими инстанциями города, а также администрацией, департаментом автодорог, департаментом окружающей среды и департаментом архитектуры. Таким образом согласования с более 15 организациями.</li>
-          </ul>
+          <div class="tabs__text"><b>Вы получаете:</b>
+            <ol>
+              <li>Акты готовности внутриплощадочных сетей, акты ввода в эксплуатацию, акты на опломбировку счетчика, акт разграничения балансовой принадлежности, акт дезинфекции и промывки</li>
+              <li>Исполнительную топографическую съемку, согласованную с Департаментом Архитектуры</li>
+              <li>Необходимую исполнительную документацию на строительство сети</li>
+              <li>Справку о благоустройстве от администрации района</li>
+              <li>Заключение лабораторных исследований (по воде)</li>
+            </ol>
+          </div>
         </div>
       </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">4
-          </div>Разрешение на разрытия
-          <div class="tabs__arrow">
+      <div class="col col_lg_3 col_sm_12">
+        <div class="tabs__item">
+          <div class="tabs__title">
+            <div class="tabs__number">4
+            </div>Оформление лицевого счета
+            <!--+e.arrow-->
           </div>
-        </div>
-        <div class="tabs__text">
-          <p>Для того, чтобы осуществлять строительство необходимо получить разрешение от двух инстанций:</p>
-          <ul>
-            <li>ГИБДД – согласовать схему дорожного движения</li>
-            <li>Управление благоустройством администрации города – получение ордера на разрытие (по закрытии которого мы получаем справку о благоустройстве, как неотъемлемый документ при сдачи сети в Водоканал)</li>
-          </ul>
+          <div class="tabs__text"><b>Вы получаете:</b>
+            <ol>
+              <li>Возможность санкционированного пользования водоснабжением/водоотведением</li>
+              <li>Договор холодного водоснабжения/водоотведения</li>
+              <li>Первую квитанцию на оплату</li>
+            </ol>
+          </div>
         </div>
       </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">5
-          </div>Строительно-монтажные работы
-          <div class="tabs__arrow">
-          </div>
-        </div>
-        <div class="tabs__text">
-          <p>Прокладка сети осуществляется открытым или закрытым (методом ГНБ, прокола) способом.</p>
-          <p>Комплексные строительно-монтажные работы включают в себя:</p>
-          <ul>
-            <li>Строительство колодца (при необходимости)</li>
-            <li>Обвязка колодца (врезка, установка запорной арматуры, переподключение трубопровода)</li>
-            <li>Прокладка трубопровода от точки врезки к дому (объекту капитального строительства)</li>
-            <li>Ввод трубопровода в дом (объект капитального строительства)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">6
-          </div>Сдача сетей в Водоканал
-          <div class="tabs__arrow">
-          </div>
-        </div>
-        <div class="tabs__text">
-          <p>Результатом данного процесса является подписание актов со стороны Водоканала и опломбирование счетчика</p>
-          <p>Для этого необходимо сдать пакет документов, включающий в себя:</p>
-          <ul>
-            <li>Исполнительную топографическую съемку (согласованную с департаментом архитектуры)</li>
-            <li>Справку о благоустройстве</li>
-            <li>Акты гидравлических испытаний</li>
-            <li>Освидетельствования скрытых работ</li>
-            <li>Проект сетей</li>
-            <li>Акт дезинфекции и промывки сетей и внутридомовой системы</li>
-            <li>Протокол лабораторных исследований</li>
-            <li>Копия паспорта водомера (вода)</li>
-          </ul>
-          <p>После чего инспектор Водоканала выезжает на объект, проверяет качество, сопоставляет с проектом и пломбирует счетчик и выдает акт.</p>
-        </div>
-      </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">7
-          </div>Получение лицевого счета 
-          <div class="tabs__arrow">
-          </div>
-        </div>
-        <div class="tabs__text">
-          <p>После приемки инспектором сетей, необходимо подать следующий пакет документов:</p>
-          <ul>
-            <li>Разрешение совладельцев (при необходимости).</li>
-            <li>Правоустанавливающие документы на землю и дом</li>
-            <li>Документ-основания права (договор купли продажи, договор дарения и т.д.)</li>
-            <li>Технический паспорт на дом</li>
-            <li>Паспорт водомера</li>
-            <li>Разрешение совладельцев (при наличии таковых)</li>
-          </ul>
-          <p style="padding-top: 14px; line-height: 1.5em;"><b>Результатом всего цикла работ является  — ваше комфортное пользование коммуникациями и получение квитанций от водоканала на оплату!</b></p>
+    </div>
+  </div>
+  <div class="froze">
+    <div class="container">
+      <div class="froze__container">
+        <div class="form">
+          <form class="ajax">
+            <div class="froze__action">
+               
+              Если Вы хотите получить детальный бизнес-процесс подключения к сетям водоснабжения и/или водоотведения, разработанный компанией ООО “БК Инвент”, заполните форму обратной связи. 
+            </div>
+            <div class="froze__description">Мы вышлем Вам на почту файл, в котором описан список работ, необходимых для комплексного подключения водоснабжения и водоотведения. </div>
+            <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
+            <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+            <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
+            <input type="hidden" name="order" value="ВК под ключ. Отправить файл 'бизнес-процесс подключения к сетям водоснабжения и/или водоотведенияна' почту"/>
+            <input type="hidden" name="url" value="<?echo $url?>"/>
+            <input type="hidden" name="utm" value="<?echo $utm?>"/>
+            <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+            <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+            <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+            <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+            <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
+            <input type="submit" value="Получить файл" class="form__btn"/>
+          </form>
         </div>
       </div>
     </div>
   </div>
   <div class="docs">
     <div class="container">
-      <div class="title">
-        <div class="title__wrap">
-          <div class="title__text">Какие документы понадобятся?
-          </div>
-        </div>
-      </div>
       <div class="row">
-        <div class="col col_lg_7">
-          <div class="docs__title">Документы, изготавливаемые ООО «БК Инвент»</div>
+        <div style="background: #96acf0;" class="col col_lg_6">
+          <div class="docs__title">Документы, входящие в “Папку клиента”:</div>
           <ol class="docs__list">
             <li>Баланс водопотребления и водоотведения</li>
-            <li>Топографическая съемка (заверенная департаментом архитектуры и радостроительства г.Ростова-на-Дону)</li>
-            <li>Ситуационный план</li>
-            <li>Проект наружной сети, согласованный со всеми инстанциями</li>
-            <li>Схема организации дорожного движения с ГИБДД</li>
-            <li>Ордер на плановое (аварийное) разрытие</li>
-            <li>Акт на чистоту траншеи</li>
-            <li>Акт освидетельствования гидравлических испытаний</li>
-            <li>Акт освидетельствования скрытых работ</li>
-            <li>Акт дезинфекции и промывки</li>
+            <li>Топографическая съемка (заверенная департаментом архитектуры и Градостроительства г.Ростова-на-Дону) </li>
+            <li>Договор на технологическое присоединение с АО “Ростовводоканал” и/или технические условия</li>
+            <li>Рабочая проектная документация, согласованная с 17 организациями</li>
+            <li>Ордер на разрытие, схема организации дорожного движения, справка о благоустройстве территории</li>
+            <li>Исполнительные акты</li>
             <li>Протокол лабораторных исследований воды</li>
-            <li>Справка о благоустройстве территории</li>
-            <li>Исполнительная топографическая съемка (заверенная департаментом архитектуры и  градостроительства г.Ростова-на-Дону)</li>
-            <li>Паспорт водомера</li>
+            <li>Исполнительная топографическая съемка (заверенная департаментом Архитектуры и Градостроительства г.Ростова-на-Дону)</li>
+            <li>Акт допуска водопроводного/канализационного ввода в эксплуатаци</li>
+            <li>Акт о разграничении балансовой принадлежности</li>
+            <li>Акт о готовности внутриплощадочных и(или) внутридомовых сетей и оборудования</li>
+            <li>Акт об опломбировке счетчика (по водоснабжению)</li>
+            <li>Справка о выполнении технических условий </li>
+            <li>Договор на холодное водоснабжение/водоотведения</li>
+            <li>Первая квитанция на оплату </li>
           </ol>
         </div>
-        <div class="col col_lg_5">
-          <div class="wall wall_docs">
-            <div class="wall__title">Перечень документов, которые нужны от Вас
-            </div>
-            <div class="form">
-              <form class="ajax">
-                <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
-                <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
-                <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
-                <input type="hidden" name="download" value="..."/>
-                <input type="hidden" name="order" value="ВК под ключ"/>
-                <input type="hidden" name="url" value="<?echo $url?>"/>
-                <input type="hidden" name="utm" value="<?echo $utm?>"/>
-                <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
-                <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
-                <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
-                <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
-                <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
-                <input type="submit" value="Получить список документов" class="form__btn"/>
-              </form>
-            </div>
+        <div style="background: #ffc2c2;" class="col col_lg_6">
+          <div class="docs__title">Правоустанавливающие документы,<br>которые необходимы от Вас:</div>
+          <ol class="docs__list">
+            <li>Копия паспорта гражданина РФ</li>
+            <li>Правоустанавливающие документы на участок и объект недвижимости</li>
+            <li>Документы-основания (договор купли-продажи, договор дарения и т.д.)</li>
+            <li>Технический паспорт (с привязкой к объекту)</li>
+            <li>Доверенность на сотрудника "БК Инвент"</li>
+          </ol>
+          <p style="margin-top: 20px;border-left: 4px solid #2b519e;padding-left: 10px;">Если из перечисленного списка, у Вас не хватает какого-то документа, юрист "БК Инвент" подскажет, как восстановить/получить/изготовить</p>
+          <div class="callme callme_block">Заказать звонок
           </div>
         </div>
       </div>
@@ -424,7 +323,7 @@ $utm =  $_SERVER["QUERY_STRING"];
   </div>
   <div class="reviews">
     <div class="container">
-      <div class="reviews__title">Выполненные работы</div>
+      <div class="reviews__title">Часть из того, что мы выполнили:</div>
       <div style="text-align: center;max-width: 1040px;margin: auto;">
         <div data-img="case1.jpg" class="zoom"><img src="img/case1_mini.jpg"/>
           <div class="zoom__icon">
@@ -512,29 +411,6 @@ $utm =  $_SERVER["QUERY_STRING"];
     </div>
     <div class="logos">
       <div class="logos__grup"><img src="img/logo1.jpg"/><img src="img/logo2.jpg"/><img src="img/logo3.jpg"/><img src="img/logo4.jpg"/><img src="img/logo5.jpg"/><img src="img/logo6.jpg"/><img src="img/logo7.jpg"/><img src="img/logo8.jpg"/><img src="img/logo9.jpg"/>
-      </div>
-    </div>
-  </div>
-  <div class="froze">
-    <div class="container">
-      <div class="froze__container">
-        <div class="froze__action">ЗАПИШИТЕСЬ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ СПЕЦИАЛИСТА ПО ОФОРМЛЕНИЮ ДОКУМЕНТОВ</div>
-        <div class="froze__description">Заполните форму, и специалист свяжется с Вами в течение 20 минут</div>
-        <div class="form">
-          <form class="ajax">
-            <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
-            <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
-            <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
-            <input type="hidden" name="url" value="<?echo $url?>"/>
-            <input type="hidden" name="utm" value="<?echo $utm?>"/>
-            <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
-            <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
-            <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
-            <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
-            <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
-            <input type="submit" value="Получить консультацию по документам" class="form__btn"/>
-          </form>
-        </div>
       </div>
     </div>
   </div>
@@ -631,10 +507,49 @@ $utm =  $_SERVER["QUERY_STRING"];
       </div>
     </div>
   </div>
-  <div class="questions">
-    <div class="questions__title">У вас остались вопросы?</div>Задайте их нашему специалисту!
+  <div class="container">
+    <div class="questions">
+      <div class="questions__title">Оцените качество представленной информации на сайте: </div>Доступно ли передана информация по подключению к водоснабжению/канализации? <br/>
+      <div class="radio radio_row">
+        <label class="radio__item">
+          <input name="ok" type="radio" value="нет" class="radio__control"/>
+          <div class="radio__box"></div>
+          <div class="radio__text">нет</div>
+        </label>
+        <label class="radio__item">
+          <input name="ok" type="radio" value="да" class="radio__control"/>
+          <div class="radio__box"></div>
+          <div class="radio__text">да</div>
+        </label>
+      </div>Вы получили ответы на интересующие Вас вопросы?<br/>
+      <div class="radio radio_row">
+        <label class="radio__item">
+          <input name="ok1" type="radio" value="нет" class="radio__control"/>
+          <div class="radio__box"></div>
+          <div class="radio__text">нет</div>
+        </label>
+        <label class="radio__item">
+          <input name="ok1" type="radio" value="да" class="radio__control"/>
+          <div class="radio__box"></div>
+          <div class="radio__text">да</div>
+        </label>
+      </div>Вы хотели бы доверить подключение инженерных сетей команде БК Инвент? 
+      <div class="radio radio_row">
+        <label class="radio__item">
+          <input name="ok2" type="radio" value="нет" class="radio__control"/>
+          <div class="radio__box"></div>
+          <div class="radio__text">нет</div>
+        </label>
+        <label class="radio__item">
+          <input name="ok2" type="radio" value="да" class="radio__control"/>
+          <div class="radio__box"></div>
+          <div class="radio__text">да</div>
+        </label>
+      </div>
+      <p style="margin: 20px 0 10px 0;border-left: 4px solid #2b519e;padding-left: 10px;">Мы бы хотели предоставить Вам исчерпывающую информацию об инженерных сетях, но, к сожалению, весь наш опыт невозможно передать на одной онлайн-странице. <br>С Вами свяжется служба поддержки "БК Инвент", и Вы сможете задать все интересующие вопросы, ответы на которые Вы не получили на этой странице! <br>Консультация абсолютно бесплатна! </p>
+      <div id="questions" class="btn">Отправить!</div>
+    </div>
   </div>
-  <div class="btn order">Получить бесплатную консультацию</div>
   <div id="map" class="map"></div>
   <div class="footer">
     <div class="container">
@@ -685,23 +600,22 @@ $utm =  $_SERVER["QUERY_STRING"];
     <div class="modal__wrapper">
       <div class="modal__dialog">
         <div class="close modal__close"></div>
-        <div class="modal__title">Получить бесплатную консультацию</div>
-        <div class="form">
-          <form class="ajax">
-            <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
-            <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
-            <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
-            <input type="hidden" name="order" value="ВК под ключ. Консультация"/>
-            <input type="hidden" name="url" value="<?echo $url?>"/>
-            <input type="hidden" name="utm" value="<?echo $utm?>"/>
-            <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
-            <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
-            <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
-            <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
-            <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
-            <input type="submit" value="Отправить" class="form__btn"/>
-          </form>
-        </div>
+        <div class="modal__title">Получить обратную связь</div>
+        <form class="ajax">
+          <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
+          <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+          <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
+          <input type="hidden" name="order" value="ВК под ключ. Консультация"/>
+          <input type="hidden" name="url" value="<?echo $url?>"/>
+          <input type="hidden" name="comment" value="" id="comment"/>
+          <input type="hidden" name="utm" value="<?echo $utm?>"/>
+          <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+          <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+          <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+          <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+          <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
+          <input type="submit" value="Отправить" class="form__btn"/>
+        </form>
       </div>
     </div>
   </div>
@@ -732,7 +646,6 @@ $utm =  $_SERVER["QUERY_STRING"];
   <!--build:js js/all.js-->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
-  <script src="node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
   <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
   <script src="tmp/index.js"></script>
   <!--endbuild-->

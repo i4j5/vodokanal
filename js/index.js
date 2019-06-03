@@ -128,40 +128,54 @@ $(document).ready(()=>{
 	}, {offset: '90%'})
 
 
-	let $items = $('.tabs__item')
-	$items.each((index, el) => {
-		let $el = $(el)
-		$el.children('.tabs__title').click(function(event) {
-			$el.toggleClass('tabs__item_active')
+	// let $items = $('.tabs__item')
+	// $items.each((index, el) => {
+	// 	let $el = $(el)
+	// 	$el.children('.tabs__title').click(function(event) {
+	// 		$el.toggleClass('tabs__item_active')
 
-			let $progressBar = $el.children('.tabs__text').children('.progress-bar')
-			let interest = $progressBar.data('interest')
+	// 		let $progressBar = $el.children('.tabs__text').children('.progress-bar')
+	// 		let interest = $progressBar.data('interest')
 
 			
-			if ( $el.hasClass('tabs__item_active') ) {
-				$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text('')
-				$progressBar.children('.progress-bar__pace').width('0%')
-				$el.children('.tabs__text').slideDown(500)
-				setTimeout(() => {
-					$progressBar.children('.progress-bar__pace').width(interest + '%')
-					let n = 0
-					let timerId = setInterval(() => {
-						++n
-						$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text(n + '%')
-						// $progressBar.children('.progress-bar__pace').width(n + '%')
-					}, 1000 / interest)
+	// 		if ( $el.hasClass('tabs__item_active') ) {
+	// 			$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text('')
+	// 			$progressBar.children('.progress-bar__pace').width('0%')
+	// 			$el.children('.tabs__text').slideDown(500)
+	// 			setTimeout(() => {
+	// 				$progressBar.children('.progress-bar__pace').width(interest + '%')
+	// 				let n = 0
+	// 				let timerId = setInterval(() => {
+	// 					++n
+	// 					$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text(n + '%')
+	// 					// $progressBar.children('.progress-bar__pace').width(n + '%')
+	// 				}, 1000 / interest)
 
-					setTimeout(() => {
-						clearInterval(timerId)
-					},1000)
-				}, 500)
-			} else {
-				$el.children('.tabs__text').slideUp(500)
-				setTimeout(() => {
-					$progressBar.children('.progress-bar__pace').width('0%')
-				}, 500)
-			}
-		});	
+	// 				setTimeout(() => {
+	// 					clearInterval(timerId)
+	// 				},1000)
+	// 			}, 500)
+	// 		} else {
+	// 			$el.children('.tabs__text').slideUp(500)
+	// 			setTimeout(() => {
+	// 				$progressBar.children('.progress-bar__pace').width('0%')
+	// 			}, 500)
+	// 		}
+	// 	});	
+	// })
+
+
+	$('#questions').click(function(event) {
+		let text = `
+Оценка качество представленной информации на сайте: \n
+Доступно ли передана информация по подключению к водоснабжению/канализации? - ${$('.radio__control[name="ok"]:checked').val()} \n
+Вы получили ответы на интересующие Вас вопросы? - ${$('.radio__control[name="ok1"]:checked').val()} \n
+Вы хотели бы доверить подключение инженерных сетей команде БК Инвент? - ${$('.radio__control[name="ok2"]:checked').val()} \n\n
+		`
+
+		yatarget = 'order'
+		$('#comment').val(text)
+		$('#modal__order').openModal()
 	})
 
 
@@ -261,18 +275,18 @@ $(document).ready(()=>{
 
 })
 
-$(document).ready(function(){
-  $('.slider__wrapped').bxSlider({
-  	pager: false,
-  	nextText: '',
-  	prevText: '',
-  	touchEnabled: false,
-  	auto: true,
-  	pause: 1400,
-  	stopAutoOnClick: true,
-  	autoHover: true
-  });
-});
+// $(document).ready(function(){
+//   $('.slider__wrapped').bxSlider({
+//   	pager: false,
+//   	nextText: '',
+//   	prevText: '',
+//   	touchEnabled: false,
+//   	auto: true,
+//   	pause: 1400,
+//   	stopAutoOnClick: true,
+//   	autoHover: true
+//   });
+// });
 
 $(window).on('load', e => {
 	window.setTimeout(function() {

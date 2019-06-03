@@ -129,39 +129,49 @@ $(document).ready(function () {
 		$('.logos img').addClass('animated zoomIn');
 	}, { offset: '90%' });
 
-	var $items = $('.tabs__item');
-	$items.each(function (index, el) {
-		var $el = $(el);
-		$el.children('.tabs__title').click(function (event) {
-			$el.toggleClass('tabs__item_active');
+	// let $items = $('.tabs__item')
+	// $items.each((index, el) => {
+	// 	let $el = $(el)
+	// 	$el.children('.tabs__title').click(function(event) {
+	// 		$el.toggleClass('tabs__item_active')
 
-			var $progressBar = $el.children('.tabs__text').children('.progress-bar');
-			var interest = $progressBar.data('interest');
+	// 		let $progressBar = $el.children('.tabs__text').children('.progress-bar')
+	// 		let interest = $progressBar.data('interest')
 
-			if ($el.hasClass('tabs__item_active')) {
-				$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text('');
-				$progressBar.children('.progress-bar__pace').width('0%');
-				$el.children('.tabs__text').slideDown(500);
-				setTimeout(function () {
-					$progressBar.children('.progress-bar__pace').width(interest + '%');
-					var n = 0;
-					var timerId = setInterval(function () {
-						++n;
-						$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text(n + '%');
-						// $progressBar.children('.progress-bar__pace').width(n + '%')
-					}, 1000 / interest);
 
-					setTimeout(function () {
-						clearInterval(timerId);
-					}, 1000);
-				}, 500);
-			} else {
-				$el.children('.tabs__text').slideUp(500);
-				setTimeout(function () {
-					$progressBar.children('.progress-bar__pace').width('0%');
-				}, 500);
-			}
-		});
+	// 		if ( $el.hasClass('tabs__item_active') ) {
+	// 			$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text('')
+	// 			$progressBar.children('.progress-bar__pace').width('0%')
+	// 			$el.children('.tabs__text').slideDown(500)
+	// 			setTimeout(() => {
+	// 				$progressBar.children('.progress-bar__pace').width(interest + '%')
+	// 				let n = 0
+	// 				let timerId = setInterval(() => {
+	// 					++n
+	// 					$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text(n + '%')
+	// 					// $progressBar.children('.progress-bar__pace').width(n + '%')
+	// 				}, 1000 / interest)
+
+	// 				setTimeout(() => {
+	// 					clearInterval(timerId)
+	// 				},1000)
+	// 			}, 500)
+	// 		} else {
+	// 			$el.children('.tabs__text').slideUp(500)
+	// 			setTimeout(() => {
+	// 				$progressBar.children('.progress-bar__pace').width('0%')
+	// 			}, 500)
+	// 		}
+	// 	});	
+	// })
+
+
+	$('#questions').click(function (event) {
+		var text = '\n\u041E\u0446\u0435\u043D\u043A\u0430 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u043E \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u043D\u043E\u0439 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u043D\u0430 \u0441\u0430\u0439\u0442\u0435: \n\n\u0414\u043E\u0441\u0442\u0443\u043F\u043D\u043E \u043B\u0438 \u043F\u0435\u0440\u0435\u0434\u0430\u043D\u0430 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043F\u043E \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044E \u043A \u0432\u043E\u0434\u043E\u0441\u043D\u0430\u0431\u0436\u0435\u043D\u0438\u044E/\u043A\u0430\u043D\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438? - ' + $('.radio__control[name="ok"]:checked').val() + ' \n\n\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u043E\u0442\u0432\u0435\u0442\u044B \u043D\u0430 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u0443\u044E\u0449\u0438\u0435 \u0412\u0430\u0441 \u0432\u043E\u043F\u0440\u043E\u0441\u044B? - ' + $('.radio__control[name="ok1"]:checked').val() + ' \n\n\u0412\u044B \u0445\u043E\u0442\u0435\u043B\u0438 \u0431\u044B \u0434\u043E\u0432\u0435\u0440\u0438\u0442\u044C \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u0438\u043D\u0436\u0435\u043D\u0435\u0440\u043D\u044B\u0445 \u0441\u0435\u0442\u0435\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u0435 \u0411\u041A \u0418\u043D\u0432\u0435\u043D\u0442? - ' + $('.radio__control[name="ok2"]:checked').val() + ' \n\n\n\t\t';
+
+		yatarget = 'order';
+		$('#comment').val(text);
+		$('#modal__order').openModal();
 	});
 
 	$('.ajax').each(function () {
@@ -250,18 +260,18 @@ $(document).ready(function () {
 	}
 });
 
-$(document).ready(function () {
-	$('.slider__wrapped').bxSlider({
-		pager: false,
-		nextText: '',
-		prevText: '',
-		touchEnabled: false,
-		auto: true,
-		pause: 1400,
-		stopAutoOnClick: true,
-		autoHover: true
-	});
-});
+// $(document).ready(function(){
+//   $('.slider__wrapped').bxSlider({
+//   	pager: false,
+//   	nextText: '',
+//   	prevText: '',
+//   	touchEnabled: false,
+//   	auto: true,
+//   	pause: 1400,
+//   	stopAutoOnClick: true,
+//   	autoHover: true
+//   });
+// });
 
 $(window).on('load', function (e) {
 	window.setTimeout(function () {
