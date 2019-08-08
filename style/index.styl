@@ -1271,3 +1271,388 @@
             border-radius 50%
             background #fff
             transition all 200ms 50ms
+
+
+
+////////////////////
+
+.col_xs_0
+    display none !important
+    img 
+        max-width 100%
+    @media (min-width 768px)
+        display block !important
+
+blockquote
+    border-left 4px solid #4273d6
+    padding-left 16px
+    line-height 1.5em
+    margin-bottom 1em
+    font-size 14px
+
+.query2result 
+    margin 25px 0 15px 0
+    h4
+        margin 10px 0 20px 0      
+    &__query
+    &__result
+        border-radius 4px
+        padding 10px 20px  
+        margin-bottom 20px
+    &__item
+        margin-bottom 15px
+        background-position left center
+        background-repeat no-repeat
+        background-size 25px
+        padding 5px 0 5px 30px 
+        line-height 1.2em
+    &__result
+        //background #eee
+        border 2px solid #4273d6
+        .query2result__item
+            background-image url(../img/i32.png) 
+    &__query
+        //font-weight 600
+        @media (min-width 780px)  
+            margin-bottom 5px
+        border 2px solid #d1ddec
+        .query2result__item
+            background-image url(../img/i68.png) 
+
+
+.docs
+    margin-top 40px
+    h4
+        margin 10px 0 20px 0      
+    &__col
+        width 100%
+        margin 0
+        background #eee
+        padding 10px 20px
+        border-radius 4px 4px 0 0 
+        @media (min-width 780px)
+            border-radius 4px 0 0 4px 
+            width 40%
+        &_well
+            background #cddbf7
+            border-radius 0 0 4px 4px
+            @media (min-width 780px)
+                border-radius 0 4px 4px 0 
+                width 60%
+
+ul.list
+    //padding-left 10px
+    margin-bottom 1em
+    li
+        padding-left 1.714em
+        list-style-type none
+        background  url(../img/list-item.svg) 0.14em  0.143em no-repeat
+        background-size 1.35em 
+        margin-bottom 1em
+        line-height 1.5
+
+    &_type
+        &_check
+            li
+                padding-left 1.714em
+                list-style-type none
+                background  url(../img/list-item-check.svg) left top no-repeat
+                background-size 1.62em 
+
+
+
+.deadlines
+    margin 80px 0 50px 0
+    p
+        margin-bottom 10px
+    &__header
+        color #3d3d3d
+        font-size 20px
+        font-weight 600
+        margin-bottom 50px
+        text-align center
+        @media (min-width 600px)
+            font-size 24px
+        @media (min-width 900px) 
+            margin-bottom 30px
+    &__wrapper
+        position relative
+        display table
+        margin 0 auto
+        @media (min-width 900px)
+            // width 100%
+            &:after
+                content ''
+                position absolute
+                background #aabfe7
+                height 100%
+                width 4px
+                border-radius 2px
+                top 0
+                left calc(50% - 2px)
+    &__item
+        position relative
+        margin-bottom 50px
+        &:last-child
+            margin-bottom 0px
+        @media (min-width 900px)
+            display grid
+            grid-template-columns 420px 50px 420px
+            align-items center
+            .deadlines__time
+                height 50px
+                line-height 50px
+                position relative
+            &:nth-child(odd)
+                grid-template-areas 'body stage time'
+                .deadlines__time
+                    padding 0 20px 0 40px
+                    left -10px
+            &:nth-child(even)
+                grid-template-areas 'time stage body'
+                .deadlines__time
+                    padding 0 40px 0 20px
+                    right -10px
+                .deadlines__time-wrapper
+                    display flex
+                    flex-direction row-reverse    
+    &__title
+        font-size 20px
+        text-align center
+        line-height 1.3em
+        margin-bottom 10px
+        margin-top 20px
+        @media (min-width 900px)
+            margin-top 0
+    &__text
+        font-size 14px
+        line-height 1.4em
+    &__body 
+        border-radius 4px 4px 0 0 
+        //background linear-gradient( 45deg, rgb(213,213,213) 0%, rgb(201,199,199) 22%, rgb(214,227,254) 100%)
+        background linear-gradient( 45deg, rgba(213,213,213,.4) 0%, rgba(201,199,199,.4) 78%, rgba(214,227,254,.4) 100%)
+        grid-area body
+        max-width 420px
+        padding 20px
+        @media (min-width 900px)
+            border-radius 4px
+    &__number
+        font-size 13px
+        line-height 1em
+        font-weight 400
+        text-align center
+        @media (min-width 900px)
+                font-size 14px
+                line-height 1.2em
+        span
+            font-size 16px
+            display block
+            @media (min-width 900px)
+                font-size 24px
+        margin auto
+    &__stage
+        width 44px
+        height 44px
+        grid-area stage
+        // 70
+        //border 3px solid #aabfe7
+        background #fff
+        //border 6px solid #fff
+        box-shadow 0 0 0px 3px #aabfe7, 0 0 0px 9px #fff
+        border-radius 50%
+        display flex
+        align-items center
+        top -25px
+        left calc(50% - 22px)
+        position absolute
+        z-index 10
+        @media (min-width 900px)
+            box-shadow 0 0 0px 4px #aabfe7, 0 0 0px 10px #fff
+            position relative
+            top auto
+            left auto
+            width 50px
+            height 50px
+    &__time
+        font-size 16px
+        color #fff
+        padding 10px 20px
+        border-radius 0 0 4px 4px 
+        background #3059ab
+        text-align center
+        @media (min-width 900px)
+            border-radius 4px
+            width max-content
+    
+    .time-wrapper
+        grid-area time
+
+.triggers
+    padding 25px 0
+    background #fff url('../img/triggers-bg.jpg') center no-repeat
+    background-size cover
+    //background-attachment fixed
+    box-shadow inset 0px 4px 20px 0px rgba(0,0,0,0.09)
+    &__items
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-top: 30px;
+        margin-top 30px
+    &__item
+        box-sizing: border-box;
+        word-wrap: break-word;
+        margin-left: 10px;
+        margin-right: 10px;
+        @media (min-width 700px)
+            width: calc(50% - 20px);
+        border 2px solid #d1ddec
+        border-radius 4px
+        padding 15px 10px 
+        margin-bottom 20px
+        font-size 16px 
+        @media (min-width 700px)
+            font-size 18px
+        display flex
+        align-items center
+        img
+            margin 0 15px 0 0
+            width auto
+            max-width 50px
+    &__title
+        font-size 22px 
+        @media (min-width 700px)
+            font-size 25px 
+        line-height 1.2em
+        color #000
+        text-align center
+        margin-bottom 5px
+
+
+.reviews2
+    border-radius 5px
+    background-image linear-gradient( 45deg, rgba(214,227,254,.4) 0%, rgba(201,199,199,.4) 78%, rgba(213,213,213,.4) 100%)
+    padding 20px 0
+    position relative
+    margin 30px 0 
+    &__title
+        color #3d3d3d
+        font-weight 500
+        font-size 20px
+        line-height 1.3em
+        text-align center
+        padding 0 10px
+        margin-bottom 30px
+        @media (min-width 700px)
+            font-size 22px
+    &__items
+        position relative
+    &__item
+        text-align center
+        padding 0 20px
+        @media (min-width 1000px)
+            padding 0 40px
+        @media (min-width 700px)
+            display flex
+            align-items flex-start
+            padding-bottom 50px !important
+    &__person
+        @media (min-width 700px)
+            margin-right 40px
+    &__avatar
+        border-radius 100% !important
+        width 130px !important
+        height 130px !important
+        max-width 130px !important
+    &__name
+        color #52475b
+        line-height 1em
+        font-size 16px 
+        // font-weight 600
+        margin-bottom 5px
+        @media (min-width 700px)
+            font-size 18px
+    &__links
+        margin 10px 0 0 0
+        img 
+            width 25px
+    &__description
+        font-size 17px
+        line-height 1.45em
+        margin 0 0 10px 0
+        font-weight 500
+    &__text
+        font-size 14px
+        line-height 1.45em
+        color #363636
+        text-align left
+        position relative
+        @media (min-width 700px)
+            padding 10px 70px 20px 70px 
+            font-size 16px 
+            &:before
+            &:after
+                content ''
+                position absolute
+                width 51px 
+                height 41px
+                background-repeat no-repeat
+                background-size contain
+            &:before
+                background-image url(../img/quote-before.svg)
+                top 0
+                left 0
+            &:after
+                background-image url(../img/quote-after.svg)
+                right 0
+                bottom 0             
+.bx-wrapper
+    position relative
+
+// .cases__next
+// .cases__prev
+.bx-prev
+.bx-next
+    position absolute
+    border-radius 5px
+    background #fff
+    box-shadow 0px 1px 4px 0px rgba(151, 147, 147, 0.5)
+    width 40px 
+    height 40px
+    top 110px
+    @media (min-width 700px)
+        top auto
+        bottom -10px
+    &:before
+    &:after
+        content ''
+        position absolute
+        width 18px
+        height 2px
+        background #4274d6
+.bx-prev
+    left -15px
+    @media (min-width 700px)
+        left auto 
+        right 58px
+    &:before
+        transform rotate(-45deg)
+        top 13px
+        left 10px
+    &:after
+        transform rotate(45deg)
+        top 25px
+        left 10px
+.bx-next
+    right -15px
+    @media (min-width 700px)
+        right 10px
+    &:before
+        transform rotate(45deg)
+        top 13px
+        right 10px
+    &:after
+        transform rotate(-45deg)
+        top 25px
+        right 10px

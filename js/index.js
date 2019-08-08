@@ -108,9 +108,9 @@ $(document).ready(()=>{
 		$('#modal__zoom').openModal()
 	})
 
-	$('.triggers').waypoint(function() {
-		$('.triggers__items').addClass('animated flipInX finish-animate')
-	}, {offset: '90%'})
+	// $('.triggers').waypoint(function() {
+	// 	$('.triggers__items').addClass('animated flipInX finish-animate')
+	// }, {offset: '90%'})
 
 	$('#doc').waypoint(function() {
 		$('#doc .l').addClass('animated fadeInLeft finish-animate')
@@ -287,6 +287,15 @@ $(document).ready(()=>{
 //   	autoHover: true
 //   });
 // });
+
+$('.reviews2__items').bxSlider({
+	// nextSelector: 'reviews__next',
+	// prevSelector:'reviews__prev',
+	touchEnabled: false,
+	nextText: '',
+	prevText: '',
+	pager: false,
+})
 
 $(window).on('load', e => {
 	window.setTimeout(function() {
