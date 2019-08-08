@@ -192,7 +192,9 @@
         text-align center
         margin-top 0
     &__phone
-        font-size 18px
+        font-size 16px
+        @media (min-width 360px)
+            font-size 18px
         color #302d36
         font-weight 500
     &__text
@@ -375,11 +377,14 @@
             margin-right 20px
         width 100%
         margin-bottom 10px
+        max-width 100%
     & .form__btn
         @media (min-width 1015px)
             display inline-block !important
             width auto
+            padding 0 15px
         width 100%
+        padding 0 5px
 
 .selectt
     font-size 18px
@@ -447,21 +452,21 @@
             box-shadow 0px 0px 0px 0px #af0303
 
 //ТРИГЕРЫ
-.triggers
-    width 100%
-    background #fff url('../img/triggers-bg.jpg')
-    background-repeat no-repeat
-    background-size cover
-    background-attachment fixed
-    box-shadow inset 0px 1px 30px 0px rgba(63, 62, 62, 0.6)
-    padding 40px 0px 70px
-    text-align center
-    &__text
-        font-size 17px 
-        line-height 1.3em
-        color #000
-    &__img
-        margin 60px 0 10px
+// .triggers
+//     width 100%
+//     background #fff url('../img/triggers-bg.jpg')
+//     background-repeat no-repeat
+//     background-size cover
+//     background-attachment fixed
+//     box-shadow inset 0px 1px 30px 0px rgba(63, 62, 62, 0.6)
+//     padding 40px 0px 70px
+//     text-align center
+//     &__text
+//         font-size 17px 
+//         line-height 1.3em
+//         color #000
+//     &__img
+//         margin 60px 0 10px
         
 
 .title
@@ -1313,7 +1318,7 @@ blockquote
             background-image url(../img/i32.png) 
     &__query
         //font-weight 600
-        @media (min-width 780px)  
+        @media (min-width 780px) 
             margin-bottom 5px
         border 2px solid #d1ddec
         .query2result__item
@@ -1323,7 +1328,9 @@ blockquote
 .docs
     margin-top 40px
     h4
-        margin 10px 0 20px 0      
+        margin 10px 0 20px 0
+        font-weight 400
+        font-size 22px   
     &__col
         width 100%
         margin 0
@@ -1513,7 +1520,7 @@ ul.list
         margin-bottom 20px
         font-size 16px 
         @media (min-width 700px)
-            font-size 18px
+            font-size 17px
         display flex
         align-items center
         img
@@ -1538,14 +1545,14 @@ ul.list
     margin 30px 0 
     &__title
         color #3d3d3d
-        font-weight 500
-        font-size 20px
+        // font-weight 500
+        font-size 22px
         line-height 1.3em
         text-align center
         padding 0 10px
         margin-bottom 30px
         @media (min-width 700px)
-            font-size 22px
+            font-size 28px
     &__items
         position relative
     &__item
