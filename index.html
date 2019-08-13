@@ -163,64 +163,6 @@ $utm =  $_SERVER["QUERY_STRING"];
       </div>
     </section>
   </div>
-  <div id="l-advantage" class="triggers">
-    <div class="container">
-      <div class="triggers__title">Ваши преимущества сотрудничества с ООО ”БК Инвент”
-      </div>
-      <div class="triggers__items">
-        <div class="triggers__item"> <img src="img/i12.png"/>Вы доверяете свою задачу “подключить инженерные сети” полностью нашим специалистам, которые имеют опыт более 8 лет 
-        </div>
-        <div class="triggers__item"> <img src="img/i17.png"/>Ваши пояжелания всегда учитываются в реализации проекта, а специалисты в своем решении учитывают экономическую выгоду и технические стандарты 
-        </div>
-        <div class="triggers__item"> <img src="img/i10.png"/>Вы получаете проект водоснабжения/водоотведения в формате 3D, который прошел нормоконтроль и имеет знак качества 
-        </div>
-        <div class="triggers__item"> <img src="img/i6.png"/>Вы имеете правовую защиту -  подрядный договор, в котором детально прописаны наши обязанности и сроки по выполнению работ, а также гарантия 24 месяца
-        </div>
-        <div class="triggers__item"> <img src="img/i14.png"/>Ваш проект обеспечен квалифицированными кадрами и ресурсами - БК Инвент состоит в СРО проектном, СРО строительном, сертифицирована ISO, по завершении проходит внутреннюю экспертизу
-        </div>
-        <div class="triggers__item"> <img src="img/i35.png"/>Вы получаете высокий сервис оказания услуги, с применением высокотехнологичного и современного подхода
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="l-stock" class="stock">
-    <div class="container">
-      <div class="row">
-        <div class="col col_lg_6 col_md_6 col_sm_12 col_xs_12 col_lg-offset_1">
-          <div class="stock__title"><span>Действующие акции</span></div>
-          <div class="stock__text"><span style="color: #fd5454;">КАКИЕ БОНУСЫ ВЫ ПОЛУЧАЕТЕ?</span><br/>Баланс водопотребления и водоотведения<br/>Справка о благоустройстве<span style="padding: 26px; float: right; margin-top: -35px; color: #fd5454;">- БЕСПЛАТНО</span><br/><br/><span style="color: #fd5454;">УСЛОВИЯ ПОЛУЧЕНИЯ БОНУСОВ: </span>При заказе услуги “КОМПЛЕКСНОЕ ВОДОСНАБЖЕНИЕ И/ИЛИ ВОДООТВЕДЕНИЕ”<br/><span style="color: #fd5454;"> СРОК ДЕЙСТВИЯ АКЦИИ: </span>до <span class="data-s"></span><br/><br/><span style="color: #fd5454;">Успей отправить заявку до <span class="data-s"></span>, чтобы сохранить за собой условия акции!! </span></div>
-          <div class="timer">
-            <div id="timer">
-              <div class="timer__action">До конца акции осталось:
-              </div>
-              <div class="digits"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col col_lg_5 col_md_6 col_sm_12 col_xs_12">
-          <div class="wall">
-            <div class="wall__title">Заполните форму, чтобы<br>поучаствовать в акции</div>
-            <div class="form">
-              <form class="ajax">
-                <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
-                <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
-                <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
-                <input type="hidden" name="order" value="ВК под ключ. Акция"/>
-                <input type="hidden" name="url" value="<?echo $url?>"/>
-                <input type="hidden" name="utm" value="<?echo $utm?>"/>
-                <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
-                <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
-                <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
-                <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
-                <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
-                <input type="submit" value="Отправить" style="background: linear-gradient(0deg,#fc4c4c,#ff5959);" class="form__btn"/>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div id="l-stages" class="container">
     <div class="deadlines">
       <div class="title">
@@ -368,6 +310,67 @@ $utm =  $_SERVER["QUERY_STRING"];
       </div>
     </div>
   </div>
+  <div id="l-stock" class="stock">
+    <div class="container">
+      <div class="row">
+        <div class="col col_lg_6 col_md_6 col_sm_12 col_xs_12 col_lg-offset_1">
+          <div class="stock__title"><span>Внимание </span> акция!</div>
+          <div class="stock__text">При заказе услуги  <span>“КОМПЛЕКСНОЕ ВОДОСНАБЖЕНИЕ И/ИЛИ ВОДООТВЕДЕНИЕ”</span><br/>Баланс водопотребления и водоотведения + Справка о благоустройстве - <span>БЕСПЛАТНО</span><br/><br/><span>Срок действия акции: </span>до <span class="data-s"></span>
+          </div>
+          <div class="timer">
+            <div id="timer">
+              <div class="timer__action">До конца акции осталось:
+              </div>
+              <div class="digits"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col col_lg_5 col_md_6 col_sm_12 col_xs_12">
+          <div class="wall">
+            <div class="wall__title">Заполните форму, чтобы<br>поучаствовать в акции</div>
+            <div class="form">
+              <form class="ajax">
+                <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
+                <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+                <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
+                <input type="hidden" name="order" value="ВК под ключ. Акция"/>
+                <input type="hidden" name="url" value="<?echo $url?>"/>
+                <input type="hidden" name="utm" value="<?echo $utm?>"/>
+                <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+                <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+                <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+                <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+                <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
+                <input type="submit" value="Отправить" style="background: linear-gradient(0deg,#fc4c4c,#ff5959);" class="form__btn"/>
+              </form>
+            </div>
+            <div class="wall__text">Успей отправить заявку до <span class="data-s"></span>, чтобы сохранить за собой условия акции!! </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="l-advantage" class="triggers">
+    <div class="container">
+      <div class="triggers__title">Ваши преимущества сотрудничества с ООО ”БК Инвент”
+      </div>
+      <div class="triggers__items">
+        <div class="triggers__item"> <img src="img/i12.png"/>Вы доверяете свою задачу “подключить инженерные сети” полностью нашим специалистам, которые имеют опыт более 8 лет 
+        </div>
+        <div class="triggers__item"> <img src="img/i17.png"/>Ваши пояжелания всегда учитываются в реализации проекта, а специалисты в своем решении учитывают экономическую выгоду и технические стандарты 
+        </div>
+        <div class="triggers__item"> <img src="img/i10.png"/>Вы получаете проект водоснабжения/водоотведения в формате 3D, который прошел нормоконтроль и имеет знак качества 
+        </div>
+        <div class="triggers__item"> <img src="img/i6.png"/>Вы имеете правовую защиту -  подрядный договор, в котором детально прописаны наши обязанности и сроки по выполнению работ, а также гарантия 24 месяца
+        </div>
+        <div class="triggers__item"> <img src="img/i14.png"/>Ваш проект обеспечен квалифицированными кадрами и ресурсами - БК Инвент состоит в СРО проектном, СРО строительном, сертифицирована ISO, по завершении проходит внутреннюю экспертизу
+        </div>
+        <div class="triggers__item"> <img src="img/i35.png"/>Вы получаете высокий сервис оказания услуги, с применением высокотехнологичного и современного подхода
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div id="l-docs" class="container">
     <div class="docs">
       <div class="row">
@@ -399,53 +402,6 @@ $utm =  $_SERVER["QUERY_STRING"];
             <li>Исполнительная топографическая съемка (заверенная департаментом Архитектуры и Градостроительства г.Ростова-на-Дону)</li>
             <li>Акт допуска водопроводного/канализационного ввода в эксплуатаци</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="reviews">
-    <div class="container">
-      <div class="reviews__title">Часть из того, что мы выполнили:</div>
-      <div style="text-align: center;max-width: 1040px;margin: auto;">
-        <div data-img="case1.jpg" class="zoom"><img src="img/case1_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-          <div class="reviews__text">Прокладка водоотведения,<br> г.Ростов-на-Дону,<br>ул. Профсоюзная, 29</div>
-        </div>
-        <div data-img="case2.jpg" class="zoom"><img src="img/case2_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-          <div class="reviews__text">Прокладка водоснабжения, <br>г.Ростов-на-Дону,<br> ул. Республиканская, 181</div>
-        </div>
-        <div data-img="case3.jpg" class="zoom"><img src="img/case3_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-          <div class="reviews__text">Прокладка водоотведения,<br> г.Ростов-на-Дону, <br>ул. Мильчакова, 83</div>
-        </div>
-        <div data-img="case5.jpg" class="zoom"><img src="img/case5_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-          <div class="reviews__text">Прокладка водовода, <br>ул. Скачкова, ЖК Акварель</div>
-        </div>
-        <div data-img="case7.jpg" class="zoom"><img src="img/case7_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-          <div class="reviews__text">Устройство канализации,<br>ул.Неклиновская, 18</div>
-        </div>
-        <div data-img="case8.jpg" class="zoom"><img src="img/case8_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-          <div class="reviews__text">Устройство водопровода, <br>ЖК Военвед Сити</div>
-        </div>
-        <div data-img="case10.jpg" class="zoom"><img src="img/case10_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-          <div class="reviews__text"> Врезка в трубу диаметром<br> 300 под давлением, <br>ул. Витебская, 12</div>
-        </div>
-        <div data-img="case11.jpg" class="zoom"><img src="img/case11_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-          <div class="reviews__text">Устройство водопровода, <br>ул. Пескова, 87 убрать</div>
         </div>
       </div>
     </div>
@@ -538,49 +494,50 @@ $utm =  $_SERVER["QUERY_STRING"];
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="title">
-      <div class="title__wrap">
-        <div class="title__text">Допуски СРО
-        </div>
-      </div>
-    </div>
-    <div id="doc" class="row">
-      <div class="col col_xs_6 col_sm_3">
-        <div style="animation-delay: .2s" data-img="doc1_big.jpg" class="zoom l start-animate"><img src="img/doc1.jpg"/>
+  <div class="reviews">
+    <div class="container">
+      <div class="reviews__title">Часть из того, что мы выполнили:</div>
+      <div style="text-align: center;max-width: 1040px;margin: auto;">
+        <div data-img="case1.jpg" class="zoom"><img src="img/case1_mini.jpg"/>
           <div class="zoom__icon">
           </div>
+          <div class="reviews__text">Прокладка водоотведения,<br> г.Ростов-на-Дону,<br>ул. Профсоюзная, 29</div>
         </div>
-      </div>
-      <div class="col col_xs_6 col_sm_3">
-        <div data-img="doc2_big.jpg" class="zoom l start-animate"><img src="img/doc2.jpg"/>
+        <div data-img="case2.jpg" class="zoom"><img src="img/case2_mini.jpg"/>
           <div class="zoom__icon">
           </div>
+          <div class="reviews__text">Прокладка водоснабжения, <br>г.Ростов-на-Дону,<br> ул. Республиканская, 181</div>
         </div>
-      </div>
-      <div class="col col_xs_6 col_sm_3">
-        <div data-img="doc3_big.jpg" class="zoom r start-animate"><img src="img/doc3.jpg"/>
+        <div data-img="case3.jpg" class="zoom"><img src="img/case3_mini.jpg"/>
           <div class="zoom__icon">
           </div>
+          <div class="reviews__text">Прокладка водоотведения,<br> г.Ростов-на-Дону, <br>ул. Мильчакова, 83</div>
         </div>
-      </div>
-      <div class="col col_xs_6 col_sm_3">
-        <div style="animation-delay: .2s" data-img="doc4_big.jpg" class="zoom r start-animate"><img src="img/doc4.jpg"/>
+        <div data-img="case5.jpg" class="zoom"><img src="img/case5_mini.jpg"/>
           <div class="zoom__icon">
           </div>
+          <div class="reviews__text">Прокладка водовода, <br>ул. Скачкова, ЖК Акварель</div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="title">
-      <div class="title__wrap">
-        <div class="title__text">Наши партнеры
+        <div data-img="case7.jpg" class="zoom"><img src="img/case7_mini.jpg"/>
+          <div class="zoom__icon">
+          </div>
+          <div class="reviews__text">Устройство канализации,<br>ул.Неклиновская, 18</div>
         </div>
-      </div>
-    </div>
-    <div class="logos">
-      <div class="logos__grup"><img src="img/logo1.jpg"/><img src="img/logo2.jpg"/><img src="img/logo3.jpg"/><img src="img/logo4.jpg"/><img src="img/logo5.jpg"/><img src="img/logo6.jpg"/><img src="img/logo7.jpg"/><img src="img/logo8.jpg"/><img src="img/logo9.jpg"/>
+        <div data-img="case8.jpg" class="zoom"><img src="img/case8_mini.jpg"/>
+          <div class="zoom__icon">
+          </div>
+          <div class="reviews__text">Устройство водопровода, <br>ЖК Военвед Сити</div>
+        </div>
+        <div data-img="case10.jpg" class="zoom"><img src="img/case10_mini.jpg"/>
+          <div class="zoom__icon">
+          </div>
+          <div class="reviews__text"> Врезка в трубу диаметром<br> 300 под давлением, <br>ул. Витебская, 12</div>
+        </div>
+        <div data-img="case11.jpg" class="zoom"><img src="img/case11_mini.jpg"/>
+          <div class="zoom__icon">
+          </div>
+          <div class="reviews__text">Устройство водопровода, <br>ул. Пескова, 87 убрать</div>
+        </div>
       </div>
     </div>
   </div>
@@ -677,6 +634,53 @@ $utm =  $_SERVER["QUERY_STRING"];
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="title">
+      <div class="title__wrap">
+        <div class="title__text">Допуски СРО
+        </div>
+      </div>
+    </div>
+    <div id="doc" class="row">
+      <div class="col col_xs_6 col_sm_3">
+        <div style="animation-delay: .2s" data-img="doc1_big.jpg" class="zoom l start-animate"><img src="img/doc1.jpg"/>
+          <div class="zoom__icon">
+          </div>
+        </div>
+      </div>
+      <div class="col col_xs_6 col_sm_3">
+        <div data-img="doc2_big.jpg" class="zoom l start-animate"><img src="img/doc2.jpg"/>
+          <div class="zoom__icon">
+          </div>
+        </div>
+      </div>
+      <div class="col col_xs_6 col_sm_3">
+        <div data-img="doc3_big.jpg" class="zoom r start-animate"><img src="img/doc3.jpg"/>
+          <div class="zoom__icon">
+          </div>
+        </div>
+      </div>
+      <div class="col col_xs_6 col_sm_3">
+        <div style="animation-delay: .2s" data-img="doc4_big.jpg" class="zoom r start-animate"><img src="img/doc4.jpg"/>
+          <div class="zoom__icon">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mob">
+    <div class="title">
+      <div class="title__wrap">
+        <div class="title__text">Наши партнеры
+        </div>
+      </div>
+    </div>
+    <div class="logos">
+      <div class="logos__grup"><img src="img/logo1.jpg"/><img src="img/logo2.jpg"/><img src="img/logo3.jpg"/><img src="img/logo4.jpg"/><img src="img/logo5.jpg"/><img src="img/logo6.jpg"/><img src="img/logo7.jpg"/><img src="img/logo8.jpg"/><img src="img/logo9.jpg"/>
+      </div>
+    </div>
+  </div>
+  
   <div id="map" class="map"></div>
   <div class="footer">
     <div class="container">
