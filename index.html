@@ -124,7 +124,6 @@ $utm =  $_SERVER["QUERY_STRING"];
       </div>
     </div>
   </div>
-  
   <div class="container">
     <section class="query2result">
       <div class="row">
@@ -315,7 +314,7 @@ $utm =  $_SERVER["QUERY_STRING"];
       <div class="row">
         <div class="col col_lg_4 col_md_4 col_sm_12 col_xs_12">
           <div class="stock__content">
-            <div class="stock__title"><span>Ация!</span></div>
+            <div class="stock__title"><span>Акция!</span></div>
             <div class="stock__text">При заказе услуги  <span>“КОМПЛЕКСНОЕ ВОДОСНАБЖЕНИЕ И/ИЛИ ВОДООТВЕДЕНИЕ”</span><br/>Баланс водопотребления и водоотведения + Справка о благоустройстве - <span>БЕСПЛАТНО</span><br/><br/><span>Срок действия акции: </span>до <span class="data-s"></span>
             </div>
             <div class="timer">
@@ -325,7 +324,7 @@ $utm =  $_SERVER["QUERY_STRING"];
                 <div class="digits"></div>
               </div>
             </div>
-            <div class="stock__action"> Отправить заявку</div>
+            <div class="stock__action order-stock"> Отправить заявку</div>
           </div>
         </div>
         <div class="col col_lg_4 col_md_4 col_sm_12 col_xs_12">
@@ -745,6 +744,29 @@ $utm =  $_SERVER["QUERY_STRING"];
           <input type="hidden" name="order" value="ВК под ключ. Консультация"/>
           <input type="hidden" name="url" value="<?echo $url?>"/>
           <input type="hidden" name="comment" value="" id="comment"/>
+          <input type="hidden" name="utm" value="<?echo $utm?>"/>
+          <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
+          <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>
+          <input type="hidden" name="utm_source" value="<?echo $utm_source?>"/>
+          <input type="hidden" name="utm_medium" value="<?echo $utm_medium?>"/>
+          <input type="hidden" name="utm_content" value="<?echo $utm_content?>"/>
+          <input type="submit" value="Отправить" class="form__btn"/>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="modal__stock" class="modal">
+    <div class="modal__wrapper">
+      <div class="modal__dialog">
+        <div class="close modal__close"></div>
+        <div class="modal__title">Заполните форму, чтобы<br>поучаствовать в акции</div>
+        <form class="ajax">
+          <input type="hidden" name="comment" value="" id="comment"/>
+          <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
+          <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+          <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
+          <input type="hidden" name="order" value="ВК под ключ. Акция"/>
+          <input type="hidden" name="url" value="<?echo $url?>"/>
           <input type="hidden" name="utm" value="<?echo $utm?>"/>
           <input type="hidden" name="utm_term" value="<?echo $utm_term?>"/>
           <input type="hidden" name="utm_campaign" value="<?echo $utm_campaign?>"/>

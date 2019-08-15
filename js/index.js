@@ -88,8 +88,6 @@ $(document).ready(()=>{
 	},1000);
 
 
-
-
 	let yatarget = 'order'
 
 	$('.callme').click(function(event) {
@@ -100,6 +98,11 @@ $(document).ready(()=>{
 	$('.order').click(function(event) {
 		yatarget = 'order'
 		$('#modal__order').openModal()
+	})
+
+	$('.order-stock').click(function(event) {
+		yatarget = 'order'
+		$('#modal__stock').openModal()
 	})
 
 	$('.zoom').click(function(event) {

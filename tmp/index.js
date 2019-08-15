@@ -105,6 +105,11 @@ $(document).ready(function () {
 		$('#modal__order').openModal();
 	});
 
+	$('.order-stock').click(function (event) {
+		yatarget = 'order';
+		$('#modal__stock').openModal();
+	});
+
 	$('.zoom').click(function (event) {
 		var img = $(this).data('img');
 		$('#zoom__img').attr('src', 'img/' + img);

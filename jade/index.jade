@@ -39,7 +39,6 @@ head
   meta(name="viewport" content="width=device-width, initial-scale=1")
   meta(name="robots" content="noindex, nofollow")
   title ВОДОПРОВОД И КАНАЛИЗАЦИЯ «ПОД КЛЮЧ»
-
   link(rel="icon" href="img/favicon.ico" type="image/x-icon")
   link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
   link(rel='apple-touch-icon', sizes='180x180', href='img/apple-touch-icon.png')
@@ -49,8 +48,6 @@ head
   link(rel='mask-icon', href='img/safari-pinned-tab.svg', color='#5bbad5')
   meta(name='msapplication-TileColor', content='#da532c')
   meta(name='theme-color', content='#ffffff')
-
-
 
   //build:css css/all.css
   link(rel="stylesheet", href="node_modules/animate.css/animate.min.css")
@@ -105,11 +102,7 @@ body.page
             input(type='hidden', name='utm_source', value!="<?echo $utm_source?>")
             input(type='hidden', name='utm_medium', value!="<?echo $utm_medium?>")
             input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
-            input(type='submit' value='Получить консультацию по документам').form__btn
-
-
-            
-
+            input(type='submit' value='Получить консультацию по документам').form__btn           
 
   //- .triggers
   //-   .container
@@ -138,7 +131,6 @@ body.page
   //-         .triggers__items(style="animation-delay: .6s").start-animate
   //-           img(src='img/triggers__img6.png').triggers__img
   //-           .triggers__text Цены ниже<br>среднерыночных<br> на 7-12%
-
 
   .container
     +b({tag: 'section'}).query2result
@@ -270,14 +262,13 @@ body.page
             input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
             input(type='submit' value='Получить файл').form__btn
 
-
   .container
     .stock#l-stock
         .row
           +b.col._lg_4._md_4._sm_12._xs_12
             .stock__content
               .stock__title
-                span Ация!
+                span Акция!
               .stock__text
                   | При заказе услуги  
                   span “КОМПЛЕКСНОЕ ВОДОСНАБЖЕНИЕ И/ИЛИ ВОДООТВЕДЕНИЕ”
@@ -305,7 +296,7 @@ body.page
                 //- +e.el
                 //-   +e.numeral 33
                 //-   +e.text минут
-              .stock__action  Отправить заявку
+              .stock__action.order-stock  Отправить заявку
 
           +b.col._lg_4._md_4._sm_12._xs_12
             .stock__image
@@ -327,8 +318,6 @@ body.page
                   input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
                   input(type='submit' value='Отправить' style="background: linear-gradient(0deg,#fc4c4c,#ff5959);").form__btn
               .wall__text Успей отправить заявку до <span class="data-s"></span>, чтобы сохранить за собой условия акции!! 
-
-
 
   +b.triggers#l-advantage
     .container
@@ -672,9 +661,6 @@ body.page
             .scheme__title Получение лицевого счета
             .scheme__text Гарантируем, что вы получите лицевой счет на водоснабжение и канализацию
 
-
-
-  
   .container
     +b.title
       +e.wrap
@@ -784,7 +770,6 @@ body.page
         +b.col_sm_4
           .footer__contact.footer__contact_type_mail order@bk-invent.ru
 
-
   .modal#modal__callme
     .modal__wrapper
         .modal__dialog
@@ -816,6 +801,26 @@ body.page
               input(type="hidden" name="order" value="ВК под ключ. Консультация")
               input(type='hidden', name='url', value!="<?echo $url?>")
               input(type='hidden', name='comment', value="", id="comment")
+              input(type='hidden', name='utm', value!="<?echo $utm?>")
+              input(type='hidden', name='utm_term', value!="<?echo $utm_term?>")
+              input(type='hidden', name='utm_campaign', value!="<?echo $utm_campaign?>")
+              input(type='hidden', name='utm_source', value!="<?echo $utm_source?>")
+              input(type='hidden', name='utm_medium', value!="<?echo $utm_medium?>")
+              input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
+              input(type='submit' value='Отправить').form__btn
+
+  .modal#modal__stock
+    .modal__wrapper
+        .modal__dialog
+            .close.modal__close
+            .modal__title Заполните форму, чтобы<br>поучаствовать в акции
+            form.ajax
+              input(type='hidden', name='comment', value="", id="comment")
+              input(placeholder='Введите Ваше имя' name='name').input.input_type_name
+              input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+              input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
+              input(type='hidden', name='order', value='ВК под ключ. Акция')
+              input(type='hidden', name='url', value!="<?echo $url?>")
               input(type='hidden', name='utm', value!="<?echo $utm?>")
               input(type='hidden', name='utm_term', value!="<?echo $utm_term?>")
               input(type='hidden', name='utm_campaign', value!="<?echo $utm_campaign?>")
