@@ -271,60 +271,62 @@ body.page
             input(type='submit' value='Получить файл').form__btn
 
 
-  .stock#l-stock
-    .container
-      .row
-        +b.col._lg_6._md_6._sm_12._xs_12._lg-offset_1
-            
-          .stock__title
-            span Внимание 
-            |  акция!
-          .stock__text
-              | При заказе услуги  
-              span “КОМПЛЕКСНОЕ ВОДОСНАБЖЕНИЕ И/ИЛИ ВОДООТВЕДЕНИЕ”
-              br
-              |Баланс водопотребления и водоотведения + Справка о благоустройстве - <span>БЕСПЛАТНО</span>
-              br
-              br
-              //- span(style="color: #fd5454;") УСЛОВИЯ ПОЛУЧЕНИЯ БОНУСОВ:
-              //- br
-              //- span При заказе услуги “КОМПЛЕКСНОЕ ВОДОСНАБЖЕНИЕ И/ИЛИ ВОДООТВЕДЕНИЕ”
-              //- br
-              span Срок действия акции: 
-              | до <span class="data-s"></span>
-              
-          +b.timer
-            #timer
-              +e.action До конца акции осталось:
-              .digits
-            //- +e.el
-            //-   +e.numeral 33
-            //-   +e.text дней
-            //- +e.el
-            //-   +e.numeral 33
-            //-   +e.text часов
-            //- +e.el
-            //-   +e.numeral 33
-            //-   +e.text минут
+  .container
+    .stock#l-stock
+        .row
+          +b.col._lg_4._md_4._sm_12._xs_12
+            .stock__content
+              .stock__title
+                span Ация!
+              .stock__text
+                  | При заказе услуги  
+                  span “КОМПЛЕКСНОЕ ВОДОСНАБЖЕНИЕ И/ИЛИ ВОДООТВЕДЕНИЕ”
+                  br
+                  |Баланс водопотребления и водоотведения + Справка о благоустройстве - <span>БЕСПЛАТНО</span>
+                  br
+                  br
+                  //- span(style="color: #fd5454;") УСЛОВИЯ ПОЛУЧЕНИЯ БОНУСОВ:
+                  //- br
+                  //- span При заказе услуги “КОМПЛЕКСНОЕ ВОДОСНАБЖЕНИЕ И/ИЛИ ВОДООТВЕДЕНИЕ”
+                  //- br
+                  span Срок действия акции: 
+                  | до <span class="data-s"></span>
+                
+              +b.timer
+                #timer
+                  +e.action До конца акции осталось:
+                  .digits
+                //- +e.el
+                //-   +e.numeral 33
+                //-   +e.text дней
+                //- +e.el
+                //-   +e.numeral 33
+                //-   +e.text часов
+                //- +e.el
+                //-   +e.numeral 33
+                //-   +e.text минут
+              .stock__action  Отправить заявку
 
-        +b.col._lg_5._md_6._sm_12._xs_12
-          .wall
-            .wall__title Заполните форму, чтобы<br>поучаствовать в акции
-            .form
-              form.ajax
-                input(placeholder='Введите Ваше имя' name='name').input.input_type_name
-                input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
-                input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
-                input(type='hidden', name='order', value='ВК под ключ. Акция')
-                input(type='hidden', name='url', value!="<?echo $url?>")
-                input(type='hidden', name='utm', value!="<?echo $utm?>")
-                input(type='hidden', name='utm_term', value!="<?echo $utm_term?>")
-                input(type='hidden', name='utm_campaign', value!="<?echo $utm_campaign?>")
-                input(type='hidden', name='utm_source', value!="<?echo $utm_source?>")
-                input(type='hidden', name='utm_medium', value!="<?echo $utm_medium?>")
-                input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
-                input(type='submit' value='Отправить' style="background: linear-gradient(0deg,#fc4c4c,#ff5959);").form__btn
-            .wall__text Успей отправить заявку до <span class="data-s"></span>, чтобы сохранить за собой условия акции!! 
+          +b.col._lg_4._md_4._sm_12._xs_12
+            .stock__image
+          +b.col._lg_4._md_4._sm_12._xs_12
+            .wall
+              .wall__title Заполните форму, чтобы<br>поучаствовать в акции
+              .form
+                form.ajax
+                  input(placeholder='Введите Ваше имя' name='name').input.input_type_name
+                  input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+                  input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
+                  input(type='hidden', name='order', value='ВК под ключ. Акция')
+                  input(type='hidden', name='url', value!="<?echo $url?>")
+                  input(type='hidden', name='utm', value!="<?echo $utm?>")
+                  input(type='hidden', name='utm_term', value!="<?echo $utm_term?>")
+                  input(type='hidden', name='utm_campaign', value!="<?echo $utm_campaign?>")
+                  input(type='hidden', name='utm_source', value!="<?echo $utm_source?>")
+                  input(type='hidden', name='utm_medium', value!="<?echo $utm_medium?>")
+                  input(type='hidden', name='utm_content', value!="<?echo $utm_content?>")
+                  input(type='submit' value='Отправить' style="background: linear-gradient(0deg,#fc4c4c,#ff5959);").form__btn
+              .wall__text Успей отправить заявку до <span class="data-s"></span>, чтобы сохранить за собой условия акции!! 
 
 
 

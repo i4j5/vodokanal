@@ -1153,16 +1153,75 @@
 .stock
     color #fff
     width 100%
-    background #f5f4f4 url('../img/stock-bg.jpg') no-repeat
-    background-size cover
-    padding 20px 0px
+    background-color #ddd
+    background-image linear-gradient(0deg,rgba(0,0,0,.5),rgba(70,70,70,.4)),url(../img/header-img.png),url(../img/stock.jpg);
+    background-repeat no-repeat,repeat,no-repeat
+    background-size  auto,auto,cover
+    // background-attachment  scroll,fixed,fixed
+    @media (min-width 992px)
+        color #000
+        background-color #fff 
+        background-image linear-gradient(107deg, rgba(214,227,254,0.3) 0%, rgba(201,199,199,0.3) 78%, rgba(213,213,213,0.3) 100%)
+    border-radius 5px 
+    margin 30px 0
+    padding 0px
     //margin-top 100px
-    box-shadow inset 0px 0px 32px 0px rgba(103, 103, 103, 0.22)
+    //box-shadow inset 0px 0px 32px 0px rgba(103, 103, 103, 0.22)
+    box-shadow 0 4px 6px 0px #d0d0d0
     // font-weight 300
     line-height 1.5em
+    overflow hidden
     
+    &__action   
+        @media (min-width 992px)
+            display none
+        display table
+        margin 20px auto 10px auto
+        font-size 16px
+        line-height 1.2em
+        padding 15px
+        border-radius 4px
+        //border 2px solid #fff
+        color #fff
+        // display inline-block
+        text-align center
+        background-color #db4d4d 
+        background-image linear-gradient(0deg, #db4d4d, #e05a5a)
+        background-repeat  no-repeat
+        background-position center
+        background-size auto
+        cursor pointer
+        transition all .1s linear
+        box-shadow  0px 2px 18px 0px rgba(171, 7, 46, 0.42)
+        user-select none
+        &:hover
+            box-shadow  0px 2px 22px 0px rgba(46, 43, 43, 0.63)
+        &:active
+            // background #db4d4d linear-gradient(0deg, #e05a5a, #db4d4d)
+            top 2px      
+
+
+    &__image
+        position relative
+        background url('../img/stock.jpg') no-repeat left top   
+        background-size cover
+        height 100%
+        width 100%
+        min-height 400px
+        display none
+        @media (min-width 992px)
+            display block
     & .wall
         padding-top 18px
+        padding-bottom 18px
+        margin 25px 20px 25px 0
+        display none
+        @media (min-width 992px)
+            display block
+    &__content
+        padding 20px
+        @media (min-width 992px)
+            padding 20px 0 20px 20px
     span
         font-weight 500
     ul
@@ -1189,12 +1248,11 @@
         @media (min-width 1200px)
             font-size 30px
             margin-bottom 25px
-            margin-top 20px
     &__text
         font-size 14px
         line-height 1.6em
         @media (min-width 1200px)
-            font-size 18px
+            font-size 16px
             margin-bottom 15px
         
 .timer
@@ -1212,18 +1270,18 @@
         display inline-block
         width 50px
         margin-right 14px
-        @media (min-width 500px)
-            margin-right 15px
-            width 74px
+        // @media (min-width 500px)
+        //     margin-right 15px
+        //     width 74px
     &__numeral
-        border 2px solid #fff
+        border 2px solid #305aae
         border-radius 50%
         positio absolute
-        @media (min-width 500px)
-            width 74px
-            height 74px
-            font-size 45px
-            line-height 70px   
+        // @media (min-width 500px)
+        //     width 74px
+        //     height 74px
+        //     font-size 45px
+        //     line-height 70px   
         width 50px
         height 50px
         line-height 46px
@@ -1233,8 +1291,8 @@
         display inline-block
     &__text
         margin-top 10px
-        @media (min-width 500px)
-            font-size 16px
+        // @media (min-width 500px)
+        //     font-size 16px
         font-size 14px
         line-height 1em
         text-align center
