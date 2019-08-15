@@ -257,7 +257,10 @@ $(document).ready(()=>{
 	     ]
 	  });
 
-	  map.behaviors.disable(['scrollZoom']);
+	  map.behaviors.disable([
+	  	'scrollZoom',
+	  	'multiTouch'
+	  	]);
 
 	  var placemark = new ymaps.Placemark([47.229409, 39.678002],
 	    {

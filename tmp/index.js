@@ -249,7 +249,7 @@ $(document).ready(function () {
 			controls: ['zoomControl']
 		});
 
-		map.behaviors.disable(['scrollZoom']);
+		map.behaviors.disable(['scrollZoom', 'multiTouch']);
 
 		var placemark = new ymaps.Placemark([47.229409, 39.678002], {
 			hintContent: 'БК Инвент ул. Текучева, 23, эт. 3'
